@@ -1,0 +1,20 @@
+{
+    "name": "reachdigital/reach",
+    "description": "Reach is a WordPress starter theme with a modern workflow",
+    "require": {
+        "php": "^8.1",
+        "squizlabs/php_codesniffer": "3.*",
+        "johnbillion/extended-cpts": "^5.0.2"
+    },
+    "require-dev": {
+        "php-stubs/acf-pro-stubs": "*",
+        "php-stubs/wordpress-stubs": "*",
+        "phpcompatibility/php-compatibility": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reach\\": "Reach/",
+            "Theme\\": "Theme/"
+        }
+    }
+}

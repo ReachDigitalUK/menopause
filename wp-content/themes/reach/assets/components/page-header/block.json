@@ -1,0 +1,35 @@
+{
+    "$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+    "apiVersion": 2,
+    "name": "page-header",
+    "title": "Reach - Page Header",
+    "category": "reach-blocks",
+    "icon": "block-default",
+    "keywords": [
+        "hero"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderCallback": "\\Reach\\Component::acfRenderCallback",
+        "postTypes": [
+            "page",
+            "reach-template"
+        ]
+    },
+    "supports": {
+        "align": false,
+        "anchor": true,
+        "color": {
+            "background": false,
+            "text": false
+        },
+        "mode": false,
+        "multiple": false
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    }
+}

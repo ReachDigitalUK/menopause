@@ -1,0 +1,77 @@
+.image-grid {
+    --image-grid-margin: 2rem 0rem;
+    --image-grid-padding: 0rem;
+    --image-grid-background-colour: transparent;
+    --image-grid-column-size: 2;
+    --image-grid-text-colour: #000;
+    --image-grid-block-height: 65dvh;
+    --image-grid-column-gap: 2rem;
+    --image-grid-heading-alignment: left;
+
+    $this: &;
+
+    margin: var(--image-grid-margin);
+    background: var(--image-grid-background-colour);
+    color: var(--image-grid-text-colour);
+
+    &__inner {
+        @include align-width--l;
+        padding: var(--image-grid-padding);
+    }
+
+    &__heading {
+        @include typestyle-h3;
+        text-align: var(--image-grid-heading-alignment);
+    }
+
+    &__images {
+        display: grid;
+        gap: var(--image-grid-column-gap);
+        grid-template-columns: repeat(var(--image-grid-column-size), 1fr);
+        color: #fff;
+
+        @include mq($until: large) {
+            grid-template-columns: repeat(var(--image-grid-column-size) / 2, 1fr);
+        }
+
+        @include mq($until: medium) {
+            grid-template-columns: 1fr;
+        }
+
+        &__image {
+            background-image: var(--image-grid-block-background);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            align-items: var(--image-grid-block-content-position);
+            justify-content: center;
+            height: var(--image-grid-block-height);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 0;
+
+            &::after {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                background-color: var(--image-grid-block-overlay-colour);
+                opacity: var(--image-grid-block-overlay-opacity);
+                mix-blend-mode: multiply;
+                z-index: -1;
+                transition: opacity 0.5s;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: .1;
+                }
+            }
+        }
+    }
+}

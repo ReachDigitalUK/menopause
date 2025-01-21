@@ -1,0 +1,638 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c8b4076db7b39717c91c25af6e220a9b",
+    "packages": [
+        {
+            "name": "johnbillion/args",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnbillion/args.git",
+                "reference": "ef9b110c4379ded08300c5484e4fa67455697c5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnbillion/args/zipball/ef9b110c4379ded08300c5484e4fa67455697c5b",
+                "reference": "ef9b110c4379ded08300c5484e4fa67455697c5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "ergebnis/json-printer": "3.7.0",
+                "ergebnis/phpstan-rules": "1.0.0",
+                "humanmade/coding-standards": "1.2.1",
+                "johnbillion/falsey-assertequals-detector": "^3",
+                "phpdocumentor/reflection": "~4.0 || ~5.0",
+                "phpstan/phpstan": "1.12.12",
+                "phpstan/phpstan-phpunit": "1.4.1",
+                "phpstan/phpstan-strict-rules": "1.6.1",
+                "phpunit/phpunit": "^9.0",
+                "roots/wordpress-core-installer": "1.100.0",
+                "roots/wordpress-full": "6.7",
+                "szepeviktor/phpstan-wordpress": "1.3.5"
+            },
+            "type": "library",
+            "extra": {
+                "args-shapes": [
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/category.php",
+                        "param": "args",
+                        "function": "\\get_categories()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/comment.php",
+                        "param": "args",
+                        "function": "\\get_comments()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/post.php",
+                        "param": "args",
+                        "function": "\\get_posts()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/category.php",
+                        "param": "args",
+                        "function": "\\get_tags()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                        "param": "args",
+                        "function": "\\get_terms()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/user.php",
+                        "param": "args",
+                        "function": "\\get_users()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/general-template.php",
+                        "param": "args",
+                        "function": "\\paginate_links()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/blocks.php",
+                        "param": "args",
+                        "function": "\\register_block_type()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/meta.php",
+                        "param": "args",
+                        "function": "\\register_meta()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/post.php",
+                        "param": "args",
+                        "function": "\\register_post_meta()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/post.php",
+                        "param": "args",
+                        "function": "\\register_post_status()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/post.php",
+                        "param": "args",
+                        "function": "\\register_post_type()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/rest-api.php",
+                        "param": "args",
+                        "function": "\\register_rest_field()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/option.php",
+                        "param": "args",
+                        "function": "\\register_setting()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                        "param": "args",
+                        "function": "\\register_taxonomy()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                        "param": "args",
+                        "function": "\\register_term_meta()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                        "param": "args",
+                        "function": "\\wp_count_terms()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/functions.php",
+                        "param": "args",
+                        "function": "\\wp_die()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/category-template.php",
+                        "param": "args",
+                        "function": "\\wp_dropdown_categories()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/l10n.php",
+                        "param": "args",
+                        "function": "\\wp_dropdown_languages()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/category-template.php",
+                        "param": "args",
+                        "function": "\\wp_generate_tag_cloud()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/nav-menu.php",
+                        "param": "args",
+                        "function": "\\wp_get_nav_menus()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                        "param": "args",
+                        "function": "\\wp_get_object_terms()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/post.php",
+                        "param": "postarr",
+                        "function": "\\wp_insert_post()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                        "param": "args",
+                        "function": "\\wp_insert_term()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/user.php",
+                        "param": "userdata",
+                        "function": "\\wp_insert_user()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/nav-menu-template.php",
+                        "param": "args",
+                        "function": "\\wp_nav_menu()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/http.php",
+                        "param": "args",
+                        "function": "\\wp_remote_get()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/http.php",
+                        "param": "args",
+                        "function": "\\wp_remote_head()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/http.php",
+                        "param": "args",
+                        "function": "\\wp_remote_post()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/http.php",
+                        "param": "args",
+                        "function": "\\wp_remote_request()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/http.php",
+                        "param": "args",
+                        "function": "\\wp_safe_remote_get()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/http.php",
+                        "param": "args",
+                        "function": "\\wp_safe_remote_head()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/http.php",
+                        "param": "args",
+                        "function": "\\wp_safe_remote_post()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/http.php",
+                        "param": "args",
+                        "function": "\\wp_safe_remote_request()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/post.php",
+                        "param": "postarr",
+                        "function": "\\wp_update_post()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                        "param": "args",
+                        "function": "\\wp_update_term()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/user.php",
+                        "param": "userdata",
+                        "function": "\\wp_update_user()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-block-type.php",
+                        "param": "args",
+                        "method": "\\WP_Block_Type::__construct()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-comment-query.php",
+                        "param": "query",
+                        "method": "\\WP_Comment_Query::__construct()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-customize-control.php",
+                        "param": "args",
+                        "method": "\\WP_Customize_Control::__construct()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-customize-manager.php",
+                        "param": "args",
+                        "method": "\\WP_Customize_Manager::__construct()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-customize-panel.php",
+                        "param": "args",
+                        "method": "\\WP_Customize_Panel::__construct()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-customize-section.php",
+                        "param": "args",
+                        "method": "\\WP_Customize_Section::__construct()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-customize-setting.php",
+                        "param": "args",
+                        "method": "\\WP_Customize_Setting::__construct()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-http.php",
+                        "param": "args",
+                        "method": "\\WP_Http::request()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-query.php",
+                        "param": "query",
+                        "method": "\\WP_Query::parse_query()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-term-query.php",
+                        "param": "query",
+                        "method": "\\WP_Term_Query::__construct()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/class-wp-user-query.php",
+                        "param": "query",
+                        "method": "\\WP_User_Query::prepare_query()"
+                    }
+                ],
+                "wordpress-install-dir": "vendor/wordpress/wordpress"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Args\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "I don't want to get into an argument about this.",
+            "support": {
+                "issues": "https://github.com/johnbillion/args/issues",
+                "source": "https://github.com/johnbillion/args/tree/2.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/johnbillion",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-11-30T23:22:24+00:00"
+        },
+        {
+            "name": "johnbillion/extended-cpts",
+            "version": "5.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnbillion/extended-cpts.git",
+                "reference": "57f2e74155a12e7a37d07250e6739dbab5a732b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnbillion/extended-cpts/zipball/57f2e74155a12e7a37d07250e6739dbab5a732b3",
+                "reference": "57f2e74155a12e7a37d07250e6739dbab5a732b3",
+                "shasum": ""
+            },
+            "require": {
+                "johnbillion/args": "^1.4.1 || ^2.0",
+                "php": ">= 7.4.0"
+            },
+            "require-dev": {
+                "automattic/phpcs-neutron-standard": "1.7.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "johnbillion/falsey-assertequals-detector": "*",
+                "johnbillion/plugin-infrastructure": "dev-trunk",
+                "johnbillion/wp-compat": "0.3.1",
+                "lucatume/wp-browser": "3.2.3",
+                "phpcompatibility/phpcompatibility-wp": "2.1.5",
+                "phpstan/phpstan": "1.12.12",
+                "phpstan/phpstan-phpunit": "1.4.1",
+                "roots/wordpress-core-installer": "1.100.0",
+                "roots/wordpress-full": "*",
+                "szepeviktor/phpstan-wordpress": "1.3.5",
+                "wp-coding-standards/wpcs": "2.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "wordpress-install-dir": "vendor/wordpress/wordpress"
+            },
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "ExtCPTs\\": "src",
+                    "ExtCPTs\\Tests\\": "tests/integration"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "A library which provides extended functionality to WordPress custom post types and taxonomies.",
+            "homepage": "https://github.com/johnbillion/extended-cpts/",
+            "support": {
+                "issues": "https://github.com/johnbillion/extended-cpts/issues",
+                "source": "https://github.com/johnbillion/extended-cpts/tree/5.0.11"
+            },
+            "time": "2024-11-30T23:16:17+00:00"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "3.11.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
+                "reference": "1368f4a58c3c52114b86b1abe8f4098869cb0079"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/1368f4a58c3c52114b86b1abe8f4098869cb0079",
+                "reference": "1368f4a58c3c52114b86b1abe8f4098869cb0079",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.3.4"
+            },
+            "bin": [
+                "bin/phpcbf",
+                "bin/phpcs"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "Former lead"
+                },
+                {
+                    "name": "Juliette Reinders Folmer",
+                    "role": "Current lead"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/PHPCSStandards/PHP_CodeSniffer/graphs/contributors"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "https://github.com/PHPCSStandards/PHP_CodeSniffer",
+            "keywords": [
+                "phpcs",
+                "standards",
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/PHPCSStandards/PHP_CodeSniffer/issues",
+                "security": "https://github.com/PHPCSStandards/PHP_CodeSniffer/security/policy",
+                "source": "https://github.com/PHPCSStandards/PHP_CodeSniffer",
+                "wiki": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/PHPCSStandards",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/jrfnl",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/php_codesniffer",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-12-11T16:04:26+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "php-stubs/acf-pro-stubs",
+            "version": "v6.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/acf-pro-stubs.git",
+                "reference": "49a1766f214c8a8484b0b3c2de2a8188ce4fc354"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/acf-pro-stubs/zipball/49a1766f214c8a8484b0b3c2de2a8188ce4fc354",
+                "reference": "49a1766f214c8a8484b0b3c2de2a8188ce4fc354",
+                "shasum": ""
+            },
+            "require": {
+                "php-stubs/wordpress-stubs": "^4.7 || ^5.0 || ^6.0"
+            },
+            "require-dev": {
+                "php": "~7.1 || ^8.0",
+                "php-stubs/generator": "^0.8",
+                "phpdocumentor/reflection-docblock": "^5.3"
+            },
+            "suggest": {
+                "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "type": "library",
+            "extra": {
+                "installer-paths": {
+                    "source/{$name}/": [
+                        "type:wordpress-plugin"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Advanced Custom Fields PRO stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/acf-pro-stubs",
+            "keywords": [
+                "PHPStan",
+                "acf",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/acf-pro-stubs/issues",
+                "source": "https://github.com/php-stubs/acf-pro-stubs/tree/v6.3.10"
+            },
+            "time": "2024-11-06T12:26:27+00:00"
+        },
+        {
+            "name": "php-stubs/wordpress-stubs",
+            "version": "v6.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/wordpress-stubs.git",
+                "reference": "83448e918bf06d1ed3d67ceb6a985fc266a02fd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/83448e918bf06d1ed3d67ceb6a985fc266a02fd1",
+                "reference": "83448e918bf06d1ed3d67ceb6a985fc266a02fd1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "nikic/php-parser": "^4.13",
+                "php": "^7.4 || ^8.0",
+                "php-stubs/generator": "^0.8.3",
+                "phpdocumentor/reflection-docblock": "^5.4.1",
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "^9.5",
+                "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.1.1",
+                "wp-coding-standards/wpcs": "3.1.0 as 2.3.0"
+            },
+            "suggest": {
+                "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
+                "symfony/polyfill-php80": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "WordPress function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/wordpress-stubs",
+            "keywords": [
+                "PHPStan",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.7.1"
+            },
+            "time": "2024-11-24T03:57:09+00:00"
+        },
+        {
+            "name": "phpcompatibility/php-compatibility",
+            "version": "9.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPCompatibility/PHPCompatibility.git",
+                "reference": "9fb324479acf6f39452e0655d2429cc0d3914243"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibility/zipball/9fb324479acf6f39452e0655d2429cc0d3914243",
+                "reference": "9fb324479acf6f39452e0655d2429cc0d3914243",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "squizlabs/php_codesniffer": "^2.3 || ^3.0.2"
+            },
+            "conflict": {
+                "squizlabs/php_codesniffer": "2.6.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.5 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "suggest": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically.",
+                "roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
+            },
+            "type": "phpcodesniffer-standard",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Wim Godden",
+                    "homepage": "https://github.com/wimg",
+                    "role": "lead"
+                },
+                {
+                    "name": "Juliette Reinders Folmer",
+                    "homepage": "https://github.com/jrfnl",
+                    "role": "lead"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/PHPCompatibility/PHPCompatibility/graphs/contributors"
+                }
+            ],
+            "description": "A set of sniffs for PHP_CodeSniffer that checks for PHP cross-version compatibility.",
+            "homepage": "http://techblog.wimgodden.be/tag/codesniffer/",
+            "keywords": [
+                "compatibility",
+                "phpcs",
+                "standards"
+            ],
+            "support": {
+                "issues": "https://github.com/PHPCompatibility/PHPCompatibility/issues",
+                "source": "https://github.com/PHPCompatibility/PHPCompatibility"
+            },
+            "time": "2019-12-27T09:44:58+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.1"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

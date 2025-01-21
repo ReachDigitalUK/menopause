@@ -1,0 +1,162 @@
+.image-slideshow {
+    --image-slideshow--overlay-color: #000;
+    --image-slideshow--overlay-opacity: 30%;
+    --image-slideshow--transition-time: 5s;
+    --image-slideshow--block-width: var(--width--responsive--l);
+    --image-slideshow--text-colour: #fff;
+    --image-slideshow--link-colour: #fff;
+    --image-slideshow--background-colour: transparent;
+    --image-slideshow--margin: 1rem 0rem;
+    --image-slideshow--padding: 0rem;
+    --image-slideshow--image-border-radius: 0rem;
+    --image-slideshow--block-height: 60vh;
+
+    $this: &;
+
+    background: var(--image-slideshow--background-colour);
+    margin: var(--image-slideshow--margin);
+    padding: var(--image-slideshow--padding);
+
+    &__inner {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: var(--image-slideshow--block-width);
+        position: relative;
+        min-height: 340px;
+        height: var(--image-slideshow--block-height);
+        border-radius: var(--image-slideshow--image-border-radius);
+        overflow: hidden;
+    }
+
+    &__controls {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        padding: 2rem 0;
+        align-items: center;
+        height: 10px;
+
+        @include mq($until: medium) {
+            padding: 2rem;
+        }
+
+        @include mq($until: large) {
+            flex-wrap: wrap;
+        }
+
+        &__indicator {
+            height: 6px;
+            width: 120px;
+            background: var(--color--brand-2);
+            position: relative;
+            cursor: pointer;
+            transition: height 0.2s linear;
+
+            @include mq($until: large) {
+                width: 25dvw;
+            }
+
+            &:after {
+                content: '';
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background: var(--color--brand-1);
+                transition: width;
+            }
+
+            &.active {
+                &:after {
+                    width: 100%;
+                    transition: width var(--image-slideshow--transition-time) linear;
+                }
+            }
+
+            &:hover {
+                height: 10px;
+            }
+        }
+    }
+
+    &__slide {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: absolute;
+        z-index: 2;
+        transition: opacity 1s;
+        padding: 6rem 0;
+        opacity: 0;
+
+        @include mq($until: medium) {
+            padding: 1.25rem;
+        }
+
+        @include mq($until: large) {
+            align-items: center;
+        }
+
+        &.active {
+            z-index: 3;
+            opacity: 1;
+        }
+
+        &:after {
+            background: var(--image-slideshow--overlay-color);
+            opacity: var(--image-slideshow--overlay-opacity);
+            position: absolute;
+            content: '';
+            inset: 0;
+            mix-blend-mode: multiply;
+        }
+
+        &__content {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--image-slideshow--text-colour);
+
+            &__subheading {
+                font-size: 21px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            &__heading {
+                font-size: 48px;
+                font-family: var(--type--2--font-family);
+                margin-bottom: 2rem;
+
+                @include mq($until: medium) {
+                    font-size: 32px;
+                    text-align: center;
+                }
+            }
+
+            &__description {
+                margin-bottom: 4rem;
+
+                @include mq($until: medium) {
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+            }
+
+            &__link {
+                a {
+                    color: var(--image-slideshow--link-colour);
+                }
+            }
+        }
+    }
+}

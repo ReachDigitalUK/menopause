@@ -1,0 +1,51 @@
+.text {
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
+
+    $this: &;
+
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
+    &__inner {
+        @include align-width--l;
+        padding: var(--text-padding)
+    }
+
+    &__heading {
+        @include typestyle-h3;
+        margin-bottom: 2rem;
+    }
+
+    &__columns {
+        display: grid;
+        grid-template-columns: repeat(var(--text-column-size), 1fr);
+        gap: 2rem;
+
+        @include mq($until: large) {
+            grid-template-columns: repeat(var(--text-column-size) / 2, 1fr);
+        }
+
+        @include mq($until: medium) {
+            grid-template-columns: 1fr;
+        }
+
+        p {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__column {
+            &__cta {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

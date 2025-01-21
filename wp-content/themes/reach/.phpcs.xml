@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<ruleset name="Reach Coding Standards">
+    <description>Reach's PHP coding standards</description>
+
+    <!-- The base rules: PSR-12 -->
+    <rule ref="PSR12"/>
+
+    <!-- Only check PHP files. -->
+    <arg name="extensions" value="php"/>
+
+    <!-- Excludes -->
+    <exclude-pattern>assets/</exclude-pattern>
+    <exclude-pattern>node_modules/</exclude-pattern>
+    <exclude-pattern>vendor/</exclude-pattern>
+
+    <!-- Configuration options -->
+    <arg value="nps"/>
+    <arg name="colors"/>
+</ruleset>

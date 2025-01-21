@@ -1,0 +1,105 @@
+@use 'sass:color';
+
+// ---------------------------------------------------
+// Colors
+// ---------------------------------------------------
+// Gutenberg color palette colors also need to be set in reach/config.php
+
+$colors: (
+    'base': ('darkgrey': ('color': #1d1d1d,
+            'foreground': 'white',
+            'properties': ('--link--color': var(--color--blue),
+                '--link--color--hover': var(--color--blue),
+            ),
+        ),
+        'lightgrey': ('color': #232323,
+            'foreground': 'white',
+            'properties': ('--link--color': var(--color--blue),
+                '--link--color--hover': var(--color--blue),
+            ),
+        ),
+        'blue': ('color': #00ade9,
+            'foreground': 'white',
+            'properties': ('--link--color': var(--color--white),
+                '--link--color--hover': var(--color--white),
+            ),
+        ),
+        'lightblue': ('color': #87d1d5,
+        ),
+        'red': ('color': #ad474b,
+            'foreground': 'white',
+            'properties': ('--link--color': 'white',
+                '--link--color--hover': 'white',
+            ),
+        ),
+        'green': ('color': #27a800,
+            'foreground': 'white',
+        ),
+        'white': ('color': #fff,
+            'foreground': 'darkgrey',
+        ),
+        'black': ('color': #222,
+            'foreground': 'white',
+            'properties': ('--link--color': 'white',
+                '--link--color--hover': 'white',
+            ),
+        ),
+        'grey': ('color': #444,
+            'foreground': 'white',
+            'properties': ('--link--color': 'white',
+                '--link--color--hover': 'white',
+            ),
+        ),
+        'brand-1': ('namedColor': 'blue',
+        ),
+        'brand-2': ('namedColor': 'darkgrey',
+        ),
+        'brand-3': ('namedColor': 'lightgrey',
+        ),
+        'foreground': ('namedColor': 'darkgrey',
+        ),
+        'background': ('namedColor': 'white',
+        ),
+        'error': ('namedColor': 'red',
+        ),
+        'valid': ('namedColor': 'green',
+        )),
+    // Alternative themes, e.g. 'dark-mode'.
+    //
+    // 'dark-mode': (
+    //     'brand-1': (
+    //         'namedColor': 'darkgrey',
+    //     ),
+    //     'brand-2': (
+    //         'namedColor': 'lightgrey',
+    //     ),
+    //     'brand-3': (
+    //         'namedColor': 'blue',
+    //     ),
+    //     'foreground': (
+    //         'namedColor': 'white',
+    //     ),
+    //     'background': (
+    //         'namedColor': 'darkgrey',
+    //     ),
+    // )
+);
+
+// Output colors at :root or under theme classes.
+// Color custom properties look like this: --color--brand-1
+// Toggle '.theme--#{$theme}' on the HTML element.
+@mixin color-variables {
+    @each $theme, $colormaps in $colors {
+        $selector: '&.theme--#{$theme}'; // Parent selector added so that the 'theme--dark-mode' class can be added to HTML el.
+
+        @if $theme =='base' {
+            $selector: '&';
+        }
+
+        #{$selector} {
+            @each $colorname, $colormap in $colormaps {
+                @include theme-color-props($colorname, $theme);
+            }
+        }
+    }
+}

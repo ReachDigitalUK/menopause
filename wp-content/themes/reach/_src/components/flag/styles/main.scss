@@ -1,0 +1,85 @@
+.flag {
+    --flag-media-size: 50%;
+    --flag-media-direction: row;
+    --flag-row-gap: 2rem;
+    --flag-image-border-radius: 0rem 0rem 0rem 0rem;
+    --flag-margin: 1rem 0rem;
+    --flag-padding: 0rem;
+    --flag-background-colour: transparent;
+    --flag-text-colour: #000;
+    --flag-link-colour: var(--color--brand-1);
+    --flag-link-hover-colour: lighten(var(--color--brand-1), 10%);
+    --flag-image-overlay-colour: transparent;
+    --flag-image-overlay-opacity: 0;
+
+    $this: &;
+
+    margin: var(--flag-margin);
+    padding: var(--flag-padding);
+    background-color: var(--flag-background-colour);
+
+    &__inner {
+        @include align-width--l;
+    }
+
+    &__heading {
+        @include typestyle-h3;
+    }
+
+    &__layout {
+        display: flex;
+        gap: var(--flag-row-gap);
+        flex-direction: var(--flag-media-direction);
+        color: var(--flag-text-colour);
+
+        @include mq($until: medium) {
+            flex-direction: column;
+        }
+
+        &__media {
+            width: var(--flag-media-size);
+            border-radius: var(--flag-image-border-radius);
+            overflow: hidden;
+            position: relative;
+
+            &:after {
+                content: '';
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--flag-image-overlay-colour);
+                opacity: var(--flag-image-overlay-opacity);
+            }
+
+            @include mq($until: medium) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                aspect-ratio: 4 / 3;
+            }
+        }
+
+        &__content {
+            width: calc(100% - var(--flag-media-size));
+
+            @include mq($until: medium) {
+                width: 100%;
+            }
+
+            &__button {
+                .reach-button {
+                    @include mq($until: medium) {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,382 @@
+# Copyright (C) 2025 reach
+# This file is distributed under the same license as the reach package.
+msgid ""
+msgstr ""
+"Project-Id-Version: reach\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Reach/Component.php:275
+msgid "Reach Settings"
+msgstr ""
+
+#: Reach/Component.php:311
+msgid "Save Location"
+msgstr ""
+
+#: Reach/Component.php:317
+msgid "Default save location"
+msgstr ""
+
+#: Reach/Component.php:318
+msgid "Component Folder"
+msgstr ""
+
+#: Reach/Component.php:320
+msgid "Select a custom location to save this field group's JSON file."
+msgstr ""
+
+#. translators: 1: opening html tags. 2: post type name. 3: closing html tags.
+#: Reach/WordPress/Admin.php:119
+msgctxt "Admin bar edit link"
+msgid "%sEdit all %s%s"
+msgstr ""
+
+#. translators: post type name.
+#: Reach/WordPress/Admin.php:128
+msgctxt "Admin bar edit link title"
+msgid "View all %s admin page"
+msgstr ""
+
+#: Reach/WordPress/EditHomepage.php:51
+msgid "Edit Homepage"
+msgstr ""
+
+#: Reach/WordPress/Gutenberg.php:50
+msgid "Reach Blocks"
+msgstr ""
+
+#: Reach/WordPress/Security.php:44
+msgid "Your username or password is incorrect"
+msgstr ""
+
+#: Reach/WordPress/Security.php:72
+msgid "Access forbidden."
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:61
+msgid "Template Name"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:64
+msgid "Updated"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:69
+msgid "Template For"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:103
+msgctxt "Template post list 404"
+msgid "Special: 404"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:96
+msgctxt "Template post list post type archive link"
+msgid "Post Type: %s"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:90
+msgctxt "Template post list taxonomy name"
+msgid "All %s"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:80
+msgctxt "Template post list taxonomy archive link"
+msgid "%s: %s"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:128
+msgid "Template Page"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:129
+msgid "Template Pages"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:169, Reach/WordPress/TemplatePage.php:220, Reach/WordPress/TemplatePage.php:228, Reach/WordPress/TemplatePage.php:273, Reach/WordPress/TemplatePage.php:281, Reach/WordPress/TemplatePage.php:316, Reach/WordPress/TemplatePage.php:324
+msgid "Add Template"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:163
+msgid "Edit Template"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:345
+msgid "Invalid request."
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:375
+msgctxt "Template Page 404 title"
+msgid "404 Not Found"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:465, Reach/WordPress/TemplatePage.php:468
+msgid "View Template"
+msgstr ""
+
+#. translators: 1: opening html tags. 2: closing html tags.
+#. translators: 1: opening html tags. 2: closing html tags.
+#: Reach/WordPress/TemplatePage.php:549, Reach/WordPress/TemplatePage.php:596
+msgctxt "Admin bar edit link"
+msgid "%sEdit Template Content%s"
+msgstr ""
+
+#: Reach/WordPress/TemplatePage.php:555, Reach/WordPress/TemplatePage.php:602
+msgctxt "Admin bar edit link title"
+msgid "Edit Template Content"
+msgstr ""
+
+#: Theme/Plugins/ACF.php:42
+msgctxt "ACF options page name"
+msgid "General"
+msgstr ""
+
+#: Theme/Plugins/ACF.php:43
+msgctxt "ACF options page name"
+msgid "Header"
+msgstr ""
+
+#: Theme/Plugins/ACF.php:44
+msgctxt "ACF options page name"
+msgid "Footer"
+msgstr ""
+
+#: Theme/Plugins/ACF.php:45
+msgctxt "ACF options page name"
+msgid "Integrations"
+msgstr ""
+
+#: Theme/PostTypes/Event.php:91
+msgid "Event"
+msgstr ""
+
+#: Theme/PostTypes/Event.php:92
+msgid "Events"
+msgstr ""
+
+#: Theme/PostTypes/Event.php:107, Theme/PostTypes/Event.php:108
+msgid "Events Settings"
+msgstr ""
+
+#: Theme/Taxonomies/Location.php:49
+msgid "Location"
+msgstr ""
+
+#: Theme/Taxonomies/Location.php:50
+msgid "Locations"
+msgstr ""
+
+#: Theme/WordPress/Menus.php:20
+msgctxt "Menu name"
+msgid "Header"
+msgstr ""
+
+#: Theme/WordPress/Menus.php:21
+msgctxt "Menu name"
+msgid "Footer 1"
+msgstr ""
+
+#: Theme/WordPress/Menus.php:22
+msgctxt "Menu name"
+msgid "Footer 2"
+msgstr ""
+
+#: _src/components/card/functions.php:84
+msgid "by %s"
+msgstr ""
+
+#: _src/components/card/functions.php:109
+msgid "Read more"
+msgstr ""
+
+#: _src/components/comments/functions.php:48
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _src/components/comments/functions.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: _src/components/comments/functions.php:91
+msgid "Save my name and email in this browser for the next time I comment."
+msgstr ""
+
+#: _src/components/comments-navigation/functions.php:34
+msgid "Comment navigation"
+msgstr ""
+
+#: _src/components/comments-navigation/index.php:7
+msgid "Older Comments"
+msgstr ""
+
+#: _src/components/comments-navigation/index.php:13
+msgid "Newer Comments"
+msgstr ""
+
+#: _src/components/cookies-notice/functions.php:32
+msgid "We use cookies. Read more about them in our %s"
+msgstr ""
+
+#: _src/components/cookies-notice/functions.php:34
+msgctxt "Cookie notice link text"
+msgid "Privacy Policy"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:12
+msgid "Accept all"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:14
+msgid "Accept all cookies"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:18
+msgid "Reject all"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:20
+msgid "Reject all cookies"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:24
+msgid "Manage preferences"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:26
+msgid "Manage preferences by cookie type"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:30
+msgid "Save preferences"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:32
+msgid "Save preferences for which cookies to consent to"
+msgstr ""
+
+#: _src/components/cookies-preferences/functions.php:37
+msgid "Cookies consent preferences saved"
+msgstr ""
+
+#: _src/components/cookies-preferences/index.php:4
+msgid "Select cookie consent by type"
+msgstr ""
+
+#: _src/components/header-search/functions.php:37, _src/components/header-search/index.php:8, _src/components/page-header/functions.php:59
+msgid "Search"
+msgstr ""
+
+#: _src/components/header-search/functions.php:44
+msgid "Submit search"
+msgstr ""
+
+#: _src/components/header-search/index.php:9
+msgid "Search..."
+msgstr ""
+
+#: _src/components/no-content/functions.php:13
+msgid "No content found."
+msgstr ""
+
+#: _src/components/no-content/functions.php:37
+msgid "Items cannot be displayed in the editor."
+msgstr ""
+
+#: _src/components/no-content/functions.php:31
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: _src/components/no-content/functions.php:29
+msgid "It seems we can't find what you're looking for."
+msgstr ""
+
+#: _src/components/page-header/functions.php:71
+msgid "Posts by %s"
+msgstr ""
+
+#: _src/components/page-header/functions.php:64
+msgid "Showing results for '%s'"
+msgstr ""
+
+#: _src/components/page-header/functions.php:55
+msgid "404"
+msgstr ""
+
+#: _src/components/page-header/functions.php:92
+msgid "Published on %s "
+msgstr ""
+
+#: _src/components/page-header/functions.php:108
+msgid "by %s "
+msgstr ""
+
+#: _src/components/page-header/functions.php:125
+msgid "Post Title"
+msgstr ""
+
+#: _src/components/page-header/functions.php:137
+msgctxt "Placeholder for page header title"
+msgid "Add title"
+msgstr ""
+
+#: _src/components/page-header/functions.php:141
+msgctxt "Placeholder for page header subheading"
+msgid "Add subheading"
+msgstr ""
+
+#: _src/components/pagination/functions.php:24
+msgid "Previous page"
+msgstr ""
+
+#: _src/components/pagination/functions.php:25
+msgid "Next page"
+msgstr ""
+
+#: _src/components/pagination/functions.php:27
+msgid "Page"
+msgstr ""
+
+#. translators: 1: Social network name.
+#: _src/components/site-footer/index.php:43
+msgid "Visit our %s page"
+msgstr ""
+
+#: _src/components/site-header/index.php:22, _src/components/site-header/index.php:53
+msgid "Expand the search field"
+msgstr ""
+
+#: _src/components/site-header/index.php:32
+msgid "Main menu button"
+msgstr ""
+
+#: _src/components/skip-link/index.php:2
+msgid "Skip to content"
+msgstr ""
+
+#: _src/components/taxonomy-filters/functions.php:13
+msgid "Filter by"
+msgstr ""
+
+#: _src/components/taxonomy-filters/functions.php:63
+msgid "Filter by %s"
+msgstr ""
+
+#: _src/components/taxonomy-filters/functions.php:68
+msgctxt "Category filter clear button text"
+msgid "All"
+msgstr ""
+
+#: _src/components/menu/menu-item/functions.php:70
+msgid "Expand or collapse a sub menu"
+msgstr ""

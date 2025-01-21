@@ -1,0 +1,16 @@
+### Ignore Rules ###
+/*
+wp-content/*
+wp-content/themes/twenty*/
+node_modules/
+*.zip
+*.tar
+*.rar
+*.sql
+
+### Excluded Rules ###
+!wp-content/
+!.htaccess
+!wp-content/themes/
+!.gitignore
+.DS_Store
