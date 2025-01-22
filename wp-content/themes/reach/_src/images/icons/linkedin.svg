@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Group_839" data-name="Group 839" transform="translate(-1246 -2764)">
+    <g id="ico-linkedin" transform="translate(1264.438 2781.326)">
+      <path id="Path_6131" data-name="Path 6131" d="M5.349,22.522V7.327H.3v15.2ZM2.824,5.251A2.634,2.634,0,1,0,2.857,0a2.632,2.632,0,1,0-.066,5.251h.033Zm5.32,17.272H13.2V14.036a3.462,3.462,0,0,1,.166-1.233,2.765,2.765,0,0,1,2.591-1.847c1.828,0,2.559,1.394,2.559,3.436v8.129h5.05V13.809c0-4.668-2.492-6.839-5.815-6.839a5.031,5.031,0,0,0-4.586,2.56H13.2v-2.2H8.144c.066,1.426,0,15.2,0,15.2Z" transform="translate(0 0)" fill="#5c5c5c"/>
+    </g>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(1246 2764)" fill="none" stroke="#5c5c5c" stroke-width="1">
+      <circle cx="30" cy="30" r="30" stroke="none"/>
+      <circle cx="30" cy="30" r="29.5" fill="none"/>
+    </g>
+  </g>
+</svg>
