@@ -189,6 +189,11 @@ msgctxt "Menu name"
 msgid "Footer 2"
 msgstr ""
 
+#: Theme/WordPress/Menus.php:23
+msgctxt "Menu name"
+msgid "Header Top"
+msgstr ""
+
 #: _src/components/card/functions.php:84
 msgid "by %s"
 msgstr ""
@@ -352,11 +357,7 @@ msgstr ""
 msgid "Visit our %s page"
 msgstr ""
 
-#: _src/components/site-header/index.php:22, _src/components/site-header/index.php:53
-msgid "Expand the search field"
-msgstr ""
-
-#: _src/components/site-header/index.php:32
+#: _src/components/site-header/index.php:42
 msgid "Main menu button"
 msgstr ""
 

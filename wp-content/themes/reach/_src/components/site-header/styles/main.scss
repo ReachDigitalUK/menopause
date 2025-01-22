@@ -133,8 +133,6 @@ $site-header--top--background: 'white';
          }
 
 
-
-
         @include mq($until: 'site-header') {
             --link--color: var(--color--foreground);
             --link--color--hover: var(--color--foreground);
@@ -181,18 +179,6 @@ $site-header--top--background: 'white';
         }
 
       
-        .button{
-            border-radius: 30px;
-            padding: 15px 30px;
-            color:  var(--color--black);
-            text-decoration: none;
-            background-color: var(--color--yellow);
-        }
-        
-
-
-
-
     }
 
     &__bottom__right {
@@ -325,6 +311,49 @@ $site-header--top--background: 'white';
         width: 100%;
     }
 
+
+    &__reviews-rating{
+        .gmbrr.badge.tiny{
+            box-shadow: none;
+            padding: 0px;
+        }
+
+        .count{
+            text-decoration: underline;
+        }
+
+        .number{
+            display: none;
+        }
+
+        .google-icon{
+            margin: 0px;
+        }
+    }
+
+
+    .menu-wrapper .menu-list{
+        gap: 10px!important;
+    }
+
+    .menu-wrapper .menu-item:nth-child(1):after,
+    .menu-wrapper .menu-item:nth-child(2):after {
+        content: ''; 
+        display: inline-block; 
+        border-right: 1px solid #BEBEBE;
+        height: 100%; 
+        margin-left: 10px; 
+    }
+
+    .menu-wrapper .menu-item:nth-child(3)::before{
+        content: '';
+        display: inline-block;
+        background-image: url('/wp-content/themes/reach/_src/images/contact.svg');
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+    }
 
     
 }

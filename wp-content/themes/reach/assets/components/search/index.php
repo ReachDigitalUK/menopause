@@ -2,10 +2,13 @@
     <div class='search'>
         <div class='search__inner'>
             <div class='search__text'>
-                <h4 class='search__text__title'>Search</h4>
+                <p class='search__text_title'>Search</p>
             </div>
-            <div class='search__button'>
-                <button class='search__button_button'><?= \Reach\SVG::get('search.svg'); ?></button>
-                </button>
+            <div class='relative'>
+                <div class='search__input_wrapper'>
+                    <input type='text' class ='search__input'>
+            </div>
         </div>
+    </div>
+</div>
 </section>

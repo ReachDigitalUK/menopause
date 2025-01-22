@@ -10,7 +10,7 @@
 
         &__toplevel {
             display: flex;
-            gap: 5rem;
+            gap: 3rem;
             align-items: center;
 
             @include mq($until: large) {
@@ -79,6 +79,8 @@
     }
 
 
+
+
     
     .has-children.active::before {
         content: "";
@@ -110,7 +112,13 @@
             display: none;
         }
 
-        
+
+    }
+
+
+
+    .has-children.active::after {
+       rotate: 180deg;
     }
 
 
@@ -125,6 +133,7 @@
         top: 0px;
         left: 0;
         background-color: var(--color--green);
+        z-index: 9999;
 
         @include mq($until: large) {
             visibility: visible;
@@ -142,7 +151,7 @@
             visibility: visible;
             opacity: 1;
             height: fit-content;
-            top: 155px;
+            top: 187px;
 
             .megamenu-child__child__grandchildren {
                 visibility: visible;
@@ -178,6 +187,7 @@
         &__child {
             width: 25%;
             z-index: 9;
+            position: relative;
 
             @include mq($until: large) {
                 width: 100%;
@@ -207,8 +217,12 @@
                 }
             }
 
-            &__header {
+            .full-width.first-child{
                 font-size: 25px;
+            }
+
+            &__header {
+                font-size: 16px;
                 padding: 0.4rem 0;
                 display: block;
 
@@ -259,6 +273,25 @@
                 }
             }
         }
+
+        .megamenu-child__child a:not(.first-child)::before {
+            content: "";
+            background-image: url('/wp-content/themes/reach/_src/images/arrow.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            left: -40px;
+            margin-top: 3px;
+        }
+
+
+
+
+
+
     }
 }
 

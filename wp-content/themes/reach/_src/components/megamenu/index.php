@@ -14,12 +14,13 @@
                         <div class="megamenu-child megamenu-child-<?= $item->ID; ?>">
                             <div class="megamenu-child__inner">
                                 <div class="megamenu-child__children">
+                                    <?php $first_child = true; // Initialize the flag for the first child ?>
                                     <?php foreach ($item->children as $child) { ?>
                                         <div class="megamenu-child__child">
                                             <div class="megamenu-child__child__header-wrap">
-                                                <a class="megamenu-child__child__header full-width" href="<?= $child->url; ?>" <?php if (!empty($child->children)) {
-                                                                                                                                    echo ' data-child="megamenu-child-' . $child->ID . '"';
-                                                                                                                                } ?>><?= $child->title; ?></a>
+                                                <a class="megamenu-child__child__header full-width <?= $first_child ? 'first-child' : ''; ?>" href="<?= $child->url; ?>" 
+                                                <?php if (!empty($child->children)) {
+                                                    echo ' data-child="megamenu-child-' .$child->ID. '"';} ?>><?= $child->title; ?></a>
                                             </div>
                                             <?php if (!empty($child->children)) { ?>
                                                 <div class="megamenu-child megamenu-child__child__grandchildren">
@@ -29,6 +30,7 @@
                                                 </div>
                                             <?php } ?>
                                         </div>
+                                        <?php $first_child = false; // Set the flag to false after the first child ?>
                                     <?php } ?>
                                 </div>
                             </div>

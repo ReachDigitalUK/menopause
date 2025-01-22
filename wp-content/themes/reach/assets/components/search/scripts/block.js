@@ -16,7 +16,7 @@
   \*************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// import Componentname from './Componentname.js';\n\n// window.addEventListener('DOMContentLoaded', () => {\n//     const items = document.querySelectorAll('.componentname');\n\n//     [...items].forEach((item) => {\n//         new Componentname(item);\n//     });\n// });\n\n//# sourceURL=webpack://reach/./_src/components/search/scripts/block.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* eslint-disable */\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  const search_button = document.querySelector('.search__input');\n  search_button.addEventListener('click', function () {\n    search_button.classList.toggle('search__input--active');\n  });\n});\n\n//# sourceURL=webpack://reach/./_src/components/search/scripts/block.js?");
 
 /***/ })
 
