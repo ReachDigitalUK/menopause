@@ -19,8 +19,8 @@ $site-header--top--background: 'white';
 }
 
 .site-header {
-    --site-header--height: #{rem(70)};
-    --site-header--logo-width: #{rem(120)};
+    --site-header--height: #{rem(500)};
+    --site-header--logo-width: #{rem(500)};
 
     --site-header--spacing: var(--space--m);
 
@@ -39,7 +39,7 @@ $site-header--top--background: 'white';
 
     @include mq('site-header') {
         --site-header--spacing: var(--space--l);
-        --site-header--logo-width: #{rem(170)};
+        --site-header--logo-width: #{rem(500)};
         --site-header--height: #{rem(74)};
         --site-header--button-size: #{rem(42)};
 
@@ -63,6 +63,10 @@ $site-header--top--background: 'white';
     }
 
     &__inner {
+   
+    }
+
+    &__top-menu {
         display: grid;
         width: 100%;
         height: 100%;
@@ -77,6 +81,24 @@ $site-header--top--background: 'white';
         }
     }
 
+
+    &__bottom-menu{
+        background-color: var(--color--green-light);
+       // display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-rows: min-content auto;
+        // padding: 20px;
+
+        // @include mq('site-header') {
+        //    // @include align-width--l;
+
+        //     gap: var(--site-header--spacing);
+        //     grid-auto-flow: column;
+        //     grid-template-rows: unset;
+        // }
+    }
+
     &__top {
         display: flex;
         height: var(--site-header--height);
@@ -85,7 +107,7 @@ $site-header--top--background: 'white';
         padding-left: var(--space--container-padding);
         background-color: var(--color--#{$site-header--top--background});
         gap: var(--site-header--spacing);
-        justify-items: flex-end;
+        justify-items: flex-start;
 
         @include mq('site-header') {
             padding-right: 0;
@@ -95,11 +117,21 @@ $site-header--top--background: 'white';
     }
 
     &__bottom {
-        display: grid;
+        display: flex;
         justify-content: center;
         gap: var(--site-header--spacing);
         grid-auto-rows: min-content;
         grid-template-rows: auto;
+        padding: 0.5em 0;
+        
+        @include mq('site-header') {
+             @include align-width--l;
+ 
+             gap: var(--site-header--spacing);
+             grid-auto-flow: column;
+             grid-template-rows: unset;
+         }
+
 
         @include mq($until: 'site-header') {
             --link--color: var(--color--foreground);
@@ -142,10 +174,20 @@ $site-header--top--background: 'white';
         @include mq('site-header') {
             width: auto;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: flex-start;
             grid-auto-flow: column;
         }
+
+      
     }
+
+    &__bottom__right {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
 
     &__burger {
         --burger--color: var(--color--brand-1);
@@ -228,9 +270,10 @@ $site-header--top--background: 'white';
     &__logo {
         display: flex;
         width: 100%;
-        max-width: var(--site-header--logo-width);
+       // max-width: var(--site-header--logo-width);
+       max-width: 130px;
         height: 100%;
-        max-height: calc(100% - var(--space--s));
+        //max-height: calc(100% - var(--space--s));
         margin-right: auto;
 
         > * {
@@ -267,4 +310,50 @@ $site-header--top--background: 'white';
         left: 0;
         width: 100%;
     }
+
+
+    &__reviews-rating{
+        .gmbrr.badge.tiny{
+            box-shadow: none;
+            padding: 0px;
+        }
+
+        .count{
+            text-decoration: underline;
+        }
+
+        .number{
+            display: none;
+        }
+
+        .google-icon{
+            margin: 0px;
+        }
+    }
+
+
+    .menu-wrapper .menu-list{
+        gap: 10px!important;
+    }
+
+    .menu-wrapper .menu-item:nth-child(1):after,
+    .menu-wrapper .menu-item:nth-child(2):after {
+        content: ''; 
+        display: inline-block; 
+        border-right: 1px solid #BEBEBE;
+        height: 100%; 
+        margin-left: 10px; 
+    }
+
+    .menu-wrapper .menu-item:nth-child(3)::before{
+        content: '';
+        display: inline-block;
+        background-image: url('/wp-content/themes/reach/_src/images/contact.svg');
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    
 }
