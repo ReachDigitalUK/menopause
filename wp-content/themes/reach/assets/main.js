@@ -63,6 +63,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Coo
 
 /***/ }),
 
+/***/ "./_src/components/megamenu/scripts/MegaMenu.js":
+/*!******************************************************!*\
+  !*** ./_src/components/megamenu/scripts/MegaMenu.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ MegaMenu)\n/* harmony export */ });\n/* eslint-disable  */\nclass MegaMenu {\n  constructor(element) {\n    this.el = element;\n    this.rootHtml = document.querySelector('html');\n    this.body = document.querySelector('body');\n    this.siteHeader = document.querySelector('.site-header');\n    this.topLevelEls = this.el.querySelectorAll('.megamenu__inner__toplevel__item > .megamenu-child__child__header-wrap > a[data-child]');\n    this.dropdowns = this.el.querySelectorAll('.megamenu__inner__toplevel__item > .megamenu-child');\n    this.burger = document.querySelector('.site-header__burger');\n    this.mobile = this.el.querySelector('.megamenu__mobile');\n    this.toggles = this.el.querySelectorAll('.megamenu-child__child__header__toggle');\n    this.has = this.el.querySelectorAll('.has-children');\n    this.init();\n  }\n  init() {\n    this.topLevelEls.forEach(el => {\n      el.addEventListener('mouseenter', event => {\n        if (event.target.dataset.child) {\n          const dropdown = this.el.querySelector(`.${event.target.dataset.child}`);\n          const parentHasChildren = event.target.closest('.has-children'); // Find the closest .has-children parent\n\n          // Deactivate all dropdowns and .has-children\n          this.dropdowns.forEach(dropdownEl => {\n            dropdownEl.classList.remove('active');\n          });\n          this.has.forEach(hasEl => {\n            hasEl.classList.remove('active');\n          });\n\n          // Activate the hovered dropdown and its parent .has-children\n          dropdown.classList.add('active');\n          this.siteHeader.classList.add('megamenu-open');\n          if (parentHasChildren) {\n            parentHasChildren.classList.add('active');\n          }\n        }\n      });\n    });\n    this.dropdowns.forEach(el => {\n      el.addEventListener('mouseleave', event => {\n        event.target.classList.remove('active');\n        this.siteHeader.classList.remove('megamenu-open');\n\n        // Remove 'active' from the related .has-children\n        const parentHasChildren = event.target.closest('.has-children');\n        if (parentHasChildren) {\n          parentHasChildren.classList.remove('active');\n        }\n      });\n    });\n    this.burger.addEventListener('click', () => {\n      this.siteHeader.classList.toggle('active');\n      this.body.classList.toggle('menu-open');\n      this.rootHtml.classList.toggle('menu-open');\n    });\n    this.toggles.forEach(el => {\n      el.addEventListener('click', event => {\n        event.target.parentNode.classList.toggle('active');\n      });\n    });\n  }\n}\n\n//# sourceURL=webpack://reach/./_src/components/megamenu/scripts/MegaMenu.js?");
+
+/***/ }),
+
+/***/ "./_src/components/megamenu/scripts/main.js":
+/*!**************************************************!*\
+  !*** ./_src/components/megamenu/scripts/main.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _MegaMenu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MegaMenu.js */ \"./_src/components/megamenu/scripts/MegaMenu.js\");\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  const element = document.querySelector('.megamenu');\n  new _MegaMenu_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](element);\n});\n\n//# sourceURL=webpack://reach/./_src/components/megamenu/scripts/main.js?");
+
+/***/ }),
+
 /***/ "./_src/components/site-header/scripts/SiteHeader.js":
 /*!***********************************************************!*\
   !*** ./_src/components/site-header/scripts/SiteHeader.js ***!
@@ -92,7 +114,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Sit
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_cookies_notice_scripts_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/cookies-notice/scripts/main.js */ \"./_src/components/cookies-notice/scripts/main.js\");\n/* harmony import */ var _components_cookies_preferences_scripts_main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/cookies-preferences/scripts/main.js */ \"./_src/components/cookies-preferences/scripts/main.js\");\n/* harmony import */ var _components_site_header_scripts_main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/site-header/scripts/main.js */ \"./_src/components/site-header/scripts/main.js\");\n/* eslint-disable-next-line import/no-unresolved */\n\n\n\n\n//# sourceURL=webpack://reach/./_src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_cookies_notice_scripts_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/cookies-notice/scripts/main.js */ \"./_src/components/cookies-notice/scripts/main.js\");\n/* harmony import */ var _components_cookies_preferences_scripts_main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/cookies-preferences/scripts/main.js */ \"./_src/components/cookies-preferences/scripts/main.js\");\n/* harmony import */ var _components_megamenu_scripts_main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/megamenu/scripts/main.js */ \"./_src/components/megamenu/scripts/main.js\");\n/* harmony import */ var _components_site_header_scripts_main_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/site-header/scripts/main.js */ \"./_src/components/site-header/scripts/main.js\");\n/* eslint-disable-next-line import/no-unresolved */\n\n\n\n\n\n//# sourceURL=webpack://reach/./_src/main.js?");
 
 /***/ }),
 
