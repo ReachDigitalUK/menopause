@@ -1,0 +1,33 @@
+.search {
+    margin-left: auto;
+
+    $this: &;
+
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+
+    &__text{
+    }
+
+    &__text__title{
+        margin-bottom: 0%;
+    }
+
+    &__button{
+        margin-left:10px;
+    }
+
+
+    &__button_button{
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 99%;
+        margin-left:20px;
+    }
+
+
+
+}
+

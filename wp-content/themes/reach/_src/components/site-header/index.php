@@ -1,5 +1,8 @@
 <header <?= \Reach\Helpers::buildAttributes($args['attributes']) ?>>
+
     <div class="site-header__inner">
+        <div class='site-header__top-menu'>
+            
         <div class="site-header__top">
             <?= \Reach\Component::get('link', [
                 'url' => home_url('/'),
@@ -14,14 +17,21 @@
                 'content_filter' => false,
             ]); ?>
 
-            <button
-                class="site-header__search-toggler site-header__search-toggler--mobile reach-button"
-                aria-expanded="false"
-                aria-controls="site-header-search-form">
-                <span class="visually-hidden">
-                    <?= esc_html__('Expand the search field', 'reach'); ?>
-                </span>
-            </button>
+
+<?=  do_shortcode('[reviews_rating]'); ?>
+
+<?= \Reach\Component::get('menu', [
+                'theme_location' => 'header-top',
+                'menu_id' => 'header', // Required for 'aria-controls' in burger component.
+                'classes' => [
+                    'site-header__navigation',
+                ],
+            ]); ?>
+
+
+        
+
+
 
             <?= \Reach\Component::get('burger', [
                 'classes' => [
@@ -36,34 +46,36 @@
             ]); ?>
         </div>
 
+        </div>
+        <div class='site-header__bottom-menu'>
+
+
         <div class="site-header__bottom">
-            <?= \Reach\Component::get('menu', [
+            <?= \Reach\Component::get('megamenu', [
                 'theme_location' => 'header',
-                'menu_id' => 'main-menu', // Required for 'aria-controls' in burger component.
+                'menu_id' => 'header', // Required for 'aria-controls' in burger component.
                 'classes' => [
                     'site-header__navigation',
                 ],
             ]); ?>
 
-            <button
-                class="site-header__search-toggler site-header__search-toggler--desktop reach-button reach-button--square"
-                aria-expanded="false"
-                aria-controls="site-header-search-form">
-                <span class="visually-hidden">
-                    <?= esc_html__('Expand the search field', 'reach'); ?>
-                </span>
-            </button>
 
-            <?php if (!empty($args['content']['call_to_action_1'])) { ?>
-                <div class="site-header__widgets">
-                    <?= \Reach\Component::get('link', $args['content']['call_to_action_1']); ?>
-                </div>
-            <?php } ?>
+        <div class='site-header__bottom__right'>
+
+            <?= \Reach\Component::get('search', [     
+                'classes' => ['site-header__search'],
+                ],
+            ); ?>
+
+            <div class='call-to-action'>
+                <a href='/book/' class='button'>Book consultation</a>
+            </div>
+            
         </div>
 
-        <?= \Reach\Component::get('header-search', [
-            'id' => 'site-header-search-form',
-            'classes' => ['js-expandable-element'],
-        ]); ?>
+
+     
+    </div>
     </div>
 </header>
+
