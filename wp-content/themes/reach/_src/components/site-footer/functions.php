@@ -8,7 +8,7 @@ function filterArgs(array $args): ?array
     // Default arguments.
     // ---------------------------------------
     $args = array_merge([
-        'background_color' => 'brand-2',
+        'background_color' => 'white',
         'classes' => [],
     ], $args);
 

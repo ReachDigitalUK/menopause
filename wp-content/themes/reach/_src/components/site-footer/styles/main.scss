@@ -6,8 +6,8 @@
     $this: &;
     $footer-breakpoint--small: 400px;
 
-    padding-top: var(--space--xl);
-    padding-bottom: var(--space--xl);
+    //padding-top: var(--space--xl);
+    //padding-bottom: var(--space--xl);
 
     &__logo { grid-area: logo; }
     &__top-text { grid-area: top-text; }
@@ -43,7 +43,7 @@
         }
 
         @include mq(large) {
-            grid-template-columns: minmax(0, 1fr) minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
         }
 
         > * {
@@ -96,7 +96,9 @@
 
         .menu-list {
             display: grid;
-            gap: var(--space--xs);
+            grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 3 columns with a minimum width */
+            grid-template-rows: auto; /* Rows adjust to content height */
+            gap: var(--space--xs); 
         }
 
         a {
@@ -123,7 +125,7 @@
 
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
+        align-items: flex-start;
     }
 
     &__images {
@@ -142,9 +144,47 @@
         }
     }
 
+    &__middle{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include align-width--l;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .number{
+            display: none;
+        }
+
+        .gmbrr.badge.tiny{
+            box-shadow: none;
+            max-width: unset;
+        }
+
+        .gmbrr.tiny{
+            margin-inline:unset;
+        }
+
+        .footer-images{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            img{
+                max-width: 100px;
+            }
+
+        }
+    }
+
     &__bottom {
         padding-top: var(--space--base);
-        border-top: var(--border--1);
+        padding-bottom: var(--space--base);
+       // border-top: var(--border--1);
+       background-color: var(--color--light-yellow);
 
         &__inner {
             align-items: center;
