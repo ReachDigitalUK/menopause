@@ -32,3 +32,18 @@
     text-decoration: none;
     background-color: var(--color--yellow);
 }
+
+.button-certificate {
+    display: inline-flex; 
+    align-items: center;  
+}
+
+.button-certificate::before {
+    content: '';
+    background-image: url('/wp-content/themes/reach/_src/images/certificate.svg');
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 10px;
+}
