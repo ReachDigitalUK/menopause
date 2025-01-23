@@ -1,5 +1,5 @@
 <section <?= \Reach\Helpers::buildAttributes($args['attributes']); ?>>
-    <div class="flag__inner">
+    <div class="flag__inner <?php if(!empty($args['add_classes'])){echo $args['add_classes'];}; ?>">
         <div class="flag__layout">
             <div class="flag__layout__media">
                 <?php if (!empty($args['image_settings']['image'])) { ?>
@@ -15,9 +15,10 @@
                         <?= $args['content']; ?>
                     </div>
                 <?php } ?>
+
                 <?php if (!empty($args['button'])) { ?>
                     <div class="flag__layout__content__button">
-                        <?= \Reach\Component::get('link', $args['button']); ?>
+                        <a href="<?= $args['button']['url']; ?>" class="<?= $args['button_class'];?>"><?= $args['button']['title']; ?></a>
                     </div>
                 <?php } ?>
             </div>

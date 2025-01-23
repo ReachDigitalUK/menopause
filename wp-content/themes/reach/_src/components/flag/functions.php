@@ -64,9 +64,36 @@ function filterArgs(array $args): ?array
     if (!empty($args['image_settings']['image_overlay_opacity'])) {
         $args['attributes']['style']['--flag-image-overlay-opacity'] = $args['image_settings']['image_overlay_opacity'] . '%';
     }
+    if (!empty($args['image_settings']['align_items'])) {
+        $args['attributes']['style']['--flag-image-align-items'] = $args['image_settings']['align_items'];
+    }
+    if (!empty($args['image_settings']['image_border_color'])) {
+        $args['attributes']['style']['--flag-image-border-color'] = $args['image_settings']['image_border_color'];
+    }
+    if (!empty($args['image_settings']['image_border_tilt'])) {
+        $args['attributes']['style']['--flag-image_border_tilt'] = $args['image_settings']['image_border_tilt'];
+    }
+
+
+    /* for some weird reason, a balck border appears if i try to create a border width! */
+
+    // if (!empty($args['image_settings']['image_flag_border_width'])) {
+    //     $args['attributes']['style']['--flag-image-border-width'] = $args['image_settings']['image_flag_border_width'].'px';
+    // }
+
+
+
+
+
     if (!empty($args['row_gap'])) {
         $args['attributes']['style']['--flag-row-gap'] = $args['row_gap'];
     }
+
+    if (!empty($args['button_class'])) {
+        $args['button_class'] = implode(' ', array_map('trim', explode(',', $args['button_class'])));
+    }
+
+
 
     // -------------------------------------------------------------------------
     // Return the filtered args.
