@@ -187,9 +187,9 @@
        background-color: var(--color--light-yellow);
 
         &__inner {
-            align-items: center;
-            gap: rem(25);
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            @include align-width--l;
         }
 
         #{$this}__bottom-text {
@@ -197,6 +197,16 @@
 
             max-width: 60em;
             text-align: left;
+        }
+    }
+
+    &__made-by-reach{
+        display: flex;
+        gap: 10px;
+        align-items: end;
+
+        img{
+            height: 30px;
         }
     }
 }

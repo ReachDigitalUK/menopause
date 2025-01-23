@@ -41,32 +41,31 @@
 
 
             <div class='footer-images'>
+                <?php $images = get_field('footer_images', 'option'); 
 
-            <?php $images = get_field('footer_images', 'option'); 
-
-            if ($images) { ?>
-                <?php foreach ($images as $image) { ?>
-                    <div class='footer-image'>
-                        <a href='<?= $image['link'] ?>'>
-                            <img src='<?= $image['image']['url'] ?>' alt='<?= $image['image']['alt'] ?>'>
-                        </a>
-                    </div>
+                if ($images) { ?>
+                    <?php foreach ($images as $image) { ?>
+                        <div class='footer-image'>
+                            <a href='<?= $image['link'] ?>'>
+                                <img src='<?= $image['image']['url'] ?>' alt='<?= $image['image']['alt'] ?>'>
+                            </a>
+                        </div>
+                    <?php } ?>
                 <?php } ?>
-            <?php } ?>
-
-                
             </div>
-
-
         </div>
 
         <div class="site-footer__bottom">
-            <div class="site-footer__bottom__inner alignwide">
+            <div class="site-footer__bottom__inner">
                 <?php if ($bottom_text = get_field('footer_text_bottom', 'option')) { ?>
                 <div class="site-footer__bottom-text">
                     <?= wp_kses_post($bottom_text); ?>
                 </div>
                 <?php } ?>
+                <div class = 'site-footer__made-by-reach'>
+                    <a href="https://reachdigital.media/?utm_source=website&utm_medium=footer&utm_campaign=menopause" target='_blank'>Design & Development by </a>
+                    <a href ="https://reachdigital.media/?utm_source=website&utm_medium=footer&utm_campaign=menopause"><?= \Reach\Image::get('logo-reach.svg'); ?> </a>
+                </div>
             </div>
         </div>
     </div>
