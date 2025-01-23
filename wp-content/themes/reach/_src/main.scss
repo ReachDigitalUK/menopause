@@ -43,3 +43,17 @@ $asset-path-prefix: './';
 // Utilities/Trumps
 // ----------------------------------------------
 @import './styles/7-utilities/';
+
+
+// ----------------------------------------------
+// Custom background color
+
+    .green-background-color{
+        background-color: var(--color--green);
+    }
+
+    .blue-background-color{
+        background-color: var(--color--blue);
+    }
+
+// ----------------------------------------------
