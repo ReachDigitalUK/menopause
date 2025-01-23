@@ -40,6 +40,12 @@ $colors: (
             ),
         ),
 
+        'light-yellow': ('color': #FDFBE6,
+            'foreground': 'darkgrey',
+            'properties': ('--link--color': 'darkgrey',
+                '--link--color--hover': 'darkgrey',
+            ),
+        ),
 
         'green': ('color': #DAEBDF,
             'foreground': 'white',

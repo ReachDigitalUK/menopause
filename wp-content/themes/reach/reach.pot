@@ -353,11 +353,11 @@ msgid "Page"
 msgstr ""
 
 #. translators: 1: Social network name.
-#: _src/components/site-footer/index.php:43
+#: _src/components/site-footer/index.php:34
 msgid "Visit our %s page"
 msgstr ""
 
-#: _src/components/site-header/index.php:42
+#: _src/components/site-header/index.php:39
 msgid "Main menu button"
 msgstr ""
 
