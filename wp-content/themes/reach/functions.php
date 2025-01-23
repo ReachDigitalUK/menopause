@@ -74,3 +74,30 @@ if (file_exists($autoloader = __DIR__ . '/vendor/autoload.php')) {
 // ----------------------------------------------------
 \Theme\Plugins\ACF::init();
 \Theme\Plugins\YoastSEO::init();
+
+
+//Backgound Color
+
+function custom_background_color($classes) {
+    $color = get_field('background-color');
+    if ($color) {
+
+    switch($color){
+        case 'white':
+            $classes[] = 'white-background-color';
+        case 'green':
+            $classes[] = 'green-background-color';
+            break;
+        case 'blue':
+            $classes[] = 'blue-background-color';
+            break;
+        default:
+            $classes[] = 'default-background-color';
+            break;
+    }
+    }else{
+        $classes[] = 'default-background-color';
+    }
+    return $classes;
+}
+add_filter('body_class', 'custom_background_color');
