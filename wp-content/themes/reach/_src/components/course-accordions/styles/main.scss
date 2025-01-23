@@ -1,0 +1,221 @@
+.course-accordions {
+    $this: &;
+    padding: 4rem 0;
+
+    @include mq($until: large) {
+        padding: 2rem 0;
+    }
+
+    &.bring-below-up {
+        padding-bottom: 16rem;
+        margin-bottom: -12rem;
+
+        @include mq($until: large) {
+            padding-bottom: 12rem;
+            margin-bottom: -12rem;
+        }
+    }
+
+    &.has-background-gradient {
+        .course-accordions__sections {
+            &__section {
+                &__title {
+                    color: #fff;
+
+                    h4 {
+                        flex-grow: 1;
+                        font-size: 2.6rem;
+                        text-align: center;
+                    }
+                }
+
+                &__text {
+                    color: #fff;
+                    text-align: center;
+                    max-width: 50%;
+                    margin: auto;
+
+                    @include mq($until: large) {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__heading {
+        @include typestyle-h3;
+    }
+
+    &__inner {
+        @include align-width--l;
+    }
+
+    &__sections {
+        &__section {
+            border-bottom: 1px solid #D2D2E8;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            &:last-of-type {
+                border-bottom: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            &.active {
+                svg {
+                    transform: rotate(45deg);
+                }
+
+                .course-accordions__sections__section__text {
+                    height: fit-content;
+                    visibility: visible;
+                    opacity: 1;
+                    margin-top: 1rem;
+
+                    @include mq($until: large) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            &__title {
+                text-transform: uppercase;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: space-between;
+                color: #7056A4;
+                font-size: 1rem;
+                cursor: pointer;
+
+                h4 {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
+
+                svg {
+                    width: 2rem;
+                    transition: transform .25s ease;
+                }
+            }
+
+            &__text {
+                height: 0px;
+                visibility: hidden;
+                opacity: 0;
+                transition: height 1s ease, opacity 1s ease;
+            }
+        }
+    }
+
+
+    &__accordion__inner {
+
+        @include align-width--l;
+    }
+
+
+
+
+    &__accordion {
+        &__section {
+            border-bottom: 1px solid #fff;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            // &:last-of-type {
+            //     border-bottom: none;
+            //     padding: 0;
+            //     margin: 0;
+            // }
+
+            &.active {
+                svg {
+                    transform: rotate(45deg);
+                }
+
+                .course-accordions__accordion__section__text {
+                    height: fit-content;
+                    visibility: visible;
+                    opacity: 1;
+                    margin-top: 1rem;
+                    text-align: center !important;
+
+                    @include mq($until: large) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            &__title {
+                text-transform: uppercase;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 1rem;
+                cursor: pointer;
+                position: relative;
+
+                h4 {
+                    text-align: center;
+                    font-size: 3.4rem;
+                    font-weight: 600;
+                    margin: 0;
+                    flex-grow: 1;
+                }
+
+                svg {
+                    width: 2rem;
+                    transition: transform .25s ease;
+                    margin-left: auto;
+                    margin-right: 20px;
+                }
+            }
+
+            &__text {
+                height: 0px;
+                visibility: hidden;
+                opacity: 0;
+                transition: height 1s ease, opacity 1s ease;
+                color: #fff;
+                text-align: center !important;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                p {
+                    text-align: center !important;
+                    max-width: 800px;
+                    padding: 0 20px;
+                }
+
+            }
+
+
+            @media screen and (max-width: 991px) {
+                &__title {
+
+                    h4 {
+                        font-size: 2.4rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+
+}
