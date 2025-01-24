@@ -58,9 +58,10 @@
                 "Card Slider": "Card Slider",
                 "Non-Card Slider": "Non-Card Slider",
                 "Custom Slider": "Custom Slider",
-                "Home": "Home"
+                "Home": "Home",
+                "Reviews": "Reviews"
             },
-            "default_value": "Card Slider",
+            "default_value": "Reviews",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -161,7 +162,8 @@
                 "recent": "Recent Posts",
                 "selected": "Selected Posts",
                 "custom": "Custom Content",
-                "category": "Category"
+                "category": "Category",
+                "reviews": "Reviews"
             },
             "default_value": "recent",
             "return_format": "value",
@@ -565,5 +567,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1732704674
+    "modified": 1737715416
 }

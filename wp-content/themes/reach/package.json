@@ -44,6 +44,7 @@
         "glob": "^8.0.1",
         "gulp": "^4.0.2",
         "gulp-eslint-new": "^1.5.1",
+        "gulp-hash-filename": "^4.1.0",
         "gulp-if": "^3.0.0",
         "gulp-imagemin": "^8.0.0",
         "gulp-phpcbf": "^0.1.2",
@@ -69,12 +70,13 @@
         "stylelint-scss": "^4.2.0",
         "vinyl-named-with-path": "^1.0.0",
         "webpack": "^5",
-        "webpack-stream": "^7.0.0",
-        "gulp-hash-filename": "^4.1.0"
+        "webpack-stream": "^7.0.0"
     },
     "dependencies": {
+        "gul": "^1.0.0",
         "lodash.debounce": "^4.0.8",
-        "normalize.css": "^8.0.1"
+        "normalize.css": "^8.0.1",
+        "swiper": "^11.2.1"
     },
     "overrides": {
         "wp-pot": "1.9.9"

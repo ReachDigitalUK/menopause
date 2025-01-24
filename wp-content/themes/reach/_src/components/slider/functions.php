@@ -16,6 +16,7 @@ function filterArgs(array $args): ?array
         'align' => 'alignwide',
         'break_container' => false,
         'items' => [],
+        'reviews' => [],
     ], $args);
 
     if ($args['break_container']) {
@@ -82,7 +83,35 @@ function filterArgs(array $args): ?array
                     ];
                 }
             }
-        } elseif ($args['card_source'] === 'selected') {
+        } elseif($args['card_source'] === 'reviews'){
+
+            global $wpdb;
+            $table_name = $wpdb->prefix .'grp_google_review';
+            $query = "SELECT * FROM {$table_name} ORDER BY time DESC";
+            $reviews = $wpdb->get_results($query);
+            
+            if ($reviews) {
+                foreach ($reviews as $key => $review) {
+                    $args['items'][$key] = [
+                        'review' => $review,
+                        'id' => $review->id, 
+                        'google_place_id' => $review->google_place_id, 
+                        'rating' => $review->rating, 
+                        'text' => $review->text,
+                        'time' => date('d/m/Y', $review->time), 
+                        'author_name' => $review->author_name, 
+                        'author_url' => $review->author_url, 
+                        'profile_photo_url' => $review->profile_photo_url, 
+                        'language' => $review->language, 
+                    ];
+
+                }
+
+            }
+
+
+
+        }elseif ($args['card_source'] === 'selected') {
             if (!empty($args['selected'])) {
                 foreach ($args['selected'] as $key => $object) {
                     $args['items'][$key] = [
@@ -190,5 +219,8 @@ function filterArgs(array $args): ?array
     // -------------------------------------------------------------------------
     // Return the filtered args.
     // -------------------------------------------------------------------------
-    return $args;
+
+
+
+ return $args;
 }
