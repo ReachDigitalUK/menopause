@@ -8,7 +8,7 @@
                             'el' => 'h4',
                             'heading' => $section['title']
                         ]); ?>
-                        <?= \Reach\SVG::get('icons/plus.svg'); ?>
+                        <?= \Reach\SVG::get('icons/add.svg'); ?>
                     </div>
                     <div class="course-accordions__sections__section__text">
                         <?= $section['content']; ?>

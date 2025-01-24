@@ -1,0 +1,194 @@
+<?php
+
+namespace Reach\Components\Slider;
+
+function filterArgs(array $args): ?array
+{
+    // -------------------------------------------------------------------------
+    // Default arguments.
+    // -------------------------------------------------------------------------
+    $args = array_merge([
+        'cards' => [],
+        'classes' => [],
+        'heading' => 'Hello World',
+        'top_header' => '',
+        'type' => 'default',
+        'align' => 'alignwide',
+        'break_container' => false,
+        'items' => [],
+    ], $args);
+
+    if ($args['break_container']) {
+        $args['classes'][] = 'break-slider-container';
+    }
+
+    // -------------------------------------------------------------------------
+    // Required classes.
+    // -------------------------------------------------------------------------
+    $args['classes'] = array_merge([
+        'slider',
+        'wp-block',
+    ], $args['classes']);
+
+    if (!empty($args['top_header'])) {
+        $args['top_header'] = [
+            'top_header' => $args['top_header'],
+            'classes' => ['slider__top-header'],
+        ];
+    }
+
+    if (!empty($args['all_categories'])) {
+        $args['all_cats'] = $args['all_categories'];
+    }
+
+    if (!empty($args['heading'])) {
+        $args['heading'] = [
+            'heading' => $args['heading'],
+            'classes' => ['slider__heading'],
+        ];
+    }
+
+    // Handle card source types.
+    if (!empty($args['card_source'])) {
+        if ($args['card_source'] === 'custom' && !empty($args['custom_cards'])) {
+            foreach ($args['custom_cards'] as $card) {
+                $args['items'][] = [
+                    'content' => $card,
+                ];
+            }
+        } elseif ($args['card_source'] === 'recent') {
+            $queryArgs = [
+                'post_type' => 'listing',
+                'posts_per_page' => $args['limit'] ?? 10,
+                'post__not_in' => [get_the_ID()],
+                'no_found_rows' => true,
+                'ignore_sticky_posts' => true,
+            ];
+
+            if (!empty($args['all_categories'])) {
+                $queryArgs['category__in'] = $args['all_categories'];
+            }
+
+            if (!empty($args['tag'])) {
+                $queryArgs['tag__in'] = $args['tag'];
+            }
+
+            $query = new \WP_Query($queryArgs);
+
+            if ($query->have_posts()) {
+                foreach ($query->posts as $key => $object) {
+                    $args['items'][$key] = [
+                        'object' => $object,
+                    ];
+                }
+            }
+        } elseif ($args['card_source'] === 'selected') {
+            if (!empty($args['selected'])) {
+                foreach ($args['selected'] as $key => $object) {
+                    $args['items'][$key] = [
+                        'object' => $object,
+                    ];
+                }
+            }
+        } elseif ($args['card_source'] === 'category' && !empty($args['slider_category'])) {
+            $metaQuery = ['relation' => 'OR'];
+
+            foreach ($args['slider_category'] as $category) {
+                $metaQuery[] = [
+                    'key' => 'category',
+                    'value' => is_object($category) ? $category->ID : $category['id'],
+                    'compare' => 'LIKE',
+                ];
+            }
+
+            $sliderArgs = [
+                'posts_per_page' => -1,
+                'post_type' => 'listing',
+                'meta_query' => $metaQuery,
+            ];
+
+            $query = new \WP_Query($sliderArgs);
+
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
+
+                    $sliderTitle = get_the_title();
+                    $id = get_the_ID();
+                    $author = get_the_author_meta('ID');
+                    $category_id = get_field('category', $id);
+                    $category = $category_id ? get_term($category_id)->name : '';
+                    $background = get_field('images', $id)[0]['image'] ?? '';
+                    $link = get_the_permalink();
+
+                    $subs = wcs_get_users_subscriptions($author);
+
+                    $accreditationLevel = '';
+                    foreach ($subs as $sub) {
+                        if ($sub->get_status() === 'active') {
+                            foreach ($sub->get_items() as $item) {
+                                $productId = $item->get_product_id();
+                                $accreditationLevel = ucfirst(get_field('accreditation_level', $productId));
+                            }
+                        }
+                    }
+
+                    $args['items'][] = [
+                        'sub_level' => $accreditationLevel,
+                        'title' => $sliderTitle,
+                        'categories' => $category,
+                        'background' => $background,
+                        'link' => $link,
+                    ];
+                }
+                wp_reset_postdata();
+            }
+        }
+    }
+
+    // Adjust `type` for icons.
+    if (!empty($args['type']) && $args['type'] === 'icons') {
+        $args['type'] = 'icon';
+    }
+
+    // Add button classes.
+    if (!empty($args['button'])) {
+        $args['button']['classes'] = ['g-button'];
+    }
+
+    // Process `items` and add additional properties.
+    if (!empty($args['items'])) {
+        foreach ($args['items'] as $key => $card) {
+            $args['items'][$key] = array_merge([
+                'slider' => true,
+                'type' => $args['type'],
+            ], $card);
+
+            if (!empty($args['card_background_color']) && $args['card_background_color'] !== 'default') {
+                $args['items'][$key]['background'] = $args['card_background_color'];
+            }
+
+            if (!empty($args['card_image_fit']) && $args['card_image_fit'] !== 'default') {
+                $args['items'][$key]['image_fit'] = $args['card_image_fit'];
+            }
+        }
+    }
+
+    // Add column-specific classes.
+    if (!empty($args['columns']) && $args['columns'] !== 'default') {
+        $args['classes'][] = 'cards--columns-' . $args['columns'];
+    }
+
+    // Adjust classes based on `align` and `slider_on_mobile`.
+    if ($args['align'] !== 'full') {
+        $args['slider_on_mobile'] = false;
+    }
+
+    $args['classes'][] = 'cards--type--' . $args['type'];
+    $args['classes'][] = !empty($args['slider_on_mobile']) ? 'cards--slider-on-mobile' : null;
+
+    // -------------------------------------------------------------------------
+    // Return the filtered args.
+    // -------------------------------------------------------------------------
+    return $args;
+}
