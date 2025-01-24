@@ -1,0 +1,31 @@
+{
+    "$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+    "apiVersion": 2,
+    "name": "acf/slider",
+    "title": "Slider",
+    "category": "reach-blocks",
+    "icon": "block-default",
+    "keywords": [],
+    "acf": {
+        "mode": "auto",
+        "renderCallback": "\\Reach\\Component::acfRenderCallback",
+        "postTypes": [
+            "page",
+            "post",
+            "reach-template"
+        ]
+    },
+    "supports": {
+        "anchor": true,
+        "color": {
+            "text": false
+        },
+        "mode": false
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    }
+}
