@@ -19,259 +19,70 @@
         position: relative;
     }
 
-    &__heading {
-        @include typestyle-h3;
+
+    .slider__swiper_inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .swiper {
         cursor: pointer;
     }
 
-    &__container {
-        &.header-beside {
-            display: grid;
-            grid-template-columns: 25% 1fr;
+    .swiper-slide {
 
-            .slider__container__header {
-
-                h2 {
-                    font-family: var(--type--2--font-family) !important;
-                    margin-top: 40px;
-                    margin-bottom: 10px;
-                }
-
-                background: #e8faf6;
-                position: relative;
-                z-index: 10;
-                display: flex;
-                flex-direction: column;
-
-
-                &__link {
-                    a {
-                        text-decoration: none;
-                        color: #1e4545 !important;
-                        font-size: 16px !important;
-                        font-weight: bold;
-                    }
-                }
-
-                h2 {
-                    font-size: 43px !important;
-                    text-transform: uppercase !important;
-                    line-height: 35px !important;
-
-                }
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    width: calc((100vw - var(--width--responsive--l)) / 4);
-                    height: 100%;
-                    background: #e8faf6;
-                    z-index: 10;
-                    left: calc(((100vw - var(--width--responsive--l)) / 4) * -1);
-                }
-            }
-        }
+        background-color: #FEECE9;
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid #FCC7BC;
+        width: 420px !important;
     }
 
-    &__header-container {
-
-        h2 {
-            text-transform: uppercase;
-            font-weight: 900;
-            color: #fff;
-            line-height: 28px;
-        }
-
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__navigation-container {
-        display: flex;
-        justify-content: flex-end;
-        // gap: 10px;
-        // margin-bottom: 20px;
-        align-self: flex-end;
-
-        svg {
-            width: 40%;
-        }
-
-        .left-nav {
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            width: 40px;
-            //background-color: #ED1A70;
-            transition: background-color 0.3s;
-
-            svg {
-                transform: rotate(180deg);
-            }
-
-
-        }
-
-        .left-nav:active,
-        .right-nav:active {
-            background-color: #ed1a7069;
-        }
-
-
-
-
-        .right-nav {
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            width: 40px;
-            //background-color: #ED1A70;
-            transition: background-color 0.3s;
-
-            svg {
-                transform: rotate(360deg);
-            }
-        }
-
-
-    }
-
-
-    //  Slide styles
-
-    .swiper {
-        //margin-top: -30px;
-    }
-
-
-
-
-    //Card Slider
-    #card {
-
-        width: 320px !important;
-
-        article {
-            height: 385px;
-            width: 320px;
-            border-radius: 10px;
-        }
-
-        .details {
-            padding: 1rem 1rem 0 1rem;
-        }
-
-        .cats {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 1rem;
-        }
-
-        .category {
-            background-color: #507dbf;
-            width: fit-content;
-            padding: .2rem 1rem;
-            border-radius: 5px;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .date {
-            svg {
-                width: 1rem;
-                margin-right: .5rem;
-            }
-        }
-
-        a {
-            text-decoration: none;
-            margin-top: 30px;
-        }
-
-        h2 {
-            line-height: 35px;
-            font-size: 38px;
-        }
-
-        .button {
-            font-size: 26px;
-            z-index: 999;
-            position: relative;
-
-        }
-
-        .button:hover {
-            background-color: #fff;
-            color: #000;
-
-        }
-    }
-
-
-    .new-style {
-        position: relative;
-
-
-
-        .details {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            /* Ensure the button is aligned towards the bottom */
-            height: 100%;
-            /* Make sure the container takes the full height */
-            padding: 10px;
-            /* Optional: Add padding around the content if needed */
-        }
-
-        .details h2 {
-            margin: 0 0 auto 0;
-            /* Push h2 upwards by taking remaining space */
-        }
-
-        .details .button {
-            margin-bottom: 33px;
-            /* Ensures 10px spacing from the bottom */
-        }
-
-    }
-
-
-    &__button-container {
-        margin-top: 40px;
+    .swiper_inner{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
 
-        a {
-            text-decoration: none;
-            border: 1px solid #044961;
-            color: #044961;
-            padding: 10px 50px;
-            border-radius: 40px;
-            font-size: 17px;
-            font-weight: 700;
-            transition: 0.3s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .profile-photo{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px 0;
         }
 
-        a:hover {
-            background-color: #044961;
-            color: #fff;
+        .author_date{
+            margin: 5px 0;
+            font-size: 15px;
         }
+
+        .author_name{
+            margin: 5px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .review-text{
+            text-align: center;
+            margin: 5px 0;
+        }
+    
+        .google-icon{
+            width: 40px;
+            height: 40px;   
+            margin: 10px 0;
+        }
+
+        .rating{
+            margin: 5px 0;
+        }
+    
+
+
     }
 
+  
 
 
     @media screen and (max-width: 992px) {
@@ -287,144 +98,8 @@
     }
 
 
-    //Non card Slider
-
-    #non-card {
-        width: auto;
-        height: 12em;
-        background-color: #01FBA5ed;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-evenly;
-
-        h3 {
-            color: #04005E;
-            font-family: 'korolev-compressed', sans-serif;
-            font-weight: 900;
-        }
-
-        a {
-            text-decoration: none;
-            margin-top: 30px;
-        }
-
-        a:last-child {
-            font-family: 'roboto', sans-serif;
-            align-self: flex-end;
-            color: #04005E;
-            text-decoration: none;
-            width: 150px;
-            margin-right: 20px;
-        }
-
-        p::after {
-            transform: rotate(180deg);
-            content: '';
-            background-image: url('./images/icons/right-arrow.svg');
-            height: 20px;
-            display: inline-flex;
-            width: 20px;
-            background-repeat: no-repeat;
-            margin-left: 5px;
-        }
-
-        img {
-            height: 6em;
-            align-self: center;
-            margin-left: 12px;
-        }
-    }
-
-    //Custom
-
-    .custom-home-width {
-        width: 400px;
-
-        h3 {
-            color: #fff;
-        }
-    }
-
-    .custom {
-        img {
-            width: 100%;
-            height: 230px;
-            border-radius: 8px;
-            object-fit: cover;
-            filter: brightness(55%);
-        }
-
-        .custom-badge--Gold::before,
-        .custom-badge--Silver::before {
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            content: "";
-            display: inline-block;
-            height: 39px;
-            margin-right: 10px;
-            position: absolute;
-            top: 8px;
-            width: 30px;
-            right: 0px;
-        }
-
-        .custom-badge--Gold::before {
-            background-image: url(images/icons/badge-gold.svg);
-        }
-
-        .custom-badge--Silver::before {
-            background-image: url(images/icons/badge-silver.svg);
-        }
 
 
-        .custom-badge--Bronze::before {
-            background-image: url(images/icons/badge-bronze.svg);
-        }
-
-
-        .slider__text-inner {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-
-
-
-            h3 {
-                margin: 0px;
-                font-family: var('--type--1--font-family');
-            }
-
-            .category {
-                font-family: var(--type--2--font-family);
-                text-align: center;
-                background-color: #A9D9CE;
-                color: #044961;
-                padding: 2px 14px;
-                border-radius: 20px;
-                width: fit-content;
-                font-size: 15px;
-                font-weight: 100;
-                margin-bottom: 10px;
-            }
-
-
-
-        }
-
-    }
-
-
-    &__header {
-
-        padding: 1rem;
-
-        h2 {
-            color: #27277F;
-            font-weight: 600;
-        }
-
-
-    }
 
     &.break-slider-container {
 
@@ -486,5 +161,4 @@
         }
 
     }
-
 }
