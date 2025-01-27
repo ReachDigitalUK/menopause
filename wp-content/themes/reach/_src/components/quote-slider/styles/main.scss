@@ -1,0 +1,88 @@
+.quote-slider {
+    $this: &;
+
+    &__inner {
+        @include align-width--l;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+
+    }
+
+
+    &__media-image{
+        display: flex;
+        width: 300px;
+        img{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    &__quote{
+        width: 800px;
+    }
+
+    &__media{
+        display: flex;
+    }
+
+    &__media-text{
+        display: flex;
+        flex-direction: column;
+
+        h5{
+            margin: 0px;
+        }
+    }
+
+    &__quote {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h5{
+        margin: 0px;
+      }
+
+      p{
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+    }
+
+}
+
+/* Define the fade-out and fade-in animations */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-out class */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Apply the fade-in class */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
