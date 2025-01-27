@@ -1,0 +1,14 @@
+<svg id="Interface-Essential-_-Date_Calendar-_-calendar-upload" data-name="Interface-Essential-/-Date/Calendar-/-calendar-upload" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group">
+    <g id="calendar-upload">
+      <circle id="Oval" cx="6" cy="6" r="6" transform="translate(11.25 11.25)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Shape" y1="6" transform="translate(17.25 14.25)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Shape-2" data-name="Shape" x1="2.25" y2="2.25" transform="translate(15 14.25)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Shape-3" data-name="Shape" x2="2.25" y2="2.25" transform="translate(17.25 14.25)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Shape-4" data-name="Shape" d="M8.25,17.25h-6a1.5,1.5,0,0,1-1.5-1.5V3.765a1.5,1.5,0,0,1,1.5-1.5h13.5a1.5,1.5,0,0,1,1.5,1.5V8.25" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
+      <line id="Shape-5" data-name="Shape" x2="16.5" transform="translate(0.75 6.75)" fill="none" stroke="#dedede" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Shape-6" data-name="Shape" y1="3" transform="translate(5.243 0.75)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Shape-7" data-name="Shape" y1="3" transform="translate(12.743 0.75)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
