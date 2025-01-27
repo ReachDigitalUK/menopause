@@ -131,3 +131,37 @@ function handle_get_quotes() {
     $quotes = $args['items'];
     wp_send_json_success($quotes);
 }
+
+add_action('wp_ajax_fetch_posts', 'handle_get_posts');
+add_action('wp_ajax_nopriv_fetch_posts', 'handle_get_posts');
+
+function handle_get_posts(){
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'post_status' => 'publish',
+    );
+    $posts = get_posts($args);
+    if ($posts) {
+        foreach ($posts as $key => $post) {
+
+            //date format is 22 June 2021
+            $date = date('j F Y', strtotime($post->post_date));
+
+            $args['items'][$key] = [
+                'post' => $post,
+                'date' => $date,
+                'category' => get_the_category($post->ID),
+                'id' => $post->ID, 
+                'title' => $post->post_title, 
+                'content' => $post->post_content,
+                'excerpt' => $post->post_excerpt,
+                'link' => get_permalink($post->ID),
+                'image' => get_the_post_thumbnail_url($post->ID, 'full'),
+            ];
+
+        }
+    }
+    $posts = $args['items'];
+    wp_send_json_success($posts);
+}

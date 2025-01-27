@@ -1,6 +1,8 @@
 .featured-news-item {
     $this: &;
 
+    padding-top: 150px;
+
     &__inner {
         @include align-width--l;
         display: flex;
@@ -10,7 +12,7 @@
     }
     &__content {
        width: 30%;
-       background-color: #f5f5f5;
+       background-color: #fff;
        display: flex;
        flex-direction: column;
         justify-content: center;
