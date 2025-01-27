@@ -101,3 +101,33 @@ function custom_background_color($classes) {
     return $classes;
 }
 add_filter('body_class', 'custom_background_color');
+
+
+
+
+/* annoyingly I can't add this to the functions.php in my block */
+
+add_action('wp_ajax_get_quotes', 'handle_get_quotes');
+add_action('wp_ajax_nopriv_get_quotes', 'handle_get_quotes');
+
+function handle_get_quotes() {
+
+    global $wpdb;
+    $table_name = $wpdb->prefix .'grp_google_review';
+    $query = "SELECT * FROM {$table_name} ORDER BY time DESC";
+    $reviews = $wpdb->get_results($query);
+    
+    if ($reviews) {
+        foreach ($reviews as $key => $review) {
+            $args['items'][$key] = [
+                'review' => $review,
+                'id' => $review->id, 
+                'rating' => $review->rating, 
+                'text' => $review->text,
+            ];
+
+        }
+    }
+    $quotes = $args['items'];
+    wp_send_json_success($quotes);
+}
