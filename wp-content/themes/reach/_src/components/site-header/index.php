@@ -16,6 +16,7 @@
                 'content_filter' => false,
             ]); ?>
 
+
             <div class='site-header__reviews-rating'>
                 <?=  do_shortcode('[reviews_rating]'); ?>
             </div>
@@ -29,6 +30,7 @@
                     ],
             ]); ?>
             </div>
+
 
          <?= \Reach\Component::get('burger', [
         'classes' => [

@@ -47,6 +47,7 @@ $site-header--top--background: 'white';
     }
 
     @include mq($until: 'site-header') {
+        height: 0px;
         &--positioned {
             position: absolute;
 
@@ -97,6 +98,10 @@ $site-header--top--background: 'white';
         //     grid-auto-flow: column;
         //     grid-template-rows: unset;
         // }
+
+        @include mq($until: 'site-header'){
+            visibility: hidden;
+        }
     }
 
     &__top {
@@ -108,6 +113,10 @@ $site-header--top--background: 'white';
         background-color: var(--color--#{$site-header--top--background});
         gap: var(--site-header--spacing);
         justify-items: flex-start;
+
+        @include mq($until: 'site-header'){
+            height: 120px;
+        }
 
         @include mq('site-header') {
             padding-right: 0;
@@ -136,6 +145,8 @@ $site-header--top--background: 'white';
         @include mq($until: 'site-header') {
             --link--color: var(--color--foreground);
             --link--color--hover: var(--color--foreground);
+
+            height: 0px;
 
             @include color-context($site-header--bottom--background);
 
@@ -313,6 +324,13 @@ $site-header--top--background: 'white';
 
 
     &__reviews-rating{
+
+        @include mq($until: 'site-header') {
+            display: none;
+        }
+
+
+
         .gmbrr.badge.tiny{
             box-shadow: none;
             padding: 0px;
@@ -331,6 +349,11 @@ $site-header--top--background: 'white';
         }
     }
 
+    .menu-wrapper{
+        @include mq($until: 'site-header') {
+            display: none;
+        }
+    }
 
     .menu-wrapper .menu-list{
         gap: 10px!important;

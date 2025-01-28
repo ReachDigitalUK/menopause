@@ -76,7 +76,12 @@
     .has-children{
         display: inline-flex;
         padding: 10px;
+
+        @include mq($until: 'site-header'){
+            display: block;
+        }
     }
+
 
 
 
@@ -297,7 +302,7 @@
     &.active {
         .site-header__bottom {
             display: block !important;
-            height: calc(100vh - var(--site-header--height));
+            height: calc(100vh);
             border-top: 2px solid #EAEAEA;
             opacity: 1 !important;
             visibility: visible !important;
