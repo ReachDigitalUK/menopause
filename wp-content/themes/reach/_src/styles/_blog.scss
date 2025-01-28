@@ -1,0 +1,86 @@
+.single-post{
+
+
+    $this: &;
+
+    &__container
+    {
+       padding-top: 100px;
+    }
+
+    &__content{
+        @include align-width--l;
+    }
+
+    &__category{
+        border-radius: 99px;
+        background-color: var(--color--lightblue);
+        width: fit-content;
+        padding: 2px 15px;
+
+       ul{
+            list-style: none;
+            text-decoration: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+       }
+
+        a{
+            text-decoration: none;
+       }
+
+    }
+
+    &__date{
+
+        color: var(--color--lightgrey);
+        position: relative;
+
+        margin-top: 0px;
+        margin-bottom: 2em;
+
+        &::before{
+            background-image: url('/wp-content/themes/reach/_src/images/calendar.svg');
+            content: " ";
+            display: inline-flex;
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top:10px;
+        }
+    }
+
+    &__image{
+
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
