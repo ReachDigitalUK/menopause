@@ -6,7 +6,7 @@
     $this: &;
     $footer-breakpoint--small: 400px;
 
-    //padding-top: var(--space--xl);
+    padding-top: var(--space--xl);
     //padding-bottom: var(--space--xl);
 
     &__logo { grid-area: logo; }

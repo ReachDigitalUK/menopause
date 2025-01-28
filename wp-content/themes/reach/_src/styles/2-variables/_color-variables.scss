@@ -18,7 +18,7 @@ $colors: (
                 '--link--color--hover': var(--color--blue),
             ),
         ),
-        'blue': ('color': #00ade9,
+        'blue': ('color': #CEECF5,
             'foreground': 'white',
             'properties': ('--link--color': var(--color--white),
                 '--link--color--hover': var(--color--white),
@@ -33,6 +33,8 @@ $colors: (
         'lightpink': ('color': #FEECE9,
         ),
 
+        'background-gray': ('color': #F4F4F4,
+        ),
 
 
 
