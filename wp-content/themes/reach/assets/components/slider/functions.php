@@ -17,6 +17,7 @@ function filterArgs(array $args): ?array
         'break_container' => false,
         'items' => [],
         'reviews' => [],
+        'background_colour' => '#FFF',
     ], $args);
 
     if ($args['break_container']) {
@@ -49,17 +50,11 @@ function filterArgs(array $args): ?array
         ];
     }
 
-    // Handle card source types.
     if (!empty($args['card_source'])) {
-        if ($args['card_source'] === 'custom' && !empty($args['custom_cards'])) {
-            foreach ($args['custom_cards'] as $card) {
-                $args['items'][] = [
-                    'content' => $card,
-                ];
-            }
-        } elseif ($args['card_source'] === 'recent') {
+
+        if ($args['card_source'] === 'recent') {
             $queryArgs = [
-                'post_type' => 'listing',
+                'post_type' => 'post',
                 'posts_per_page' => $args['limit'] ?? 10,
                 'post__not_in' => [get_the_ID()],
                 'no_found_rows' => true,
@@ -220,6 +215,14 @@ function filterArgs(array $args): ?array
     // Return the filtered args.
     // -------------------------------------------------------------------------
 
+    if (!empty($args['background_colour'])) {
+        $args['attributes']['style']['--text-background-colour'] = $args['background_colour'];
+    }
+
+
+    // echo '<pre>';
+    // print_r($args);
+    // echo '</pre>';
 
 
  return $args;
