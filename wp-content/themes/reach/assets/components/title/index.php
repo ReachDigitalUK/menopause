@@ -10,7 +10,9 @@
             <p class="title__description"><?= $args['description']; ?></p>
         <?php endif; ?>
         <?php if (!empty($args['button'])){ ?>
-            <a href="<?= $args['button']['url']; ?>" class="<?= $args['button_class']; ?>"><?= $args['button']['text']; ?></a>
+            <div class="title__button">
+                <a href="<?= $args['button']['url']; ?>" class="<?= $args['button_class']; ?>"><?= $args['button']['text']; ?></a>
+            </div>
         <?php } ?>
     </div>
 </section>

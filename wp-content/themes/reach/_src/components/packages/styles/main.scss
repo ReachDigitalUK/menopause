@@ -1,0 +1,156 @@
+.packages {
+    $this: &;
+
+    --package-background: #fff;
+
+    &__inner {
+        @include align-width--l;
+    }
+
+    &__heading {
+        color: #044961;
+        @include typestyle-h3;
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+        font-family: var(--type--1--font-family);
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq($until: large) {
+            max-width: 100%;
+        }
+
+        @include mq($until: small) {
+            font-size: 32px;
+        }
+    }
+
+    &__content {
+        color: #044961;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 4rem;
+        max-width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq($until: large) {
+            max-width: 100%;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 4rem;
+
+        @include mq($until: large) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq($until: small) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+            background: var(--package-background);
+            color: #fff;
+            padding: 1rem 2rem;
+            font-family: var(--type--2--font-family);
+
+            h3 {
+                font-size: 28px;
+                font-weight: 600;
+                margin-bottom: 0.6rem;
+            }
+
+            &__price {
+                width: fit-content;
+                margin-left: auto;
+                font-family: var(--type--1--font-family);
+
+                .woocommerce-Price-amount {
+                    font-size: 32px;
+                    font-weight: 600;
+
+                    .woocommerce-Price-currencySymbol {
+                        vertical-align: super;
+                        font-weight: 400;
+                        font-size: 1.6rem;
+                    }
+                }
+
+                .subscription-details {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        &__image {
+            top: -68px;
+            position: absolute;
+        }
+
+        &__features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            color: #044961;
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: space-between;
+            padding: 1rem 2rem 2rem 2rem;
+            padding-top: calc(68px + 1rem);
+            height: 100%;
+            position: relative;
+        }
+
+        &__feature {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-weight: 600;
+
+            svg {
+                width: 1.6rem;
+                color: #0EB14B;
+
+                path {
+                    fill: #0EB14B;
+                }
+            }
+        }
+
+        .button {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-color: #00A6B5;
+            width: 100%;
+            padding: 10px 40px;
+            border-radius: 99px;
+            font-weight: 700;
+            align-self: center;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}

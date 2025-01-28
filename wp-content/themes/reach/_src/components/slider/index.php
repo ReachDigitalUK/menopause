@@ -96,6 +96,5 @@ if ($args['card_source'] === 'recent') {
             </div>
         </div>
     </section>
-
 <?php
 }
