@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_679261f606cd2",
-            "label": "background-color",
+            "label": "Page Background Colour",
             "name": "background-color",
             "aria-label": "",
             "type": "select",
@@ -50,5 +50,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1737647293
+    "modified": 1738091401
 }

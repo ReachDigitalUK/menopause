@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.35 24.35"><g data-name="Group 7"><path data-name="Path 25" d="m22.936 22.936-5.179-5.188m2.87-6.934A9.813 9.813 0 1 1 10.813 1a9.813 9.813 0 0 1 9.813 9.813Z" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24.35" height="24.35" viewBox="0 0 24.35 24.35">
+  <g id="search" transform="translate(-15 -15)">
+    <g id="Group_7" data-name="Group 7" transform="translate(16 16)">
+      <path id="Path_25" data-name="Path 25" d="M37.936,37.936l-5.179-5.188m2.87-6.934A9.813,9.813,0,1,1,25.813,16a9.813,9.813,0,0,1,9.813,9.813Z" transform="translate(-16 -16)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -16,18 +16,21 @@
                     <div class="packages__item">
                         <div class="packages__item__header" style="--package-background: <?= $package['background']; ?>;">
                             <?= \Reach\Component::get('heading', ['heading' => $package['product']->get_name(), 'el' => 'h3']); ?>
-                            <div class="packages__item__header__price">
-                                <?= $package['product']->get_price_html(); ?>
+                            <div class="packages__item__header__description">
+                                <p><?=  $package['product']->get_description(); ?></p>
                             </div>
+                            <!-- <div class="packages__item__header__price">
+                                <?// $package['product']->get_price_html(); ?>
+                            </div> -->
                         </div>
                         <div class="packages__item__body">
-                            <div class="packages__item__image">
-                                <?= $package['product']->get_image(); ?>
-                            </div>
+                            <!-- <div class="packages__item__image">
+                                <? //$package['product']->get_image(); ?>
+                            </div> -->
                             <div class="packages__item__features">
                                 <?php foreach ($package['features'] as $feature) { ?>
                                     <div class="packages__item__feature">
-                                        <?= \Reach\SVG::get('check-circle.svg'); ?>
+                                        <?= \Reach\SVG::get('check.svg'); ?>
                                         <span><?= $feature['feature']; ?></span>
                                     </div>
                                 <?php } ?>
