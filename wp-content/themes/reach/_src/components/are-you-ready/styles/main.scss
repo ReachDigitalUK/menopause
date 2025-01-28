@@ -1,0 +1,15 @@
+.are-you-ready {
+    $this: &;
+
+    padding-top: 10em;
+    padding-bottom: 10em;
+    background: var(--text-background-colour);
+
+    &__inner {
+        @include align-width--l;
+    }
+
+    &__heading {
+        @include typestyle-h3;
+    }
+}
