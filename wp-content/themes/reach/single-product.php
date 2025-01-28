@@ -22,8 +22,8 @@ $components = [];
 
 $components[] = \Reach\Component::get('product-details', ['product' => $product]);
 
-$components[] = \Reach\Component::get('reviews');
-$components[] = \Reach\Component::get('did-you-know');
+// $components[] = \Reach\Component::get('reviews');
+// $components[] = \Reach\Component::get('did-you-know');
 
 $components[] = '</div>';
 
