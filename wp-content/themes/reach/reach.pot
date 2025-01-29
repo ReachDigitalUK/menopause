@@ -357,7 +357,7 @@ msgstr ""
 msgid "Visit our %s page"
 msgstr ""
 
-#: _src/components/site-header/index.php:39
+#: _src/components/site-header/index.php:41
 msgid "Main menu button"
 msgstr ""
 

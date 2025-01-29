@@ -52,7 +52,7 @@
         margin-bottom: 4rem;
 
         @include mq($until: large) {
-            grid-template-columns: repeat(2, 1fr);
+           flex-direction: column;
         }
 
         @include mq($until: small) {
@@ -70,6 +70,15 @@
         position: relative;
 
 
+        @include mq($until: large) {
+            width: 100%;
+            margin-bottom: 60px;
+
+            &:nth-child(2) {
+                margin-top: 0px!important;
+            }
+         }
+
 
         &:nth-child(2) {
             margin-top: -50px;
@@ -86,8 +95,6 @@
                 margin-left: 40px;
 
             }
-
-
         }
     
 

@@ -14,6 +14,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+
+        @include mq($until: large) {
+            flex-direction: column;
+         }
     }
 
     &__filters{
@@ -82,8 +86,12 @@
 
     &__item{
         width: calc(25% - 30px);
-   
         border-radius: 10px;
+
+        @include mq($until: large) {
+            width: 100%;
+            margin-bottom: 20px;
+         }
     }
 
     &__item__image{
