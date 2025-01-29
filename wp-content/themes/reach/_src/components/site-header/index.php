@@ -21,7 +21,7 @@
                 <?=  do_shortcode('[reviews_rating]'); ?>
             </div>
 
-            <div class='menu-wrapper'>
+            <div class='menu-wrapper' id='main-menu'>
                 <?= \Reach\Component::get('menu', [
                     'theme_location' => 'header-top',
                     'menu_id' => 'header', // Required for 'aria-controls' in burger component.

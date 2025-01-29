@@ -4,16 +4,31 @@
     padding-top: 80px;
 
     &__buttons {
-        background-color: var(--color--white)
+        background-color: var(--color--white);
+
+        @include mq($until: large) {
+           padding-top: 50px;
+
+        }
     }
 
     &__button_inner{
         @include align-width--l;
         display: flex;
         justify-content: flex-end;
-       padding-bottom: 5px;
-       padding-top: 5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
 
+        @include mq($until: large) {
+           gap: 5px;
+
+           a{
+                 padding: 7px 7px!important;
+            }
+
+        }
+
+      
     }
 
     &__title{
