@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
-  <g id="Group_837" data-name="Group 837" transform="translate(-1418 -2764)">
-    <g id="ico-facebook" transform="translate(1427.396 2775)">
-      <g id="Group_836" data-name="Group 836" transform="translate(13.604 5)">
-        <path id="Path_7054" data-name="Path 7054" d="M17.018,32.073h5.7V20.66h5.135l.564-5.671h-5.7V12.125A1.425,1.425,0,0,1,24.143,10.7h4.275V5H24.143a7.125,7.125,0,0,0-7.125,7.125v2.864h-2.85L13.6,20.66h3.414Z" transform="translate(-13.604 -5)" fill="#5c5c5c"/>
-      </g>
-    </g>
-    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(1418 2764)" fill="none" stroke="#5c5c5c" stroke-width="1">
-      <circle cx="30" cy="30" r="30" stroke="none"/>
-      <circle cx="30" cy="30" r="29.5" fill="none"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g data-name="Group 837"><g data-name="Group 836"><path data-name="Path 7054" d="M26.414 43.073h5.7V31.66h5.135l.564-5.671h-5.7v-2.864a1.425 1.425 0 0 1 1.426-1.425h4.275V16h-4.275a7.125 7.125 0 0 0-7.125 7.125v2.864h-2.85l-.568 5.671h3.414Z" fill="#5c5c5c"/></g><g data-name="Ellipse 5" fill="none" stroke="#5c5c5c"><circle cx="30" cy="30" r="30" stroke="none"/><circle cx="30" cy="30" r="29.5"/></g></g></svg>
