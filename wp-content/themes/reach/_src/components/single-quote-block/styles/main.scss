@@ -1,5 +1,21 @@
 .single-quote{
+
+      
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
+
     $this: &;
+
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
+    padding: var(--text-padding);
 
     &__inner {
         @include align-width--l;
@@ -8,13 +24,14 @@
         display: flex;
         position: relative;
         height: 35em;
+      
 
 
         &::before{
             content: '';
             background: url('/wp-content/themes/reach/_src/images/opening-quote.svg');
-            height: 10em;
-            width: 10em;
+            height: 15em;
+            width: 15em;
             position: absolute;
             top: 0;
             left: 50%;
@@ -47,7 +64,8 @@
 
     &__title{
         h3{
-            font-size: 56px;
+            font-size: 44px;
+            font-family: var(--type--1--font-family);
         }
        
     }
@@ -55,7 +73,7 @@
     &__text{
         p{
             margin: 0;
-            font-size: 20px;
+            font-size: 16px;
         }
 
     }

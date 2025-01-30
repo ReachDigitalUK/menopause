@@ -26,7 +26,7 @@
                     <h4><?= $args['job_title']; ?></h4>
                 </div>
                 <div class='who-we-are__name'>
-                    <h3><?= $args['name_and_title']; ?></h3>
+                    <h2><?= $args['name_and_title']; ?></h2>
                 </div>
                 <div class='who-we-are__description'>
                     <p><?= $args['description']; ?></p>

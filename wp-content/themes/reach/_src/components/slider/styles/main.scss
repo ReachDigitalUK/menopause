@@ -8,16 +8,27 @@
 
 
 .slider {
-    background: var(--text-background-colour);
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
 
     $this: &;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
+
 
     &__inner {
         @include align-width--l;
         z-index: 8;
         position: relative;
+        padding: var(--text-padding);
     }
 
 

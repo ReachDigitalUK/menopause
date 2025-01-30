@@ -193,7 +193,8 @@
                     },
                     "choices": {
                         "button-yellow": "Yellow Button",
-                        "button-certificate": "Certificate Button"
+                        "button-certificate": "Certificate Button",
+                        "button-light-yellow": "Light Yellow"
                     },
                     "default_value": "button-yellow",
                     "return_format": "value",
@@ -206,6 +207,28 @@
                     "parent_repeater": "field_679250f7121fa"
                 }
             ]
+        },
+        {
+            "key": "field_679a4d71287c8",
+            "label": "Styling",
+            "name": "styling",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_672b6163d608e"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -227,5 +250,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1737650674
+    "modified": 1738228476
 }

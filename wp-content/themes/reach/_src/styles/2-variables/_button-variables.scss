@@ -31,6 +31,18 @@
     color:  var(--color--black);
     text-decoration: none;
     background-color: var(--color--yellow);
+    font-family: var(--type--1--font-family);
+    font-weight: 600;
+}
+
+.button-light-yellow{
+    border-radius: 30px;
+    padding: 10px 30px;
+    color:  var(--color--black);
+    text-decoration: none;
+    background-color: #FDFBE6;
+    font-family: var(--type--1--font-family);
+    font-weight: 600;
 }
 
 .button-certificate {
@@ -47,3 +59,4 @@
     display: inline-block;
     margin-right: 10px;
 }
+
