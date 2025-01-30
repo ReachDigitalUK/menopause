@@ -1,4 +1,4 @@
-.title {
+.image-block {
 
     --text-margin: 2rem 0rem;
     --text-padding: 0rem;
@@ -14,19 +14,19 @@
     margin: var(--text-margin);
     text-align: var(--text-text-align);
 
-
+    padding: var(--text-padding);
    
+
     &__inner {
         @include align-width--l;
         text-align: center;
         font-family: var(--type--1--font-family);
         padding: var(--text-padding);
 
+        background-size: cover;
+     }
 
-
-    }
-
-    &__sub-heading{
+     &__sub-heading{
         font-size: 24px;
         margin-bottom: 0px;
         margin-top: 0px;
@@ -52,7 +52,4 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
-
-  
 }
-
