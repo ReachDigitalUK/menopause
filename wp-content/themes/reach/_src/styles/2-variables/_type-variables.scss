@@ -1,7 +1,9 @@
 // ---------------------------------------------------
 // Type Variables
 // ---------------------------------------------------
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://use.typekit.net/xzk2eov.css');
+
+
 
 $type-min-width: 320px;
 $type-max-width: 1200px;
@@ -11,7 +13,7 @@ $base-font-size: 16px;
 @mixin type-variables {
     --type--font-size--base: #{$base-font-size};
 
-    --type--1--font-family: 'Montserrat', sans-serif;
+    --type--1--font-family: 'Cy Text', sans-serif;
     --type--1--font-weight: 400;
     --type--1--font-weight--bold: 700;
     --type--1--line-height: 1.5;

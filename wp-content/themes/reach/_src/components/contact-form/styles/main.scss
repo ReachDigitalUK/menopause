@@ -1,0 +1,76 @@
+.contact-form {
+    $this: &;
+    padding-top: 100px;
+
+    &__inner {
+        @include align-width--l;
+        padding: 50px;
+        border-radius: 30px;
+        background-color: #fff;
+
+
+        h2{
+            text-align: center;
+            padding: 50px 0;
+            margin: 0px;
+        }
+
+        .gform_heading{
+            display: none;
+        }
+
+        .gform-body{
+            input[type="text"], input[type="email"], input[type="tel"], textarea, select{
+                width: 100%;
+                padding: 30px;
+                margin-bottom: 20px;
+                border: 1px solid #DEE1E3;
+                border-radius: 30px;
+                box-shadow: none;
+                outline: none;
+            }
+
+            input[type="checkbox"]{
+                border-radius: 99px;
+                width: 30px;
+                height: 30px;
+                border-color: #A3CEB0;
+                border-width: 2px;
+                color: red;
+
+                &:focus{
+                    border-color: #A3CEB0
+                }
+
+                &::before{
+                    color:#A3CEB0;
+                }
+            }
+        }
+
+
+
+        .gform-footer{
+            justify-content: center;
+
+
+            input[type="submit"]{
+
+                border-radius: 30px!important;
+                padding: 20px 60px!important;
+                color:  var(--color--black)!important;
+                text-decoration: none!important;
+                background-color: var(--color--yellow)!important;
+
+                &:hover{
+                    background-color: #8ABE9B;
+                }
+            }
+
+        }
+
+
+
+    }
+
+}

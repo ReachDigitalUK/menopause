@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_67927b41345f7",
-            "label": "sub_heading",
+            "label": "Sub Heading",
             "name": "sub_heading",
             "aria-label": "",
             "type": "text",
@@ -25,7 +25,7 @@
         },
         {
             "key": "field_67927ba9345f8",
-            "label": "heading",
+            "label": "Heading",
             "name": "heading",
             "aria-label": "",
             "type": "text",
@@ -124,6 +124,33 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_679b473ec1424",
+            "label": "Span Text",
+            "name": "span_text",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "100%": "One Line",
+                "630px": "Two Lines"
+            },
+            "default_value": "two_line",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -145,5 +172,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1738090341
+    "modified": 1738229920
 }

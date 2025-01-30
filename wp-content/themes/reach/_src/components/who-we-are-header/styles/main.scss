@@ -1,5 +1,19 @@
 .who-we-are{
+   
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
+
     $this: &;
+
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
 
     padding-top: 80px;
 
@@ -18,6 +32,7 @@
         justify-content: flex-end;
         padding-bottom: 5px;
         padding-top: 5px;
+        gap: 10px;
 
         @include mq($until: large) {
            gap: 5px;
@@ -35,11 +50,17 @@
         background-color: var(--color--green-dark);
         color: var(--color--white);
         height: 200px;
+        h2{
+            font-size: 56px;
+            font-family: var(--type--1--font-family);
+        }
+ 
     }
 
     &__title__text{
         @include align-width--l;
         padding-top: 30px;
+        font-weight: 700;
     }
 
     &__content__inner{
@@ -49,6 +70,31 @@
         margin-top: -100px;
         flex-direction: column;
         align-items: center;
+        font-family: var(--type--1--font-family);
+    }
+
+    &__job{
+        margin-top:35px;
+        h4{ 
+            font-family: var(--type--1--font-family);
+            margin: 0px;
+            font-size: 20px;
+        }
+    }
+    &__name{
+        h2{
+            font-family: var(--type--1--font-family);
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+    }
+
+    &__description{
+        p{
+            font-family: var(--type--1--font-family);
+            font-weight: 600;
+            margin: 0px;
+        }
     }
 
     &__content__image{

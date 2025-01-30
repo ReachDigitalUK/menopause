@@ -27,6 +27,9 @@ function filterArgs(array $args): ?array
         ];
     }
 
+
+
+
     if (!empty($args['margin'])) {
         $args['attributes']['style']['--text-margin'] = implode(' ', $args['margin']);
     }
@@ -44,6 +47,9 @@ function filterArgs(array $args): ?array
     }
     if (!empty($args['text_align'])) {
         $args['attributes']['style']['--text-text-align'] = $args['text_align'];
+    }
+    if(!empty($args['span_text'])) {
+        $args['attributes']['style']['--text-span'] = $args['span_text'];
     }
 
 
