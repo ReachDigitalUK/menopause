@@ -93,6 +93,11 @@
         }
 
         &__content {
+
+            h2, p{
+                font-family: var(--type--1--font-family);
+            }
+          
             width: calc(100% - var(--flag-media-size));
 
             @include mq($until: medium) {

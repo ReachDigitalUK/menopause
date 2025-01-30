@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const firstCategory =
                     post.category && post.category.length > 0 ? post.category[0].name : 'Uncategorized';
 
+                    const truncatedTitle = post.title.length > 50 ? post.title.substring(0, 55) + '...' : post.title;
+
                 return `
                 <div class="post-grid__item">
                     <div class="post-grid__item__image">
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                     <div class="post-grid__item__content">
                         <p>${post.date}</p>
-                        <h3>${post.title}</h3>
+                        <h3>${truncatedTitle}</h3>
                         <a href="${post.link}">Read more</a>
                     </div>
                 </div>

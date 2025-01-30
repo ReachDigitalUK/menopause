@@ -234,9 +234,6 @@ function filterArgs(array $args): ?array
     // Return the filtered args.
     // -------------------------------------------------------------------------
 
-    if (!empty($args['background_colour'])) {
-        $args['attributes']['style']['--text-background-colour'] = $args['background_colour'];
-    }
 
 
     // echo '<pre>';
