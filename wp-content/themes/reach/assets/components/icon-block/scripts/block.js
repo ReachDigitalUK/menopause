@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./_src/components/homepage-heo/scripts/block.js":
-/*!*******************************************************!*\
-  !*** ./_src/components/homepage-heo/scripts/block.js ***!
-  \*******************************************************/
+/***/ "./_src/components/icon-block/scripts/block.js":
+/*!*****************************************************!*\
+  !*** ./_src/components/icon-block/scripts/block.js ***!
+  \*****************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// import Componentname from './Componentname.js';\n\n// window.addEventListener('DOMContentLoaded', () => {\n//     const items = document.querySelectorAll('.componentname');\n\n//     [...items].forEach((item) => {\n//         new Componentname(item);\n//     });\n// });\n\n//# sourceURL=webpack://reach/./_src/components/homepage-heo/scripts/block.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n// import Componentname from './Componentname.js';\n\n// window.addEventListener('DOMContentLoaded', () => {\n//     const items = document.querySelectorAll('.componentname');\n\n//     [...items].forEach((item) => {\n//         new Componentname(item);\n//     });\n// });\n\n//# sourceURL=webpack://reach/./_src/components/icon-block/scripts/block.js?");
 
 /***/ })
 
@@ -43,7 +43,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// import Componentname from 
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./_src/components/homepage-heo/scripts/block.js"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_modules__["./_src/components/icon-block/scripts/block.js"](0, __webpack_exports__, __webpack_require__);
 /******/ 	
 /******/ })()
 ;

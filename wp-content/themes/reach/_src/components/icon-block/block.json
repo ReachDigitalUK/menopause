@@ -1,8 +1,8 @@
 {
     "$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
     "apiVersion": 2,
-    "name": "blockname",
-    "title": "Reach - Block Name",
+    "name": "icon-block",
+    "title": "Reach - Icon Block",
     "category": "reach-blocks",
     "icon": "block-default",
     "keywords": [],
