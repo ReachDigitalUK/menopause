@@ -1,7 +1,26 @@
 .quote-slider {
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
+
     $this: &;
 
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
+    padding: var(--text-padding);
+
+    @include mq($until: medium) {
+       padding-top: 3em;
+    }
+
     &__inner {
+        padding: var(--text-padding);
         @include align-width--l;
         background-color: #fff;
         border-radius: 20px;
@@ -12,13 +31,35 @@
         gap: 30px;
         padding: 30px;
 
+    
         @include mq($until: large) {
            flex-direction: column;
            height: auto;
+
+           max-width: 100%;
+           margin-left: unset;
+           margin-right: unset;
+        }
+    }
+
+
+
+    .home-page-hero::after{
+        content: '';
+        background-image: url('/wp-content/themes/reach/_src/images/woman-cut-out.svg');
+        background-repeat: no-repeat;
+        width: 720px;
+        height: 500px;
+        position: absolute;
+        display: block;
+        bottom: 150px;
+        right: 0;
+
+        @include mq($until: large) {
+            display: none;
         }
 
     }
-
 
     &__media-image{
         display: flex;

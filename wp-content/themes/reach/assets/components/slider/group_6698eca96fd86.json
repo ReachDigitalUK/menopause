@@ -1,6 +1,6 @@
 {
     "key": "group_6698eca96fd86",
-    "title": "Block - Card Slider",
+    "title": "Block - Slider",
     "fields": [
         {
             "key": "field_6698eca9713c3",
@@ -589,5 +589,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1738063801
+    "modified": 1738251014
 }

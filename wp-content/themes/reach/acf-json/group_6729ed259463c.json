@@ -1,6 +1,6 @@
 {
     "key": "group_6729ed259463c",
-    "title": "VVKT - Product",
+    "title": "Block - Product",
     "fields": [
         {
             "key": "field_6729ed25cffad",
@@ -115,5 +115,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1738078367
+    "modified": 1738250927
 }
