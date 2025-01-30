@@ -34,7 +34,7 @@ class Helpers
                 } elseif (is_bool($val)) {
                     return $val ? \esc_html($key) : '';
                 } elseif (is_array($val)) {
-                    $val = array_unique($val);
+                   // $val = array_unique($val);
 
                     if (empty($val)) {
                         return '';

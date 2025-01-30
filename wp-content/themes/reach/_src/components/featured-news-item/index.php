@@ -12,7 +12,7 @@
                     <?= $args['feautured_post']['post_date']; ?>
                 </div>
                 <div class='featured-news-item__title'>
-                    <?= $args['feautured_post']['post_title']; ?>
+                    <h3><?= $args['feautured_post']['post_title']; ?></h3>
                 </div>
                 <div class='featured-news-item__read-more'>
                     <a href='<?= $args['feautured_post']['post_link']; ?>'>Read More</a>
