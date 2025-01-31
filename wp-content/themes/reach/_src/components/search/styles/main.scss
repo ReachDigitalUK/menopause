@@ -1,11 +1,17 @@
 .search {
     margin-left: auto;
 
+    @include mq($until: 'site-header'){
+       margin-left: unset;
+       display: none;
+    }
+
     $this: &;
 
     &__inner{
         display: flex;
         align-items: center;
+        padding: 10px;
     }
 
 

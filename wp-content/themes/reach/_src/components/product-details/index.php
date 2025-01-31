@@ -30,8 +30,8 @@
                             <?php foreach ($perks as $perk) { ?>
                                 <div class='package-item-perk' data-name=''>
                                     <h4><?php echo $perk['feature']; ?></h4>
-                                    <a class='info-modal' data-name='<?php echo $perk['feature']; ?>' data-description='<?php echo $perk['feature-description'] ?>'><img src="/wp-content/themes/reach/_src/images/infosmall.svg)"></a>
-                                </div>
+                                    <!---<a class='info-modal' data-name='<?php //echo $perk['feature']; ?>' data-description='<?php //echo $perk['feature-description'] ?>'><img src="/wp-content/themes/reach/_src/images/infosmall.svg)"></a> -->
+                                 </div> 
                             <?php } ?>
 
                             </ul>

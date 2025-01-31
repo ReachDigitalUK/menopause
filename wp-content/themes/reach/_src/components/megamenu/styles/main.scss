@@ -7,6 +7,7 @@
     &__inner {
         display: flex;
         align-items: center;
+        padding: 10px;
 
         &__toplevel {
             display: flex;
@@ -20,8 +21,9 @@
     }
 
     .top-level-mega {
+        font-family: var(--type--1--font-family);
         @include mq($until: large) {
-            font-size: 3rem !important;
+            font-size: 2rem !important;
         }
     }
 
@@ -30,13 +32,14 @@
         z-index: 7;
         text-decoration: none;
         color:  var(--color--black) !important;
-        font-weight: 700 !important;
+        font-weight: 600 !important;
         padding: 0.6rem 0;
         border-bottom: 2px solid transparent;
+        font-family: var(--type--1--font-family);
 
         @include mq($until: 'site-header') {
             font-size: 1rem !important;
-            color: #044961 !important;
+            color: #5C5C5C !important;
         }
     }
 
@@ -75,7 +78,7 @@
 
     .has-children{
         display: inline-flex;
-        padding: 10px;
+        //padding: 10px;
 
         @include mq($until: 'site-header'){
             display: block;
@@ -144,10 +147,12 @@
             height: fit-content;
             position: static;
             border-top: none;
+
+            background-color: unset;
         }
 
         a {
-            color: #044961 !important;
+            color: #5C5C5C !important;
         }
 
         &.active {
@@ -173,7 +178,7 @@
             @include mq($until: large) {
                 padding: 0;
                 margin-right: 0px;
-                margin-left: 20px !important;
+                margin-left: 60px !important;
             }
         }
 
@@ -222,6 +227,10 @@
 
             .full-width.first-child{
                 font-size: 25px;
+
+                @include mq($until: large) {
+                    display: none;
+                }
             }
 
             &__header {
@@ -236,19 +245,20 @@
 
                 &.full-width {
                     width: 100%;
+                    font-family: var(--type--1--font-family);
                 }
 
                 &__toggle {
                     display: none;
                     align-items: center;
                     justify-content: center;
-                    color: #fff;
+                    color: #5c5c5c;
                     font-weight: 400;
                     height: 2rem;
                     width: 2rem;
                     border-radius: 100%;
                     transition: transform 0.3s linear;
-                    background: #044961;
+                    background: #C8E1CF;
                     font-size: 1.4rem;
                     cursor: pointer;
 

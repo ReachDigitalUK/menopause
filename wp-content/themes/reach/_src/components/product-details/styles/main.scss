@@ -8,19 +8,26 @@
 
         .back{
             text-decoration: underline;
+
+                color: #5C5C5C;
+                font-family: var(--type--1--font-family);
+                text-decoration: none;
+                font-weight: 700;
         }
 
 
         .back::before {
-            background-image: url(/wp-content/themes/reach/_src/images/arrow-left.svg);
+            background-image: url('/wp-content/themes/reach/_src/images/arrow-right.svg');
             background-repeat: no-repeat;
+            transform: rotate(180deg);
             content: "";
             display: inline-block;
             height: 25px;
             margin-right: 10px;
             position: relative;
             width: 25px;
-            top: 12px;
+
+
         }
 
     }
@@ -40,13 +47,16 @@
     }
 
     &__description {
+
+       
     }
 
     &__information {
 
-        color: #044961;
+        color: #5C5C5C;
         .item-desciption{
             padding-bottom: 20px;
+            font-family: var(--type--1--font-family);
         }
 
         width: 50%;
@@ -83,6 +93,8 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 0px;
+            font-family: var(--type--1--font-family);
+          
         }
 
         &__price {
@@ -93,6 +105,8 @@
             span {
                 font-size: 26px;
                 display: inline-flex;
+                font-family: var(--type--1--font-family);
+                
 
                 bdi {
                     margin-right: 0.2rem;
@@ -127,9 +141,11 @@
 
 
         .all-perks{
+            font-family: var(--type--1--font-family);
 
             a{
                 cursor: pointer;
+                font-family: var(--type--1--font-family);
             }
 
 
@@ -149,7 +165,7 @@
         }
 
             .package-item-perk{
-                display: flex;
+                display: inline-flex;
 
                 a{
                     margin-top: 6px;
@@ -164,7 +180,15 @@
 
             h3{
                 font-size: 20px;
-                margin-bottom: 2px!important;
+                margin-bottom: 20px!important;
+                font-family: var(--type--1--font-family);
+            }
+
+            h4{
+                font-family: var(--type--1--font-family);
+                font-size: 20px;
+                display: inline-flex;
+
             }
 
             h4::before {
@@ -176,7 +200,6 @@
                     margin-right: 10px;
                     position: relative;
                     width: 35px;
-                    top: 9px;
                     background-size: 25px;
                 }
 

@@ -64,6 +64,28 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_6729ed3ecffae"
+                },
+                {
+                    "key": "field_679cc5e8ed7d9",
+                    "label": "Feature Description",
+                    "name": "feature_description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6729ed3ecffae"
                 }
             ]
         },
@@ -115,5 +137,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1738250927
+    "modified": 1738327546
 }

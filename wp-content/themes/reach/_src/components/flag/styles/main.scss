@@ -2,6 +2,13 @@
 
     padding-top: 100px!important;
 
+    @include mq($until: large) {
+        padding-top: 0px!important;
+        padding-bottom: 0px;
+    }
+
+
+
     --flag-media-size: 50%;
     --flag-media-direction: row;
     --flag-row-gap: 2rem;
@@ -94,6 +101,19 @@
 
         &__content {
 
+            margin-bottom: 0px;
+
+            p{
+                margin-bottom: 0px;
+                margin-top:5px;
+            }
+
+
+            ul{
+                padding-left: 10px;
+            }
+
+
             h2, p{
                 font-family: var(--type--1--font-family);
             }
@@ -105,6 +125,7 @@
             }
 
             &__button {
+                margin-top: 10px;
                 .reach-button {
                     @include mq($until: medium) {
                         display: block;
@@ -113,5 +134,28 @@
                 }
             }
         }
+
+        &__content__bullets{
+            display: flex;
+            gap: 40px; 
+        }
+
+
+        
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .no-bullet {
+            list-style-type: none; /* Removes the bullet */
+            text-indent: -15px; /* Aligns it with the bullet points */
+
+        }
+        
+        .bold-text {
+            font-weight: bold; /* Makes the text bold */
+        }
+
     }
 }
