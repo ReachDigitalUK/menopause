@@ -3,7 +3,7 @@
         <div class="quote-slider__inner <?php if (!empty($args['quote_slider_type'])){ echo $args['quote_slider_type']; } ?>">
             <div class='quote-slider__media'>
                 <div class='quote-slider__media-image'>
-                    <img src='/wp-content/themes/reach/_src/images/quote-pic.svg'>
+                    <img src='/wp-content/themes/reach/_src/images/quote-pic.png'>
                 </div>
                 <div class='quote-slider__media-text'>
                     <div class='quote-slider__review-average'></div>

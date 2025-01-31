@@ -202,6 +202,12 @@ $site-header--top--background: 'white';
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @include mq($until: 'site-header'){
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 15px;
+        }
     }
 
 

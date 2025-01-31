@@ -19,7 +19,7 @@
 
     &__inner {
         @include align-width--l;
-        padding: var(--text-padding)
+        padding: var(--text-padding);
     }
 
     &__heading {

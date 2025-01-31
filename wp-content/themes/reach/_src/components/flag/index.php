@@ -16,6 +16,35 @@
                     </div>
                 <?php } ?>
 
+           
+                <?php if (!empty($args['bullet_points'])) { ?>
+                <div class="flag__layout__content__bullets">
+                    <div class="column">
+                        <ul>
+                            <?php foreach (array_slice($args['bullet_points'], 0, 5) as $bullet) { ?>
+                                <li><?= htmlspecialchars($bullet['point']); ?></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <?php 
+                            $totalItems = count($args['bullet_points']);
+                            $lastIndex = $totalItems - 1;
+
+                            foreach (array_slice($args['bullet_points'], 5) as $index => $bullet) { 
+                                $isLast = ($index + 5 === $lastIndex); // Check if it's the last item
+                            ?>
+                                <li <?= $isLast ? 'class="no-bullet bold-text"' : ''; ?>>
+                                    <?= htmlspecialchars($bullet['point']); ?>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>
+            <?php } ?>
+
+
                 <?php if (!empty($args['button'])) { ?>
                     <div class="flag__layout__content__button">
                         <a href="<?= $args['button']['url']; ?>" class="<?= $args['button_class'];?>"><?= $args['button']['title']; ?></a>
