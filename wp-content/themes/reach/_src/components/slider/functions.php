@@ -11,7 +11,6 @@ function filterArgs(array $args): ?array
         'cards' => [],
         'classes' => [],
         'heading' => 'Hello World',
-        'top_header' => '',
         'type' => 'default',
         'align' => 'alignwide',
         'break_container' => false,

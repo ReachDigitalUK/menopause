@@ -38,6 +38,7 @@
                         flex-grow: 1;
                         font-size: 2.6rem;
                         text-align: center;
+                        font-family: var(--type--1--font-family);
                     }
                 }
 
@@ -98,7 +99,6 @@
             }
 
             &__title {
-                text-transform: uppercase;
                 display: flex;
                 gap: 1rem;
                 align-items: center;
@@ -109,8 +109,9 @@
 
                 h4 {
                     font-size: 1.4rem;
-                    font-weight: 600;
+                    font-weight: 400;
                     margin: 0;
+                    font-family: var(--type--1--font-family);
                 }
 
                 svg {
@@ -124,6 +125,7 @@
                 visibility: hidden;
                 opacity: 0;
                 transition: height 1s ease, opacity 1s ease;
+                font-family: var(--type--1--font-family);
             }
         }
     }
