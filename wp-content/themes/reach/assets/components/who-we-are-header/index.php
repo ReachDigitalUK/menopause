@@ -14,7 +14,7 @@
         </div>
 
         <div class="who-we-are__title">
-            <h2 class="who-we-are__title__text"><?= $args['title']; ?></h2>
+            <h1 class="who-we-are__title__text"><?= $args['title']; ?></h1>
         </div>
 
         <div class='who_we_are__content'>

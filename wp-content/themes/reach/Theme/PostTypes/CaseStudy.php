@@ -6,9 +6,9 @@
 
 namespace Theme\PostTypes;
 
-class Event
+class CaseStudy
 {
-    protected const SLUG = 'event';
+    protected const SLUG = 'case-study';
 
     public static function init(): void
     {
@@ -35,8 +35,8 @@ class Event
             'hierarchical' => false,
             'show_in_rest' => true,
             'menu_position' => 25, // Below comments.
-            'menu_icon' => 'dashicons-calendar',
-            'enter_title_here' => 'Event Name',
+            'menu_icon' => 'dashicons-open-folder',
+            'enter_title_here' => 'Case Study Name',
             'supports' => [
                 'title',
                 'editor',
@@ -88,8 +88,8 @@ class Event
             ],
         ], [
             // Override the base names used for labels (optional).
-            'singular' => \__('Event', 'reach'),
-            'plural'   => \__('Events', 'reach'),
+            'singular' => \__('Case Study', 'reach'),
+            'plural'   => \__('Case Study', 'reach'),
             'slug'     => self::SLUG,
         ]);
     }
@@ -104,9 +104,9 @@ class Event
         }
 
         \acf_add_options_sub_page([
-            'page_title'  => \__('Events Settings', 'reach'),
-            'menu_title'  => \__('Events Settings', 'reach'),
-            'menu_slug'   => 'acf-options-events-settings',
+            'page_title'  => \__('Case Study Settings', 'reach'),
+            'menu_title'  => \__('Case Study Settings', 'reach'),
+            'menu_slug'   => 'acf-options-case-study-settings',
             'parent_slug' => 'edit.php?post_type=' . self::SLUG,
         ]);
     }

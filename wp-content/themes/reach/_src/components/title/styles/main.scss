@@ -23,8 +23,8 @@
         padding: var(--text-padding);
         
         @include mq($until: large) {
-           padding-top: 1em;
-            padding-bottom: 1em;
+           padding-top: 4em;
+            padding-bottom:0em;
          }
 
 

@@ -28,6 +28,14 @@
         @include align-width--l;
         z-index: 8;
         position: relative;
+
+
+        @include mq($until: large) {
+            padding-top: 4em;
+            padding-bottom: 2em;
+        }
+
+
         padding: var(--text-padding);
     }
 
@@ -36,10 +44,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+
+        @include mq($until: large) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
 
         h2{
-            font-size: 30px;
+            font-size: 40px;
             font-family: var(--type--1--font-family);
             margin-top:0px;
             margin-bottom: 0px;
@@ -65,18 +79,19 @@
     }
 
     &__navigation{
-        margin-left: -15px;
-        margin-right: -15px;
+            margin-left: -15px;
+            margin-right: -15px;
 
-        display: flex;
+            display: flex;
             gap: 10px;
             position: relative;
             top: 250px;
             justify-content: space-between;
             z-index: 99999;
-       gap: 10px;
+            gap: 10px;
         svg{
             width: 40px;
+            cursor: pointer;
         }
     }
 
@@ -98,8 +113,8 @@
         padding: 30px;
         border-radius: 20px;
         border: 1px solid #FCC7BC;
-        width: 420px !important;
-        height: 420px!important;
+        width: 320px !important;
+        height: 400px!important;
     }
 
     .swiper_inner{
@@ -109,8 +124,8 @@
         flex-direction: column;
 
         .profile-photo{
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             margin: 10px 0;
         }
@@ -149,7 +164,7 @@
         padding: 0px;
         border-radius: 20px;
         background-color: var(--color--white);
-        width: 420px !important;
+        width: 320px !important;
     }
 
 
@@ -167,6 +182,7 @@
             height: 200px;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+            object-fit: cover;
         }
 
         .post-category{
@@ -181,6 +197,7 @@
 
         .post-content{
             padding: 20px;
+            height: 200px;
         }
 
         .post_title{

@@ -3,7 +3,7 @@
 <div class="single-post__container">
 
 <div class='single-post__return'>
-            <a href="/news-and-insights/">Back to News & insights</a>
+            <a href="/free-resource/">Back to Free resources</a>
         </div>
 
 
@@ -42,22 +42,6 @@
     <div class="single-post__slider">
         <?php 
 
-
-        
-        $components[] = \Reach\Component::get('slider', [
-            'top_header' => 'You may also like',
-            'card_source' => 'recent',
-            'post_type' => 'post',
-            'limit' => 14,
-            'break_container' => false,
-            'background_colour' => '#FDFBE6',
-            'padding' => ['5rem', '0rem', '5rem', '0rem'],
-            'margin' => ['0', '0', '0', '0'],
-            'text_colour' => '#5c5c5c',
-            'show_navigation' => false
-            
-        ],
-        );
 
         $components[] = \Reach\Component::get('are-you-ready', [
 

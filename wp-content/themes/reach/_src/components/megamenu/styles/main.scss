@@ -275,7 +275,7 @@
                 border-top: none;
 
                 @include mq($until: large) {
-                    padding-left: 1rem;
+                  //  padding-left: 1rem;
 
                 }
 
@@ -356,8 +356,8 @@ html.menu-open {
     }
 
     .megamenu-child__child__header.full-width {
-        font-size: 20px !important;
-        font-weight: 600 !important;
+        font-size: 1rem !important;
+        font-weight: 200!important;
     }
 
     .megamenu-child__child__header-wrap.active {

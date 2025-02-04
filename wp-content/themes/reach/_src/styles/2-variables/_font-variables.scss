@@ -1,18 +1,11 @@
 // Define our font-face stacks here.
 @mixin font-variables {
     @font-face {
-        font-display: fallback;
-        font-family: 'Cy';
+        font-display: swap;
+        font-family: 'Cy Text';
         font-style: normal;
         font-weight: normal;
         src: url('https://use.typekit.net/xzk2eov.css') format('woff2');
     }
 
-    @font-face {
-        font-display: fallback;
-        font-family: 'Example';
-        font-style: italic;
-        font-weight: normal;
-        src: url('./static/subset-Example-Italic.woff2') format('woff2');
-    }
 }

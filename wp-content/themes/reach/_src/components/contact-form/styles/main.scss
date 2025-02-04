@@ -25,11 +25,12 @@
         background-color: #fff;
 
 
-        h3{
+        h1{
             text-align: center;
             padding: 50px 0;
             margin: 0px;
             font-family: var(--type--1--font-family);
+            font-size: 36px;
         }
 
         .gform_heading{
@@ -44,6 +45,7 @@
                 border-radius: 30px;
                 box-shadow: none;
                 outline: none;
+                cursor: pointer;
             }
 
              .gform_fields, .gform-grid-row{
@@ -60,6 +62,7 @@
                 border-color: #A3CEB0;
                 border-width: 2px;
                 color: red;
+                cursor: pointer;
 
                 &:focus{
                     border-color: #A3CEB0

@@ -27,12 +27,12 @@
             'menu-2'
             'right';
 
-        @include mq($footer-breakpoint--small) {
-            grid-template-areas:
-                'logo logo'
-                'top-text menu-1'
-                'menu-2 right';
-        }
+        // @include mq($footer-breakpoint--small) {
+        //     grid-template-areas:
+        //         'logo logo'
+        //         'top-text menu-1'
+        //         'menu-2 right';
+        // }
 
         @include mq(medium) {
             grid-template-areas:
@@ -49,17 +49,37 @@
         > * {
             @include no-first-last-margin;
         }
+
+
+        a{
+            font-weight: 600;
+            text-decoration: none;
+            color: #000;
+            transition: all 0.5s ease;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 
     &__logo {
+
+        @include mq($until: large) {
+            text-align: center;
+        }
         a {
             display: inline-block;
             width: 100%;
             max-width: rem(130);
 
+       
+
             @include mq(medium) {
                 max-width: rem(165);
             }
+
+          
         }
 
         img {
@@ -99,6 +119,10 @@
             grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 3 columns with a minimum width */
             grid-template-rows: auto; /* Rows adjust to content height */
             gap: var(--space--xs); 
+
+            @include mq($until: large) {
+                text-align: center;
+            }
         }
 
         a {
@@ -126,6 +150,7 @@
         display: flex;
         flex-flow: row wrap;
         align-items: flex-start;
+        justify-content: center;
     }
 
     &__images {
@@ -151,9 +176,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-
-
+        
 
         .number{
             display: none;
@@ -182,6 +205,18 @@
             }
 
         }
+
+
+        @include mq($until: large){
+
+            flex-direction: column;
+            gap: 10px;
+
+            .footer-images{
+                justify-content: center;
+            }
+        }
+
     }
 
     &__bottom {
@@ -194,6 +229,26 @@
             display: flex;
             justify-content: space-between;
             @include align-width--l;
+
+            a{
+                font-weight: 600;
+                text-decoration: none;
+                color: #000;
+                transition: all 0.5s ease;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+
+            @include mq($until: large) {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+
+
         }
 
         #{$this}__bottom-text {
@@ -202,6 +257,7 @@
             max-width: 60em;
             text-align: left;
         }
+        
     }
 
     &__made-by-reach{
@@ -209,8 +265,15 @@
         gap: 10px;
         align-items: end;
 
+        @include mq($until: large){
+            flex-direction: column;
+            align-items: center;
+        }
+
         img{
             height: 30px;
         }
+
+
     }
 }

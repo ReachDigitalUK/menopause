@@ -17,13 +17,16 @@
 
     padding-top: 80px;
 
+    @include mq($until: large) {
+        padding-top: 0px!important;
+        padding-bottom: 3rem;
+
+     }
+
     &__buttons {
         background-color: var(--color--white);
 
-        @include mq($until: large) {
-           padding-top: 50px;
 
-        }
     }
 
     &__button_inner{
@@ -38,7 +41,7 @@
            gap: 5px;
 
            a{
-                 padding: 7px 7px!important;
+                 padding: 5px 5px!important;
             }
 
         }
@@ -72,6 +75,18 @@
         align-items: center;
         font-family: var(--type--1--font-family);
     }
+
+    &__content__image{
+
+        img{
+            border-radius: 100%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
+       
+    }
+
 
     &__job{
         margin-top:35px;

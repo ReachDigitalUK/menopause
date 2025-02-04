@@ -1,10 +1,10 @@
 .flag {
 
-    padding-top: 100px!important;
+   
 
     @include mq($until: large) {
-        padding-top: 0px!important;
-        padding-bottom: 0px;
+        padding-top: 1rem!important;
+        padding-bottom: 1rem;
     }
 
 
@@ -126,6 +126,7 @@
 
             &__button {
                 margin-top: 10px;
+                margin-bottom: 10px;
                 .reach-button {
                     @include mq($until: medium) {
                         display: block;

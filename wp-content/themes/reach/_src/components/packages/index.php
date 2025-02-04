@@ -36,7 +36,7 @@
                                 <?php } ?>
                             </div>
                             <div class="packages__item__button">
-                                <?= \Reach\Component::get('link', ['title' => 'Learn more', 'url' => $package['product']->get_permalink(), 'classes' => ['button']]); ?>
+                                <?= \Reach\Component::get('link', ['title' => 'Learn more', 'url' => $package['product']->get_permalink(), 'classes' => ['button-yellow']]); ?>
                             </div>
                         </div>
                     </div>

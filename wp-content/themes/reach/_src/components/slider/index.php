@@ -31,6 +31,20 @@ if($args['card_source'] === 'reviews'){
 <section <?= \Reach\Helpers::buildAttributes($args['attributes']); ?> style="margin-top: 0px; margin-bottom: 0px;">
     <div class="slider__inner">
 
+    <?php if(!empty($args['top_header_slider'])) { ?>
+            <div class="slider__top-header">
+                <h2><?= $args['top_header_slider']; ?></h2>
+                <a href="<?= $args['cta']['url']; ?>"><?php echo $args['cta']['title']; ?></a>
+            </div>
+        <?php } ?>
+
+        <?php if($args['show_navigation'] === true) { ?>
+            <div class="slider__navigation">
+                <div class="left-nav"><?= \Reach\SVG::get('slider-left.svg'); ?></div>
+                <div class="right-nav"><?= \Reach\SVG::get('slider-right.svg'); ?></div>
+            </div>
+        <?php } ?>
+
           <div class="swiper cards-slider">
                 <div class="swiper-wrapper">
                     <?php
@@ -110,7 +124,7 @@ if ($args['card_source'] === 'recent') {
                                 <div class="post-content">
                                     <p class="post_date"><?= esc_html(get_the_date('F j, Y', $post->ID)); ?></p>
                                     <p class="post_title"><?= esc_html($post->post_title); ?></p>
-                                    <a class= 'post_link' href="<?= esc_url(get_author_posts_url($post->post_author)); ?>">Read more</a>
+                                    <a class= 'post_link' href="<?= esc_url(get_the_permalink($post->ID)); ?>">Read more</a>
                                 </div>
                             </div>
                         </div>

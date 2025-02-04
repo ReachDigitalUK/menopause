@@ -15,7 +15,7 @@
 
 
     @include mq($until: large) {
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
 
     &.bring-below-up {
@@ -67,13 +67,16 @@
 
     &__sections {
         &__section {
-            border-bottom: 1px solid #D2D2E8;
             margin-bottom: 1rem;
             display: flex;
             flex-direction: column;
             background-color: var(--color--pink);
             border-radius: 20px;
             padding: 40px;
+
+            @include mq($until: large) {
+                padding: 20px;
+            }
 
             &:last-of-type {
                 border-bottom: none;
@@ -112,6 +115,10 @@
                     font-weight: 400;
                     margin: 0;
                     font-family: var(--type--1--font-family);
+
+                    @include mq($until: large) {
+                        font-size: 1.2rem;
+                    }
                 }
 
                 svg {
