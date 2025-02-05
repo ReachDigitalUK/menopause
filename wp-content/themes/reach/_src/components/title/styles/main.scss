@@ -43,6 +43,10 @@
         text-align: center;
         margin: 10px auto;
         word-wrap: break-word;
+
+        h1, h2{
+            font-size: 48px;
+        }
     }   
 
     &__description{

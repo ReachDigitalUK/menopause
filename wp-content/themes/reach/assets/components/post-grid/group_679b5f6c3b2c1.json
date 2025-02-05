@@ -19,7 +19,7 @@
             "choices": {
                 "post": "Post",
                 "case-study": "Case Study",
-                "free-resources": "Free Resource"
+                "free-resource-list": "Free Resource"
             },
             "default_value": "post",
             "return_format": "value",

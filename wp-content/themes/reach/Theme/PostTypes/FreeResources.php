@@ -8,7 +8,7 @@ namespace Theme\PostTypes;
 
 class FreeResources
 {
-    protected const SLUG = 'free-resource';
+    protected const SLUG = 'free-resource-list';
 
     public static function init(): void
     {

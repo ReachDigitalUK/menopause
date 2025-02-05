@@ -63,7 +63,7 @@
             ); ?>
 
                     <div class='call-to-action'>
-                        <a href='/book/' class='button-yellow'>Book consultation</a>
+                        <a href='/' class='button-yellow'>Book consultation</a>
                     </div>
 
                 </div>

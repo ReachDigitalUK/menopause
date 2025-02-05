@@ -4,8 +4,14 @@
             <h3 class="title__sub-heading"><?= $args['sub_heading']; ?></h3>
         <?php endif; ?>
         <?php if (!empty($args['heading'])): ?>
-            <h2 class="title__heading"><?= $args['heading']['heading']; ?></h2>
-        <?php endif; ?>
+    <?php 
+        $headingType = !empty($args['heading_type']) ? $args['heading_type'] : 'h2'; 
+    ?>
+    <<?php echo $headingType; ?> class="title__heading">
+        <?php echo htmlspecialchars($args['heading']['heading'], ENT_QUOTES, 'UTF-8'); ?>
+    </<?php echo $headingType; ?>>
+<?php endif; ?>
+
         <?php if (!empty($args['description'])): ?>
             <p class="title__description"><?= $args['description']; ?></p>
         <?php endif; ?>

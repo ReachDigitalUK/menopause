@@ -45,6 +45,33 @@
             "append": ""
         },
         {
+            "key": "field_67a23ea7dcdba",
+            "label": "Heading Type",
+            "name": "heading_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2"
+            },
+            "default_value": "h2",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_67927baf345f9",
             "label": "Description",
             "name": "description",
@@ -172,5 +199,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1738575949
+    "modified": 1738687195
 }

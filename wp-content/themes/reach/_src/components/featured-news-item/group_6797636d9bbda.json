@@ -19,7 +19,7 @@
             "post_type": [
                 "post",
                 "case-study",
-                "free-resources"
+                "free-resource-list"
             ],
             "post_status": [
                 "publish"
