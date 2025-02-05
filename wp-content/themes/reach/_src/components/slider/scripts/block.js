@@ -1,29 +1,34 @@
+/* eslint-disable  */
 import Swiper from 'swiper';
 import { Navigation, Scrollbar } from 'swiper/modules';
 
 window.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.slider__inner');
-    [...items].forEach(() => {
-        new Swiper('.cards-slider', {
+    const sliders = document.querySelectorAll('.slider__inner');
+
+    sliders.forEach((slider, index) => {
+        const swiper = new Swiper(slider.querySelector('.cards-slider'), {
             direction: 'horizontal',
             modules: [Navigation, Scrollbar],
-            autoHeight: true,
-            slidesPerView: 3.1,
+            slidesPerView: 1,
             spaceBetween: 30,
+            centeredSlides: false,
+            roundLengths: true,
+            speed: 600,
+            loop: false,
 
             navigation: {
-                nextEl: '.right-nav',
-                prevEl: '.left-nav',
+                nextEl: slider.querySelector('.right-nav'),
+                prevEl: slider.querySelector('.left-nav'),
             },
 
             scrollbar: {
-                el: '.swiper-scrollbar',
+                el: slider.querySelector('.swiper-scrollbar'),
                 draggable: true,
             },
 
             breakpoints: {
                 0: {
-                    slidesPerView: 1.1,
+                    slidesPerView: 1,
                 },
                 812: {
                     slidesPerView: 2.1,
@@ -32,6 +37,9 @@ window.addEventListener('DOMContentLoaded', () => {
                     slidesPerView: 3.1,
                 },
             },
+
+            freeMode: false,
+            slidesPerGroup: 1,
         });
     });
 });

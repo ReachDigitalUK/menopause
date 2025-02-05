@@ -18,7 +18,7 @@
 
 
             <div class='site-header__reviews-rating'>
-                <?=  do_shortcode('[reviews_rating]'); ?>
+               <a href='<?php if(get_field('header_reviews_link', 'options')){echo get_field('header_reviews_link', 'options'); } ?>' target='_BLANK'> <?=  do_shortcode('[reviews_rating]'); ?>
             </div>
 
             <div class='menu-wrapper' id='main-menu'>
@@ -63,7 +63,7 @@
             ); ?>
 
                     <div class='call-to-action'>
-                        <a href='/book/' class='button-yellow'>Book consultation</a>
+                        <a href='/' class='button-yellow'>Book consultation</a>
                     </div>
 
                 </div>

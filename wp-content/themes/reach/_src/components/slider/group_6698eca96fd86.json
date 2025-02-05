@@ -23,7 +23,7 @@
         {
             "key": "field_6698eca9713c8",
             "label": "Heading",
-            "name": "top_header",
+            "name": "top_header_slider",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -36,9 +36,27 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_679cf0383ca47",
+            "label": "Header CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         },
         {
             "key": "field_66a8b5be758ab",
@@ -589,5 +607,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1738251014
+    "modified": 1738338792
 }

@@ -2,7 +2,7 @@
     <div class='featured-news-item__container'>
         <div class='featured-news-item__inner'>
             <div class='featured-news-item__image'>
-                <img src='<?= $args['feautured_post']['post_image']; ?>' />
+            <a href='<?= $args['feautured_post']['post_link']; ?>'><img src='<?= $args['feautured_post']['post_image']; ?>' /></a>
             </div>
             <div class='featured-news-item__content'>
                 <div class = 'featured-news-item__category'>
@@ -12,7 +12,7 @@
                     <?= $args['feautured_post']['post_date']; ?>
                 </div>
                 <div class='featured-news-item__title'>
-                    <h3><?= $args['feautured_post']['post_title']; ?></h3>
+                <a href='<?= $args['feautured_post']['post_link']; ?>'><h1><?= $args['feautured_post']['post_title']; ?></h1></a>
                 </div>
                 <div class='featured-news-item__read-more'>
                     <a href='<?= $args['feautured_post']['post_link']; ?>'>Read More</a>

@@ -21,7 +21,11 @@
         text-align: center;
         font-family: var(--type--1--font-family);
         padding: var(--text-padding);
-
+        
+        @include mq($until: large) {
+           padding-top: 4em;
+            padding-bottom:0em;
+         }
 
 
     }
@@ -39,6 +43,10 @@
         text-align: center;
         margin: 10px auto;
         word-wrap: break-word;
+
+        h1, h2{
+            font-size: 48px;
+        }
     }   
 
     &__description{

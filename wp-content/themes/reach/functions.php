@@ -62,6 +62,8 @@ if (file_exists($autoloader = __DIR__ . '/vendor/autoload.php')) {
 // \Theme\PostTypes\Event::init();
 \Theme\PostTypes\Page::init();
 \Theme\PostTypes\Post::init();
+\Theme\PostTypes\CaseStudy::init();
+\Theme\PostTypes\FreeResources::init();
 
 // ----------------------------------------------------
 // Custom Taxonomies.
@@ -136,8 +138,11 @@ add_action('wp_ajax_fetch_posts', 'handle_get_posts');
 add_action('wp_ajax_nopriv_fetch_posts', 'handle_get_posts');
 
 function handle_get_posts(){
+
+    $post_type = isset($_POST['post_type']) ? sanitize_text_field($_POST['post_type']) : 'post';
+
     $args = array(
-        'post_type' => 'post',
+        'post_type' => $post_type,
         'posts_per_page' => -1,
         'post_status' => 'publish',
     );
@@ -165,3 +170,13 @@ function handle_get_posts(){
     $posts = $args['items'];
     wp_send_json_success($posts);
 }
+
+/* Disable Category Pages */
+
+function disable_category_pages() {
+    if (is_category()) {
+        wp_redirect(home_url()); // Redirect to homepage
+        exit;
+    }
+}
+add_action('template_redirect', 'disable_category_pages');

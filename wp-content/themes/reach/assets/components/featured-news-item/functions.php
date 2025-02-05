@@ -30,17 +30,20 @@ function filterArgs(array $args): ?array
     // -------------------------------------------------------------------------
     if (isset($args['feautured_post']) && is_object($args['feautured_post'])) {
         $featured_post = $args['feautured_post'];
-
+    
         $formatted_date = date_i18n('jS F Y', strtotime($featured_post->post_date));
+    
+        // Get categories and select only the first one (non-link)
+        $categories = get_the_category($featured_post->ID);
+        $first_category = !empty($categories) ? esc_html($categories[0]->name) : 'Uncategorized';
     
         $args['feautured_post'] = [
             'post_title' => $featured_post->post_title ?? 'Default Title',
             'post_date' => $formatted_date ?? 'No Date',
-            'post_category' => get_the_category_list(', ', '', $featured_post->ID) ?? 'Uncategorized',
+            'post_category' => $first_category, // Now it's plain text, no link
             'post_image' => has_post_thumbnail($featured_post->ID) ? get_the_post_thumbnail_url($featured_post->ID, 'full') : null,
             'post_link' => get_permalink($featured_post->ID),
         ];
-
     }
 
     if (!empty($args['margin'])) {

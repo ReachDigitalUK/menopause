@@ -80,6 +80,9 @@ $site-header--top--background: 'white';
             grid-auto-flow: column;
             grid-template-rows: unset;
         }
+
+
+
     }
 
 
@@ -126,8 +129,30 @@ $site-header--top--background: 'white';
 
         a{
             font-weight: 600;
+            text-decoration: none;
+            color: #000;
+            transition: all 0.5s ease;
+
+            &:hover{
+                text-decoration: underline;
+            }
         }
 
+
+
+    }
+
+    &__reviews-rating{
+
+        a{
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.5s ease;
+
+            &:hover{
+                text-decoration: none!important;
+            }
+        }
     }
 
     &__bottom {

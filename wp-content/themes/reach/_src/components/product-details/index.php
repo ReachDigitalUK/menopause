@@ -7,11 +7,7 @@
                 <?php do_action('woocommerce_before_main_content'); ?>
 
                 <div class="product-details__gallery__images">
-                    <?php
-                    $imageIds = array_slice($args['product']->get_gallery_image_ids(), 0, 6);
-                    foreach ($imageIds as $imageId) { ?>
-                        <img src="<?= wp_get_attachment_image_url($imageId, 'full'); ?>" alt="<?= get_post_meta($imageId, '_wp_attachment_image_alt', true); ?>">
-                    <?php } ?>
+                <img src="<?= get_the_post_thumbnail_url($args['product']->get_id(), 'full'); ?>" alt="<?= get_post_meta(get_post_thumbnail_id($args['product']->get_id()), '_wp_attachment_image_alt', true); ?>">
                 </div>
             </div>
             <div class="product-details__information">
@@ -28,9 +24,8 @@
                         $perks = get_field('features');
                         if ($perks) { ?>
                             <?php foreach ($perks as $perk) { ?>
-                                <div class='package-item-perk' data-name=''>
+                                <div class='package-item-perk'>
                                     <h4><?php echo $perk['feature']; ?></h4>
-                                    <!---<a class='info-modal' data-name='<?php //echo $perk['feature']; ?>' data-description='<?php //echo $perk['feature-description'] ?>'><img src="/wp-content/themes/reach/_src/images/infosmall.svg)"></a> -->
                                  </div> 
                             <?php } ?>
 

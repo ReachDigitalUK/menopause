@@ -18,4 +18,6 @@ echo \Reach\Component::get('site-main', [
     'content' => implode($content),
 ]);
 
+
+
 get_footer();

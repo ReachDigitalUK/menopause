@@ -17,7 +17,9 @@
                 "id": ""
             },
             "post_type": [
-                "post"
+                "post",
+                "case-study",
+                "free-resource-list"
             ],
             "post_status": [
                 "publish"
@@ -46,7 +48,7 @@
                 "id": ""
             },
             "clone": [
-                "group_6698eca96fd86"
+                "group_672b6163d608e"
             ],
             "display": "seamless",
             "layout": "block",
@@ -73,5 +75,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1738250910
+    "modified": 1738672641
 }

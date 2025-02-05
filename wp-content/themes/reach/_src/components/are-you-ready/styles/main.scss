@@ -19,6 +19,10 @@
     &__inner {
         @include align-width--l;
         padding: var(--text-padding);
+        @include mq($until: large) {
+            padding-top: 0rem!important;
+            padding-bottom: 1em;
+        }
     }
 
     &__heading {

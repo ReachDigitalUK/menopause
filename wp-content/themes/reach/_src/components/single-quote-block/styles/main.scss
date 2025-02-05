@@ -17,6 +17,10 @@
 
     padding: var(--text-padding);
 
+    @include mq($until: large) {
+        padding: 1rem 0;
+    }
+
     &__inner {
         @include align-width--l;
         background-color: var(--color--pink);
@@ -29,7 +33,11 @@
             flex-direction: column;
             justify-content: center;
             height: auto;
+
+
          }
+
+
       
 
 
@@ -89,7 +97,7 @@
 
     &__title{
         h3{
-            font-size: 44px;
+            font-size: 48px;
             font-family: var(--type--1--font-family);
 
             @include mq($until: large) {

@@ -26,13 +26,9 @@ function filterArgs(array $args): ?array
         $object = $args['object'];
 
         if ($object instanceof \WP_Query && $object->is_404()) {
-            $args['content']['message'] = \__("It seems we can't find what you're looking for.", 'reach');
-        } elseif ($object instanceof \WP_Query && $object->is_search()) {
-            $args['content']['message'] = \__(
-                'Sorry, but nothing matched your search terms. Please try again with some different keywords.',
-                'reach'
-            );
-        }
+            $args['content']['message'] = \__("<a href='/'>Error 404</a>", 'reach');
+            
+        } 
     } elseif (\is_admin()) {
         $args['content']['message'] = \__('Items cannot be displayed in the editor.', 'reach');
     }

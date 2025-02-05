@@ -15,7 +15,7 @@
 
 
     @include mq($until: large) {
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
 
     &.bring-below-up {
@@ -38,6 +38,7 @@
                         flex-grow: 1;
                         font-size: 2.6rem;
                         text-align: center;
+                        font-family: var(--type--1--font-family);
                     }
                 }
 
@@ -66,13 +67,16 @@
 
     &__sections {
         &__section {
-            border-bottom: 1px solid #D2D2E8;
             margin-bottom: 1rem;
             display: flex;
             flex-direction: column;
             background-color: var(--color--pink);
             border-radius: 20px;
             padding: 40px;
+
+            @include mq($until: large) {
+                padding: 20px;
+            }
 
             &:last-of-type {
                 border-bottom: none;
@@ -98,7 +102,6 @@
             }
 
             &__title {
-                text-transform: uppercase;
                 display: flex;
                 gap: 1rem;
                 align-items: center;
@@ -109,8 +112,13 @@
 
                 h4 {
                     font-size: 1.4rem;
-                    font-weight: 600;
+                    font-weight: 400;
                     margin: 0;
+                    font-family: var(--type--1--font-family);
+
+                    @include mq($until: large) {
+                        font-size: 1.2rem;
+                    }
                 }
 
                 svg {
@@ -124,6 +132,7 @@
                 visibility: hidden;
                 opacity: 0;
                 transition: height 1s ease, opacity 1s ease;
+                font-family: var(--type--1--font-family);
             }
         }
     }

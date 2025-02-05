@@ -34,7 +34,7 @@
 
     &__header {
       display: flex;
-      align-items: center;
+      flex-direction: column;
 
         @include mq($until: medium) {
             flex-direction: column;
@@ -48,6 +48,10 @@
 
     &__description {
 
+        @include mq($until: large) {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
        
     }
 
@@ -59,7 +63,7 @@
             font-family: var(--type--1--font-family);
         }
 
-        width: 50%;
+        width: 100%;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -94,6 +98,12 @@
             justify-content: space-between;
             margin-bottom: 0px;
             font-family: var(--type--1--font-family);
+
+            @include mq($until: medium) {
+                align-items: flex-start;
+                flex-direction: column;
+                
+            }
           
         }
 
@@ -142,6 +152,8 @@
 
         .all-perks{
             font-family: var(--type--1--font-family);
+            display: flex;
+            flex-direction: column;
 
             a{
                 cursor: pointer;
@@ -194,13 +206,15 @@
             h4::before {
                     background-image: url(/wp-content/themes/reach/_src/images/check.svg);
                     background-repeat: no-repeat;
+                    background-size: 25px 25px;
                     content: "";
                     display: inline-block;
-                    height: 35px;
-                    margin-right: 10px;
+                    flex-shrink: 0;
+                    height: 25px;
+                    margin-right: 11px;
+                    top: 0px;
+                    width: 25px;
                     position: relative;
-                    width: 35px;
-                    background-size: 25px;
                 }
 
             // h4::after{
@@ -219,26 +233,22 @@
 
             }
 
-            @include mq($until: medium) {
-               width: 100%;
-            }
+            // @include mq($until: medium) {
+            //    width: 100%;
+            // }
 
     }
 
     &__gallery {
-        width: 50%;
-        padding-right: 2rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
 
         &__images {
             display: flex;
 
             img {
-                max-width: 50%;
+                max-width: 100%;
                 margin: auto;
-
-                @include mq($until: medium) {
-                    max-width: 85%;
-                }
             }
         }
 
@@ -249,12 +259,6 @@
         .woocommerce-breadcrumb {
             display: none;
         }
-
-        @include mq($until: medium) {
-            width: 80%;
-            padding-right: 0;
-            margin-top: 20px;
-    }
 
     }
 

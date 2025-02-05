@@ -15,7 +15,7 @@
         </div>
                    
 
-            <div class="post-grid__posts"></div>
+        <div class="post-grid__posts" data-type='<?= $args['post_type']; ?>'></div>
         
         </div>
     </div>

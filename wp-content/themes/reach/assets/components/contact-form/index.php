@@ -2,7 +2,7 @@
 
     <div class='contact-form__container'>
         <div class="contact-form__inner">
-            <h3><?= $args['header']; ?></h3>
+            <h1><?= $args['header']; ?></h1>
             <?php 
                     echo do_shortcode("{$args['gravity_form_shortcode']}");
             ?>

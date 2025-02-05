@@ -49,7 +49,7 @@
         display: flex;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
-        margin-bottom: 4rem;
+        margin-bottom: -2rem;
 
         @include mq($until: large) {
            flex-direction: column;
@@ -199,19 +199,12 @@
             }
         }
 
-        .button {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            background-color: #F6ED9A;
-            width: 100%;
-            padding: 10px 40px;
-            border-radius: 99px;
-            font-weight: 400;
-            align-self: center;
-            margin-top: 30px;
-            text-decoration: none;
-            color: #000;
+        &__button {
+                align-items: center !important;
+                display: flex !important;
+                justify-content: center !important;
         }
+
+        
     }
 }

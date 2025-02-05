@@ -1,13 +1,19 @@
 /* eslint-disable */
 document.addEventListener('DOMContentLoaded', function () {
     const ajaxurl = `${window.location.origin}/wp-admin/admin-ajax.php`;
+    const type = document.querySelector('.post-grid__posts').dataset.type;
+
+    console.log('type', type);
 
     fetch(ajaxurl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: 'action=fetch_posts',
+        body: new URLSearchParams({
+            action: 'fetch_posts',
+            post_type: type, // Pass `type` along with the request
+        }),
     })
         .then((response) => response.json())
         .then((data) => {
@@ -67,15 +73,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 return `
                 <div class="post-grid__item">
                     <div class="post-grid__item__image">
-                        ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
+                        ${post.image ? ` <a href='${post.link}'><img src="${post.image}" alt="${post.title}"></a>` : ''}
                         <div class="post-grid__category">
                             <p>${firstCategory}</p>
                         </div>
                     </div>
                     <div class="post-grid__item__content">
                         <p>${post.date}</p>
-                        <h3>${truncatedTitle}</h3>
-                        <a href="${post.link}">Read more</a>
+                        <a href='${post.link}'><h3>${truncatedTitle}</h3></a>
+                        <a href="${post.link}" class='read-more-content'>Read more</a>
                     </div>
                 </div>
             `;
