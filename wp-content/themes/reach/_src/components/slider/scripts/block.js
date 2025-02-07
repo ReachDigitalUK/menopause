@@ -8,13 +8,11 @@ window.addEventListener('DOMContentLoaded', () => {
     sliders.forEach((slider, index) => {
         const swiper = new Swiper(slider.querySelector('.cards-slider'), {
             direction: 'horizontal',
-            modules: [Navigation, Scrollbar],
-            slidesPerView: 1,
-            spaceBetween: 30,
-            centeredSlides: false,
-            roundLengths: true,
-            speed: 600,
+            modules: [Navigation],
+            autoHeight: true,
             loop: false,
+            slidesPerView: 3.1,
+            spaceBetween: 30,
 
             navigation: {
                 nextEl: slider.querySelector('.right-nav'),
@@ -27,19 +25,19 @@ window.addEventListener('DOMContentLoaded', () => {
             },
 
             breakpoints: {
-                0: {
-                    slidesPerView: 1,
+                320: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 10,
                 },
-                812: {
+                768: {
                     slidesPerView: 2.1,
+                    spaceBetween: 20,
                 },
-                1550: {
+                1024: {
                     slidesPerView: 3.1,
+                    spaceBetween: 30,
                 },
             },
-
-            freeMode: false,
-            slidesPerGroup: 1,
         });
     });
 });
