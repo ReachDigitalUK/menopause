@@ -1,12 +1,3 @@
-// @import 'swiper/css';
-//  @import 'swiper/css/navigation';
-// @import 'swiper/css/pagination';
-
-@import 'swiper/swiper.min';
-@import 'swiper/modules/navigation';
-@import 'swiper/modules/scrollbar';
-
-
 .slider {
     --text-margin: 2rem 0rem;
     --text-padding: 0rem;
@@ -52,51 +43,53 @@
         }
 
 
-        h2{
+        h2 {
             font-size: 40px;
             font-family: var(--type--1--font-family);
-            margin-top:0px;
+            margin-top: 0px;
             margin-bottom: 0px;
         }
 
-        a{
+        a {
             color: #5C5C5C;
-            &::after{
-                
-                    content: "";
-                    display: inline-flex;
-                    height: 20px;
-                    width: 20px;
-                    background-repeat: no-repeat;
-                    background-image: url('/wp-content/themes/reach/_src/images/arrow-right.svg');
-                    top: 10px;
-                    color: #5C5C5C;
-                    position: relative; 
-                    margin-left: 10px;
-         }
-    }
+
+            &::after {
+
+                content: "";
+                display: inline-flex;
+                height: 20px;
+                width: 20px;
+                background-repeat: no-repeat;
+                background-image: url('/wp-content/themes/reach/_src/images/arrow-right.svg');
+                top: 10px;
+                color: #5C5C5C;
+                position: relative;
+                margin-left: 10px;
+            }
+        }
 
     }
 
-    &__navigation{
-            margin-left: -15px;
-            margin-right: -15px;
+    &__navigation {
+        margin-left: -15px;
+        margin-right: -15px;
 
-            display: flex;
-            gap: 10px;
-            position: relative;
-            top: 250px;
-            justify-content: space-between;
-            z-index: 99999;
-            gap: 10px;
-        svg{
+        display: flex;
+        gap: 10px;
+        position: relative;
+        top: 250px;
+        justify-content: space-between;
+        z-index: 99999;
+        gap: 10px;
+
+        svg {
             width: 40px;
             cursor: pointer;
         }
     }
 
 
-    .slider__swiper_inner{
+    .slider__swiper_inner {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -113,54 +106,54 @@
         padding: 30px;
         border-radius: 20px;
         border: 1px solid #FCC7BC;
-        width: 320px !important;
-        height: 400px!important;
+        /*width: 320px !important;*/
+        height: 400px !important;
     }
 
-    .swiper_inner{
+    .swiper_inner {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        .profile-photo{
+        .profile-photo {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             margin: 10px 0;
         }
 
-        .author_date{
+        .author_date {
             margin: 5px 0;
             font-size: 15px;
         }
 
-        .author_name{
+        .author_name {
             margin: 5px 0;
             font-size: 20px;
             font-weight: bold;
         }
 
-        .review-text{
+        .review-text {
             text-align: center;
             margin: 5px 0;
         }
-    
-        .google-icon{
+
+        .google-icon {
             width: 40px;
-            height: 40px;   
+            height: 40px;
             margin: 10px 0;
         }
 
-        .rating{
+        .rating {
             margin: 5px 0;
         }
-    
+
     }
 
     // Post Card
 
-    .post-card{
+    .post-card {
         padding: 0px;
         border-radius: 20px;
         background-color: var(--color--white);
@@ -168,16 +161,16 @@
     }
 
 
-    .swiper_inner--post{
+    .swiper_inner--post {
         display: flex;
         justify-content: center;
         flex-direction: column;
 
-        .post-image-container{
-           position: relative;
+        .post-image-container {
+            position: relative;
         }
 
-        .post-image{
+        .post-image {
             width: 100%;
             height: 200px;
             border-top-left-radius: 10px;
@@ -185,22 +178,22 @@
             object-fit: cover;
         }
 
-        .post-category{
+        .post-category {
             background-color: var(--color--blue);
-            border-radius:90px;
+            border-radius: 90px;
             position: absolute;
             bottom: 10px;
             left: 10px;
             padding: 2px 7px;
-    
+
         }
 
-        .post-content{
+        .post-content {
             padding: 20px;
             height: 200px;
         }
 
-        .post_title{
+        .post_title {
             font-size: 20px;
             font-weight: 600;
             margin-top: 0px;
@@ -211,7 +204,7 @@
 
         }
 
-        .post_date:before{
+        .post_date:before {
             content: " ";
             display: inline-flex;
             height: 30px;
@@ -222,14 +215,14 @@
             position: relative;
         }
 
-        .post_date{
+        .post_date {
             margin-top: 0px;
             margin-bottom: 10px;
             color: #DEDEDE;
             font-family: var(--type--1--font-family);
         }
 
-        .post_link:before{
+        .post_link:before {
             content: "";
             display: inline-flex;
             height: 20px;
@@ -237,10 +230,10 @@
             background-repeat: no-repeat;
             background-image: url('/wp-content/themes/reach/_src/images/arrow-right.svg');
             top: 10px;
-            position: relative; 
+            position: relative;
         }
 
-        .post_link{
+        .post_link {
             text-decoration: none;
             color: #5C5C5C;
             font-weight: 600;
@@ -248,7 +241,7 @@
 
         }
 
-    
+
     }
 
 
@@ -256,7 +249,7 @@
 
 
 
-  
+
 
 
     @media screen and (max-width: 992px) {
