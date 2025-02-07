@@ -52,7 +52,7 @@
         margin-bottom: -2rem;
 
         @include mq($until: large) {
-           flex-direction: column;
+            flex-direction: column;
         }
 
         @include mq($until: small) {
@@ -66,7 +66,7 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        width: 33.3333%;    
+        width: 33.3333%;
         position: relative;
 
 
@@ -75,18 +75,18 @@
             margin-bottom: 60px;
 
             &:nth-child(2) {
-                margin-top: 0px!important;
+                margin-top: 0px !important;
             }
-         }
+        }
 
 
         &:nth-child(2) {
             margin-top: -50px;
 
-            h3::after{
+            h3::after {
                 content: "";
                 display: inline-flex;
-                background-image: url('/wp-content/themes/reach/_src//images/popular.png');
+                background-image: url('/wp-content/themes/reach/_srassetsc/images/popular.png');
                 width: 100px;
                 height: 100px;
                 position: absolute;
@@ -100,9 +100,9 @@
 
             }
         }
-    
 
-    
+
+
         &__header {
             background: var(--package-background);
             color: #5C5C5C;
@@ -137,7 +137,7 @@
                 }
             }
 
-            &__description{
+            &__description {
                 text-align: center;
                 width: 100%;
                 display: flex;
@@ -178,33 +178,36 @@
 
         &__feature {
             display: flex;
-            align-items: flex-start; /* Align icon to the top of text */
+            align-items: flex-start;
+            /* Align icon to the top of text */
             gap: 0.75rem;
             font-weight: 600;
-        
+
             svg {
-                flex-shrink: 0; /* Prevent icon from resizing */
+                flex-shrink: 0;
+                /* Prevent icon from resizing */
                 width: 1.6rem;
                 height: 1.6rem;
                 color: #5C5C5C;
-        
+
                 path {
                     fill: #5C5C5C;
                 }
             }
-        
+
             span {
                 display: block;
-                max-width: 90%; /* Ensures text wraps properly */
+                max-width: 90%;
+                /* Ensures text wraps properly */
             }
         }
 
         &__button {
-                align-items: center !important;
-                display: flex !important;
-                justify-content: center !important;
+            align-items: center !important;
+            display: flex !important;
+            justify-content: center !important;
         }
 
-        
+
     }
 }

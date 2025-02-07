@@ -22,7 +22,7 @@
         padding: var(--text-padding);
 
         @include mq($until: large) {
-            padding-top: 0rem!important;
+            padding-top: 0rem !important;
             padding-bottom: 1em;
         }
     }
@@ -31,17 +31,17 @@
         @include typestyle-h3;
     }
 
-    &__grid_container{
+    &__grid_container {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
 
         @include mq($until: large) {
             flex-direction: column;
-         }
+        }
     }
 
-    &__filters{
+    &__filters {
         display: flex;
         gap: 15px;
         margin-bottom: 30px;
@@ -49,16 +49,16 @@
 
         @include mq($until: large) {
             flex-direction: column;
-         }
+        }
 
 
-        h4{
+        h4 {
             margin-top: 0px;
             margin-bottom: 0px;
             font-family: var(--type--1--font-family);
         }
 
-    
+
         #post_grid__category {
             background-color: #fff;
             color: #000;
@@ -68,27 +68,32 @@
             text-decoration: none;
             cursor: pointer;
             border: 1px solid #ccc;
-            appearance: none; /* Removes default arrow styling */
-            -webkit-appearance: none; /* For Safari */
-            -moz-appearance: none; /* For Firefox */
+            appearance: none;
+            /* Removes default arrow styling */
+            -webkit-appearance: none;
+            /* For Safari */
+            -moz-appearance: none;
+            /* For Firefox */
             text-align: center;
             width: 300px;
             font-family: var(--type--1--font-family);
         }
-        
+
         #post_grid__category:focus {
             outline: none;
-            border-color: #000; /* Highlight border on focus */
+            border-color: #000;
+            /* Highlight border on focus */
         }
-        
+
         /* Add a custom arrow */
         #post_grid__category::after {
-            content: '▼'; /* Custom arrow */
+            content: '▼';
+            /* Custom arrow */
             position: absolute;
             right: 20px;
             pointer-events: none;
         }
-        
+
         /* Wrapper to position the select box properly */
         .select-wrapper {
             position: relative;
@@ -97,7 +102,7 @@
         }
     }
 
-    &__all-button{
+    &__all-button {
         background-color: #fff;
         color: #000;
         padding: 10px 50px;
@@ -110,69 +115,69 @@
 
 
 
-    &__item{
+    &__item {
         width: calc(25% - 30px);
         border-radius: 10px;
 
         @include mq($until: large) {
             width: 100%;
             margin-bottom: 20px;
-         }
+        }
     }
 
-    &__item__image{
-        border-top-left-radius:  10px;
-        border-top-right-radius:  10px;
+    &__item__image {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         overflow: hidden;
         position: relative;
     }
 
 
-    &__category{
+    &__category {
         background-color: #CEECF5;
-        border-radius:90px;
+        border-radius: 90px;
         position: absolute;
         bottom: 10px;
         left: 10px;
         padding: 0.5rem 1rem;
 
-        p{
+        p {
             margin-top: 0px;
             margin-bottom: 0px;
         }
     }
 
 
-    &__item__content{
+    &__item__content {
         background-color: #fff;
-        border-bottom-left-radius:  10px;
-        border-bottom-right-radius:  10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 14rem;
 
-        p{
+        p {
             margin-top: 0px;
             margin-bottom: 10px;
             color: #DEDEDE;
             font-family: var(--type--1--font-family);
         }
 
-        p:before{
+        p:before {
             content: "";
             display: inline-flex;
             height: 30px;
             width: 30px;
             background-repeat: no-repeat;
-            background-image: url('/wp-content/themes/reach/_src/images/calendar.svg');
+            background-image: url('/wp-content/themes/reach/assets/images/calendar.svg');
             top: 15px;
             position: relative;
         }
 
-    
-        h3{
+
+        h3 {
             font-size: 20px;
             font-weight: 600;
             margin-top: 0px;
@@ -182,22 +187,22 @@
             max-width: 200px;
         }
 
-        a{
+        a {
             text-decoration: none;
             color: #5C5C5C;
             font-weight: 600;
             font-family: var(--type--1--font-family);
         }
 
-        .read-more-content:before{
+        .read-more-content:before {
             content: "";
             display: inline-flex;
             height: 20px;
             width: 20px;
             background-repeat: no-repeat;
-            background-image: url('/wp-content/themes/reach/_src/images/arrow-right.svg');
+            background-image: url('/wp-content/themes/reach/assets/images/arrow-right.svg');
             top: 10px;
-            position: relative; 
+            position: relative;
         }
     }
 }
