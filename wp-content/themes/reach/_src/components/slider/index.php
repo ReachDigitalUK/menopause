@@ -16,7 +16,7 @@ if ($args['card_source'] === 'reviews') {
         $rating = round($rating);
         $ratingString = '';
         for ($i = 0; $i < $rating; $i++) {
-            $ratingString .= '<img src="/wp-content/themes/reach/_src/images/icons/star.svg" />';
+            $ratingString .= '<img src="/wp-content/themes/reach/assets/images/icons/star.svg" />';
         }
         $args['items'][$key]['rating'] = $ratingString;
 
@@ -55,7 +55,7 @@ if ($args['card_source'] === 'reviews') {
                                 <p class='author_date'><?= $card['time']; ?></p>
                                 <p class='rating'><?= $card['rating']; ?></p>
                                 <p class='review-text'><?= $card['text']; ?></p>
-                                <a href='<?= $card['author_url'] ?>'><img class='google-icon' src='/wp-content/themes/reach/_src/images/icons/google.svg' /></a>
+                                <a href='<?= $card['author_url'] ?>'><img class='google-icon' src='/wp-content/themes/reach/assets/images/icons/google.svg' /></a>
                             </div>
                         </div>
                     <?php } ?>

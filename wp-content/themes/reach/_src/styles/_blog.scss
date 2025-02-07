@@ -1,19 +1,19 @@
-.single-post{
+.single-post {
 
 
     $this: &;
 
-    &__container
-    {
-       padding-top: 100px;
+    &__container {
+        padding-top: 100px;
     }
 
 
-    &__return{
+    &__return {
         margin-top: 10px;
 
         @include align-width--l;
-        a{
+
+        a {
             color: #5C5C5C;
             font-family: var(--type--1--font-family);
             text-decoration: none;
@@ -21,56 +21,56 @@
 
         }
 
-        a:before{
+        a:before {
             content: "";
             display: inline-flex;
             height: 20px;
             width: 20px;
             background-repeat: no-repeat;
-            background-image: url('/wp-content/themes/reach/_src/images/arrow-right.svg');
+            background-image: url('/wp-content/themes/reach/assets/images/arrow-right.svg');
             transform: rotate(180deg);
             top: 0px;
             right: 10px;
-            position: relative; 
+            position: relative;
             margin-bottom: 40px;
         }
-       
+
     }
 
-    &__content{
-       max-width: 1200px;
-       margin-left: auto;
-       margin-right: auto;
+    &__content {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
-    
-    &__category{
+
+    &__category {
         border-radius: 99px;
         background-color: var(--color--blue);
         width: fit-content;
         padding: 2px 15px;
         color: #5C5C5C;
 
-       ul{
+        ul {
             list-style: none;
             text-decoration: none;
             margin-top: 0px;
             margin-bottom: 0px;
             padding: 0px;
-            color:#5C5C5C;
-       }
+            color: #5C5C5C;
+        }
 
-        a{
+        a {
             text-decoration: none;
             color: #5C5C5C;
             font-family: var(--type--1--font-family);
             font-weight: 600;
-       }
+        }
 
     }
 
-    &__date{
+    &__date {
 
         color: var(--color--lightgrey);
         position: relative;
@@ -78,20 +78,20 @@
         margin-top: 0px;
         margin-bottom: 2em;
 
-        &::before{
-            background-image: url('/wp-content/themes/reach/_src/images/calendar.svg');
+        &::before {
+            background-image: url('/wp-content/themes/reach/assets/images/calendar.svg');
             content: " ";
             display: inline-flex;
             background-repeat: no-repeat;
             width: 30px;
             height: 30px;
             position: relative;
-            top:10px;
+            top: 10px;
         }
     }
 
 
-    &__title{
+    &__title {
         font-size: 2.5em;
         font-weight: 700;
         margin-top: 10px;
@@ -99,21 +99,21 @@
         color: #5C5C5C;
 
 
-        h1{
+        h1 {
             font-family: var(--type--1--font-family);
             margin-bottom: 10px;
         }
-       
+
     }
 
-    &__content{
-        padding-bottom:30px;
+    &__content {
+        padding-bottom: 30px;
     }
 
 
-    &__image{
+    &__image {
 
-        img{
+        img {
             width: 100%;
             height: auto;
             border-radius: 30px;

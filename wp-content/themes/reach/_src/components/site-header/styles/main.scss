@@ -48,10 +48,11 @@ $site-header--top--background: 'white';
 
     @include mq($until: 'site-header') {
         height: 0px;
+
         &--positioned {
             position: absolute;
 
-            ~ .site-main {
+            ~.site-main {
                 margin-top: calc(var(--site-header--bottom));
             }
         }
@@ -63,9 +64,7 @@ $site-header--top--background: 'white';
         }
     }
 
-    &__inner {
-   
-    }
+    &__inner {}
 
     &__top-menu {
         display: grid;
@@ -86,9 +85,9 @@ $site-header--top--background: 'white';
     }
 
 
-    &__bottom-menu{
+    &__bottom-menu {
         background-color: var(--color--green-light);
-       // display: grid;
+        // display: grid;
         width: 100%;
         height: 100%;
         grid-template-rows: min-content auto;
@@ -102,7 +101,7 @@ $site-header--top--background: 'white';
         //     grid-template-rows: unset;
         // }
 
-        @include mq($until: 'site-header'){
+        @include mq($until: 'site-header') {
             visibility: hidden;
         }
     }
@@ -117,7 +116,7 @@ $site-header--top--background: 'white';
         gap: var(--site-header--spacing);
         justify-items: flex-start;
 
-        @include mq($until: 'site-header'){
+        @include mq($until: 'site-header') {
             height: 120px;
         }
 
@@ -127,13 +126,13 @@ $site-header--top--background: 'white';
             background-color: transparent;
         }
 
-        a{
+        a {
             font-weight: 600;
             text-decoration: none;
             color: #000;
             transition: all 0.5s ease;
 
-            &:hover{
+            &:hover {
                 text-decoration: underline;
             }
         }
@@ -142,15 +141,15 @@ $site-header--top--background: 'white';
 
     }
 
-    &__reviews-rating{
+    &__reviews-rating {
 
-        a{
+        a {
             font-weight: 600;
             text-decoration: none;
             transition: all 0.5s ease;
 
-            &:hover{
-                text-decoration: none!important;
+            &:hover {
+                text-decoration: none !important;
             }
         }
     }
@@ -162,14 +161,14 @@ $site-header--top--background: 'white';
         grid-auto-rows: min-content;
         grid-template-rows: auto;
         padding: 0.5em 0;
-        
+
         @include mq('site-header') {
-             @include align-width--l;
- 
-             gap: var(--site-header--spacing);
-             grid-auto-flow: column;
-             grid-template-rows: unset;
-         }
+            @include align-width--l;
+
+            gap: var(--site-header--spacing);
+            grid-auto-flow: column;
+            grid-template-rows: unset;
+        }
 
 
         @include mq($until: 'site-header') {
@@ -193,21 +192,20 @@ $site-header--top--background: 'white';
             .site-header.is-open & {
                 opacity: 1;
                 pointer-events: all;
-                transition: all var(--site-header--menu--duration) var(--site-header--menu--ease)
-                    var(--site-header--menu--duration);
+                transition: all var(--site-header--menu--duration) var(--site-header--menu--ease) var(--site-header--menu--duration);
                 visibility: visible;
             }
 
-            > * {
+            >* {
                 padding-right: var(--space--container-padding);
                 padding-left: var(--space--container-padding);
             }
 
-            > *:first-child {
+            >*:first-child {
                 margin-top: var(--site-header--spacing);
             }
 
-            > *:last-child {
+            >*:last-child {
                 padding-bottom: var(--site-header--spacing);
             }
         }
@@ -219,7 +217,7 @@ $site-header--top--background: 'white';
             grid-auto-flow: column;
         }
 
-      
+
     }
 
     &__bottom__right {
@@ -228,7 +226,7 @@ $site-header--top--background: 'white';
         align-items: center;
         gap: 20px;
 
-        @include mq($until: 'site-header'){
+        @include mq($until: 'site-header') {
             flex-direction: column;
             align-items: flex-start;
             margin-top: 15px;
@@ -317,13 +315,13 @@ $site-header--top--background: 'white';
     &__logo {
         display: flex;
         width: 100%;
-       // max-width: var(--site-header--logo-width);
-       max-width: 130px;
+        // max-width: var(--site-header--logo-width);
+        max-width: 130px;
         height: 100%;
         //max-height: calc(100% - var(--space--s));
         margin-right: auto;
 
-        > * {
+        >* {
             object-fit: contain;
             object-position: left center;
         }
@@ -359,7 +357,7 @@ $site-header--top--background: 'white';
     }
 
 
-    &__reviews-rating{
+    &__reviews-rating {
 
         @include mq($until: 'site-header') {
             display: none;
@@ -367,52 +365,52 @@ $site-header--top--background: 'white';
 
 
 
-        .gmbrr.badge.tiny{
+        .gmbrr.badge.tiny {
             box-shadow: none;
             padding: 0px;
         }
 
-        .count{
+        .count {
             text-decoration: underline;
         }
 
-        .number{
+        .number {
             display: none;
         }
 
-        .google-icon{
+        .google-icon {
             margin: 0px;
         }
     }
 
-    .menu-wrapper{
+    .menu-wrapper {
         @include mq($until: 'site-header') {
             display: none;
         }
     }
 
-    .menu-wrapper .menu-list{
-        gap: 10px!important;
+    .menu-wrapper .menu-list {
+        gap: 10px !important;
     }
 
     .menu-wrapper .menu-item:nth-child(1):after,
     .menu-wrapper .menu-item:nth-child(2):after {
-        content: ''; 
-        display: inline-block; 
-        border-right: 1px solid #BEBEBE;
-        height: 100%; 
-        margin-left: 10px; 
-    }
-
-    .menu-wrapper .menu-item:nth-child(3)::before{
         content: '';
         display: inline-block;
-        background-image: url('/wp-content/themes/reach/_src/images/contact.svg');
+        border-right: 1px solid #BEBEBE;
+        height: 100%;
+        margin-left: 10px;
+    }
+
+    .menu-wrapper .menu-item:nth-child(3)::before {
+        content: '';
+        display: inline-block;
+        background-image: url('/wp-content/themes/reach/assets/images/contact.svg');
         background-repeat: no-repeat;
         height: 20px;
         width: 20px;
         margin-right: 5px;
     }
 
-    
+
 }

@@ -22,6 +22,7 @@
 
     .top-level-mega {
         font-family: var(--type--1--font-family);
+
         @include mq($until: large) {
             font-size: 2rem !important;
         }
@@ -31,7 +32,7 @@
     a {
         z-index: 7;
         text-decoration: none;
-        color:  var(--color--black) !important;
+        color: var(--color--black) !important;
         font-weight: 600 !important;
         padding: 0.6rem 0;
         border-bottom: 2px solid transparent;
@@ -76,11 +77,11 @@
     }
 
 
-    .has-children{
+    .has-children {
         display: inline-flex;
         //padding: 10px;
 
-        @include mq($until: 'site-header'){
+        @include mq($until: 'site-header') {
             display: block;
         }
     }
@@ -89,21 +90,26 @@
 
 
 
-    
+
     .has-children.active::before {
         content: "";
         background-color: var(--color--green);
         border-radius: 10px;
         position: absolute;
-        top: calc(100% + 10px); /* Position below the .has-children element */
-        left: 0; /* Align with the left edge of the .has-children element */
-        width: 200px; /* Adjust width as needed */
-        height: 80px; /* Adjust height as needed */
-        z-index: -1; /* Ensure it appears behind the content */
+        top: calc(100% + 10px);
+        /* Position below the .has-children element */
+        left: 0;
+        /* Align with the left edge of the .has-children element */
+        width: 200px;
+        /* Adjust width as needed */
+        height: 80px;
+        /* Adjust height as needed */
+        z-index: -1;
+        /* Ensure it appears behind the content */
     }
-  
 
-    .has-children::after{
+
+    .has-children::after {
         content: "";
         background-image: url('images/icons/arrow-down.svg');
         background-repeat: no-repeat;
@@ -116,6 +122,7 @@
         z-index: 9;
         margin-left: 15px;
         margin-top: 17px;
+
         @include mq($until: large) {
             display: none;
         }
@@ -124,7 +131,7 @@
 
 
     .has-children.active::after {
-       rotate: 180deg;
+        rotate: 180deg;
     }
 
 
@@ -225,7 +232,7 @@
                 }
             }
 
-            .full-width.first-child{
+            .full-width.first-child {
                 font-size: 25px;
 
                 @include mq($until: large) {
@@ -275,7 +282,7 @@
                 border-top: none;
 
                 @include mq($until: large) {
-                  //  padding-left: 1rem;
+                    //  padding-left: 1rem;
 
                 }
 
@@ -289,7 +296,7 @@
 
         .megamenu-child__child a:not(.first-child)::before {
             content: "";
-            background-image: url('/wp-content/themes/reach/_src/images/arrow.svg');
+            background-image: url('/wp-content/themes/reach/assets/images/arrow.svg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             display: inline-block;
@@ -357,7 +364,7 @@ html.menu-open {
 
     .megamenu-child__child__header.full-width {
         font-size: 1rem !important;
-        font-weight: 200!important;
+        font-weight: 200 !important;
     }
 
     .megamenu-child__child__header-wrap.active {
@@ -381,9 +388,9 @@ html.menu-open {
     }
 
 
-/* gonna have to do these custom */
+    /* gonna have to do these custom */
 
-    
+
 
 
 

@@ -6,18 +6,18 @@
         @include align-width--l;
 
 
-        .back{
+        .back {
             text-decoration: underline;
 
-                color: #5C5C5C;
-                font-family: var(--type--1--font-family);
-                text-decoration: none;
-                font-weight: 700;
+            color: #5C5C5C;
+            font-family: var(--type--1--font-family);
+            text-decoration: none;
+            font-weight: 700;
         }
 
 
         .back::before {
-            background-image: url('/wp-content/themes/reach/_src/images/arrow-right.svg');
+            background-image: url('/wp-content/themes/reach/assets/images/arrow-right.svg');
             background-repeat: no-repeat;
             transform: rotate(180deg);
             content: "";
@@ -33,8 +33,8 @@
     }
 
     &__header {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
         @include mq($until: medium) {
             flex-direction: column;
@@ -49,16 +49,17 @@
     &__description {
 
         @include mq($until: large) {
-          margin-top: 10px;
-          margin-bottom: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
-       
+
     }
 
     &__information {
 
         color: #5C5C5C;
-        .item-desciption{
+
+        .item-desciption {
             padding-bottom: 20px;
             font-family: var(--type--1--font-family);
         }
@@ -102,9 +103,9 @@
             @include mq($until: medium) {
                 align-items: flex-start;
                 flex-direction: column;
-                
+
             }
-          
+
         }
 
         &__price {
@@ -116,7 +117,7 @@
                 font-size: 26px;
                 display: inline-flex;
                 font-family: var(--type--1--font-family);
-                
+
 
                 bdi {
                     margin-right: 0.2rem;
@@ -150,53 +151,53 @@
 
 
 
-        .all-perks{
+        .all-perks {
             font-family: var(--type--1--font-family);
             display: flex;
             flex-direction: column;
 
-            a{
+            a {
                 cursor: pointer;
                 font-family: var(--type--1--font-family);
             }
 
 
-            img{
+            img {
                 position: relative;
                 //bottom: 11px;
             }
 
-        .info-modal{
-            cursor: pointer!important;
-        }
+            .info-modal {
+                cursor: pointer !important;
+            }
 
-        .info-modal:hover{
+            .info-modal:hover {
 
-            cursor: pointer!important;
-            
-        }
+                cursor: pointer !important;
 
-            .package-item-perk{
+            }
+
+            .package-item-perk {
                 display: inline-flex;
 
-                a{
+                a {
                     margin-top: 6px;
                     margin-left: 5px;
                 }
 
-                img{
+                img {
                     width: 25px;
                     height: 25px;
                 }
             }
 
-            h3{
+            h3 {
                 font-size: 20px;
-                margin-bottom: 20px!important;
+                margin-bottom: 20px !important;
                 font-family: var(--type--1--font-family);
             }
 
-            h4{
+            h4 {
                 font-family: var(--type--1--font-family);
                 font-size: 20px;
                 display: inline-flex;
@@ -204,21 +205,21 @@
             }
 
             h4::before {
-                    background-image: url(/wp-content/themes/reach/_src/images/check.svg);
-                    background-repeat: no-repeat;
-                    background-size: 25px 25px;
-                    content: "";
-                    display: inline-block;
-                    flex-shrink: 0;
-                    height: 25px;
-                    margin-right: 11px;
-                    top: 0px;
-                    width: 25px;
-                    position: relative;
-                }
+                background-image: url(/wp-content/themes/reach/assets/images/check.svg);
+                background-repeat: no-repeat;
+                background-size: 25px 25px;
+                content: "";
+                display: inline-block;
+                flex-shrink: 0;
+                height: 25px;
+                margin-right: 11px;
+                top: 0px;
+                width: 25px;
+                position: relative;
+            }
 
             // h4::after{
-            //     background-image: url(/wp-content/themes/reach/_src/images/infosmall.svg);
+            //     background-image: url(/wp-content/themes/reach/assets/images/infosmall.svg);
             //     background-repeat: no-repeat;
             //     content: "";
             //     display: inline-block;
@@ -231,11 +232,11 @@
             //     cursor: pointer;
             // }
 
-            }
+        }
 
-            // @include mq($until: medium) {
-            //    width: 100%;
-            // }
+        // @include mq($until: medium) {
+        //    width: 100%;
+        // }
 
     }
 
@@ -297,36 +298,36 @@
     }
 }
 
-dialog{
+dialog {
     width: 800px;
     border-radius: 20px;
     border: none;
     outline: none;
     padding: 30px;
 
-    .close{
-            align-items: center;
-            background: #F6ED9A !important;
-            border-radius: 50px !important;
-            color: #000 !important;
-            display: flex;
-            font-size: 1rem !important;
-            font-weight: 700 !important;
-            justify-content: center;
-            padding: 1rem !important;
-            text-align: center;
-            text-transform: uppercase;
-            transition: all .25s;
-            width: 100%;
-            margin-top: 20px;
+    .close {
+        align-items: center;
+        background: #F6ED9A !important;
+        border-radius: 50px !important;
+        color: #000 !important;
+        display: flex;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        justify-content: center;
+        padding: 1rem !important;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .25s;
+        width: 100%;
+        margin-top: 20px;
     }
 
-    .close:hover{
+    .close:hover {
         background: #facb6e !important;
     }
-   
+
     :focus {
-        outline: none!important;
+        outline: none !important;
     }
 }
 
@@ -335,15 +336,15 @@ dialog::backdrop {
 }
 
 dialog[open] {
-    transition: 
-      translate 0.2s ease-out, 
-      display 0.2s ease-out allow-discrete;
-  
+    transition:
+        translate 0.2s ease-out,
+        display 0.2s ease-out allow-discrete;
+
     /* Post-Entry (Normal) State */
     translate: 0 0;
-  
+
     /* Pre-Entry State */
     @starting-style {
-      translate: 0 100vh;
+        translate: 0 100vh;
     }
-  }
+}

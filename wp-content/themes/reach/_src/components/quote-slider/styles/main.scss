@@ -16,7 +16,7 @@
     padding: var(--text-padding);
 
     @include mq($until: medium) {
-       padding-top: 3em;
+        padding-top: 3em;
     }
 
     &__inner {
@@ -31,22 +31,22 @@
         gap: 30px;
         padding: 30px;
 
-    
-        @include mq($until: large) {
-           flex-direction: column;
-           height: auto;
 
-           max-width: 100%;
-           margin-left: unset;
-           margin-right: unset;
+        @include mq($until: large) {
+            flex-direction: column;
+            height: auto;
+
+            max-width: 100%;
+            margin-left: unset;
+            margin-right: unset;
         }
     }
 
 
 
-    .home-page-hero::after{
+    .home-page-hero::after {
         content: '';
-        background-image: url('/wp-content/themes/reach/_src/images/woman-cut-out.png');
+        background-image: url('/wp-content/themes/reach/assets/images/woman-cut-out.png');
         background-repeat: no-repeat;
         width: 720px;
         height: 500px;
@@ -61,10 +61,11 @@
 
     }
 
-    &__media-image{
+    &__media-image {
         display: flex;
         width: 300px;
-        img{
+
+        img {
             position: absolute;
             bottom: 0;
 
@@ -75,7 +76,7 @@
         }
     }
 
-    &__quote{
+    &__quote {
         width: 800px;
 
         @include mq($until: large) {
@@ -85,7 +86,7 @@
         }
     }
 
-    &__media{
+    &__media {
         display: flex;
 
 
@@ -94,32 +95,32 @@
         }
     }
 
-    &__media-text{
+    &__media-text {
         display: flex;
         flex-direction: column;
 
-        h5{
+        h5 {
             margin: 0px;
         }
 
         @include mq($until: large) {
-          align-items: center;
+            align-items: center;
         }
     }
 
     &__quote {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      h5{
-        margin: 0px;
-      }
+        h5 {
+            margin: 0px;
+        }
 
-      p{
-        margin-top: 2px;
-        margin-bottom: 2px;
-      }
+        p {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
     }
 
     @include mq($until: large) {
@@ -133,6 +134,7 @@
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -142,6 +144,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }

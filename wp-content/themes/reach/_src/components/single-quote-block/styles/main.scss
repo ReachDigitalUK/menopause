@@ -1,6 +1,6 @@
-.single-quote{
+.single-quote {
 
-      
+
     --text-margin: 2rem 0rem;
     --text-padding: 0rem;
     --text-background-colour: transparent;
@@ -35,15 +35,15 @@
             height: auto;
 
 
-         }
+        }
 
 
-      
 
 
-        &::before{
+
+        &::before {
             content: '';
-            background: url('/wp-content/themes/reach/_src/images/opening-quote.svg');
+            background: url('/wp-content/themes/reach/assets/images/opening-quote.svg');
             height: 15em;
             width: 15em;
             position: absolute;
@@ -56,14 +56,15 @@
 
             @include mq($until: large) {
                 display: none;
-             }
+            }
         }
     }
 
-    &__image{
+    &__image {
         width: 50%;
         position: relative;
-        img{
+
+        img {
             position: absolute;
             bottom: 0;
         }
@@ -71,15 +72,15 @@
         @include mq($until: large) {
             display: none;
 
-            img{
+            img {
                 top: 0;
-            bottom: unset;
+                bottom: unset;
             }
-           
-         }
+
+        }
     }
 
-    &__content{
+    &__content {
         padding: 2em;
         width: 50%;
         display: flex;
@@ -92,23 +93,23 @@
             width: 100%;
             text-align: center;
             justify-content: center;
-         }
+        }
     }
 
-    &__title{
-        h3{
+    &__title {
+        h3 {
             font-size: 48px;
             font-family: var(--type--1--font-family);
 
             @include mq($until: large) {
                 font-size: 32px;
-             }
+            }
         }
-       
+
     }
 
-    &__text{
-        p{
+    &__text {
+        p {
             margin: 0;
             font-size: 16px;
         }
