@@ -7,7 +7,7 @@
                 </div>
                 <div class='quote-slider__media-text'>
                     <div class='quote-slider__review-average'></div>
-                    <div class='google-logo'><img src='/wp-content/themes/reach/_src/images/google.svg'></div>
+                    <div class='quote-slider__google-logo'><img src='/wp-content/themes/reach/_src/images/google.svg'></div>
                     <h5>Customer Reviews</h5>
                 </div>
             </div>
