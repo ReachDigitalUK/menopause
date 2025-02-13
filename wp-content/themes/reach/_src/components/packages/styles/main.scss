@@ -114,16 +114,21 @@
                 font-weight: 600;
                 margin-bottom: 0.6rem;
                 text-align: center;
+                font-family: var(--type--1--font-family);
             }
 
             &__price {
-                width: fit-content;
                 margin-left: auto;
                 font-family: var(--type--1--font-family);
+                align-items: center;
+                display: flex;
+                justify-content: center;
+
 
                 .woocommerce-Price-amount {
                     font-size: 32px;
                     font-weight: 600;
+                    padding-top: 20px;
 
                     .woocommerce-Price-currencySymbol {
                         vertical-align: super;
@@ -148,6 +153,8 @@
                     width: 280px;
                     margin-top: 0px;
                     margin-bottom: 0px;
+                    font-family: var(--type--1--font-family);
+                
                 }
             }
         }

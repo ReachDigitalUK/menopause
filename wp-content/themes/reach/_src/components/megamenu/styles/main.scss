@@ -40,7 +40,7 @@
 
         @include mq($until: 'site-header') {
             font-size: 1rem !important;
-            color: #5C5C5C !important;
+            color: #ffffff !important;
         }
     }
 
@@ -324,6 +324,7 @@
             opacity: 1 !important;
             visibility: visible !important;
             pointer-events: all !important;
+            background-color: #A3CEB0
         }
 
         .site-header__inner {

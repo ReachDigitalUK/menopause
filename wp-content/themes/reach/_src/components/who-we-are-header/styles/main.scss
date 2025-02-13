@@ -23,70 +23,112 @@
 
      }
 
-    &__buttons {
-        background-color: var(--color--white);
-
-
-    }
 
     &__button_inner{
-        @include align-width--l;
         display: flex;
-        justify-content: flex-end;
         padding-bottom: 5px;
         padding-top: 5px;
         gap: 10px;
 
         @include mq($until: large) {
            gap: 5px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
 
            a{
                  padding: 5px 5px!important;
             }
 
         }
+    }
 
-      
+    &__container{
+   
+        background-color: var(--color--green-dark);
     }
 
     &__title{
-        background-color: var(--color--green-dark);
+        @include align-width--l;
+        align-items: flex-start;
         color: var(--color--white);
         height: 200px;
+        justify-content: space-between;
         h2{
             font-size: 56px;
             font-family: var(--type--1--font-family);
         }
- 
+
+        display: flex; 
+        flex-direction: row;     
+        
+        @include mq($until: large) {
+            align-items: center;
+        }
+    }
+
+    &__top-content{
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
+
     }
 
     &__title__text{
-        @include align-width--l;
-        padding-top: 30px;
         font-weight: 700;
+        margin-bottom: 0px;
+
+        @include mq($until: large) {
+            font-size: 50px;
+        }
     }
 
     &__content__inner{
         @include align-width--l;
         display: flex;
         justify-content: center;
-        margin-top: -100px;
+
         flex-direction: column;
         align-items: center;
         font-family: var(--type--1--font-family);
+
+        @include mq($until: large) {
+            text-align: center;
+        }
+
     }
 
     &__content__image{
 
         img{
+            margin-top: -100px;
             border-radius: 100%;
             width: 250px;
             height: 250px;
             object-fit: cover;
         }
+
+        @include mq($until: large) {
+            img{
+                margin-top: 20px;
+
+            }
+        }
        
     }
 
+    &__content{
+        padding-bottom: 40px;
+
+    
+    }
 
     &__job{
         margin-top:35px;
@@ -113,7 +155,6 @@
     }
 
     &__content__image{
-        background-color: var(--color--white);
         border-radius: 100%;
     }
 

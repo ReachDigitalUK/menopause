@@ -72,7 +72,7 @@ function filterArgs(array $args): ?array
 
         if ($args['card_source'] === 'recent') {
             $queryArgs = [
-                'post_type' => 'post',
+                'post_type' => $args['post_type'] ?? 'post',
                 'posts_per_page' => $args['limit'] ?? 10,
                 'post__not_in' => [get_the_ID()],
                 'no_found_rows' => true,

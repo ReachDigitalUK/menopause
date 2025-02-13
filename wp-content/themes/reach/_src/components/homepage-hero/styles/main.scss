@@ -39,10 +39,12 @@
 
     &__text {
         width: 100%;
+        margin-top: 4em;
 
         @include mq($until: medium) {
             width: 100%;
             z-index: 2;
+            margin-top: 0;
         }
 
         h1 {

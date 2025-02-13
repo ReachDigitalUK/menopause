@@ -1,6 +1,7 @@
 .product-details {
     $this: &;
     padding: 9rem 0 6rem 0;
+    background-color: #EFF9FC;
 
     &__inner {
         @include align-width--l;
@@ -26,6 +27,7 @@
             margin-right: 10px;
             position: relative;
             width: 25px;
+            top: 6px;
 
 
         }

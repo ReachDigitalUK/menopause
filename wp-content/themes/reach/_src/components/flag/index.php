@@ -18,7 +18,7 @@
 
            
                 <?php if (!empty($args['bullet_points'])) { ?>
-                <div class="flag__layout__content__bullets">
+                <div class="flag__layout__content__bullets <?php if(isset($args['flag_type'])){ if($args['flag_type'] === 'package'){echo 'bullet-one-column';}}; ?>">
                     <div class="column">
                         <ul>
                             <?php foreach (array_slice($args['bullet_points'], 0, 5) as $bullet) { ?>
