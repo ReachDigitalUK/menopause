@@ -19,9 +19,9 @@
                             <div class="packages__item__header__description">
                                 <p><?=  $package['product']->get_description(); ?></p>
                             </div>
-                            <!-- <div class="packages__item__header__price">
-                                <?// $package['product']->get_price_html(); ?>
-                            </div> -->
+                            <div class="packages__item__header__price">
+                                <?= $package['product']->get_price_html(); ?>
+                            </div>
                         </div>
                         <div class="packages__item__body">
                             <!-- <div class="packages__item__image">

@@ -62,8 +62,13 @@
                 ],
             ); ?>
 
+                    <div class='mobile-bottom-links'>
+                        <a href='/contact/'>Contact</a>
+                        <a href='/about/'>About</a>
+                    </div>
+
                     <div class='call-to-action'>
-                        <a href='/' class='button-yellow'>Book consultation</a>
+                        <a href='/contact/' class='button-yellow'>Book consultation</a>
                     </div>
 
                 </div>

@@ -117,7 +117,7 @@ if ($args['card_source'] === 'recent') {
                                 <!-- Image -->
                                 <div class="post-image-container">
                                     <img class="post-image" src="<?= esc_url($card['post_image']); ?>" alt="<?= esc_attr($post->post_title); ?>" />
-                                    <div class="post-category"><?= esc_html(get_the_category($post->ID)[0]->name); ?></div>
+                                    <?php $categories = get_the_category($post->ID); $category_name = (!empty($categories) && isset($categories[0]->name)) ? esc_html($categories[0]->name) : 'No Category';?><div class="post-category"><?= $category_name; ?></div>
                                 </div>
                                 <!-- Content -->
                                 <div class="post-content">

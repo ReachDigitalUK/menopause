@@ -350,7 +350,9 @@
             },
             "choices": {
                 "post": "Posts",
-                "page": "Page"
+                "page": "Page",
+                "case-study": "Case Studies",
+                "free-resource-list": "Free Resources"
             },
             "default_value": "",
             "return_format": "value",
@@ -607,5 +609,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1738338792
+    "modified": 1739379538
 }

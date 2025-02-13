@@ -24,7 +24,7 @@
     --flag-image-align-items: center;
     --flag-image_border_tilt: 0;
     --flag-image-border-color: transparent;
-    --flag-image-border-width: 4px;
+    --flag-image-border-width: 7px;
 
     $this: &;
 
@@ -141,6 +141,10 @@
             gap: 40px; 
         }
 
+
+        .bullet-one-column{
+            display: block;
+        }
 
         
         .column {
