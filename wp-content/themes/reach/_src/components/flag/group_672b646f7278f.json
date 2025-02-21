@@ -451,6 +451,33 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_67b70ad48a02c",
+            "label": "Heading Type",
+            "name": "heading_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "H1": "H1",
+                "H2": "H2"
+            },
+            "default_value": "H2",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -472,5 +499,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1739381552
+    "modified": 1740049152
 }

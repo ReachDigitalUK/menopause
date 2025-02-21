@@ -10,10 +10,10 @@
                     'description' => 'Put yourself back in control.',
                     'button' => [
                         'text' => 'Reclaim your confidence now',
-                        'url' => 'https://www.google.com',
+                        'url' => '/contact-form/',
                     ],
                     'button_class' => 'button-yellow',
-            
+
                 ]);
 
                 $components[] = \Reach\Component::get('quote-slider');
@@ -23,7 +23,7 @@
 
 
 
-            ?>
+                ?>
 
 
 

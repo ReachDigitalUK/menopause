@@ -27,7 +27,7 @@
 
 .button-yellow {
     border-radius: 30px;
-    padding: 10px 60px;
+    padding: 10px 20px;
     color: var(--color--black);
     text-decoration: none;
     background-color: var(--color--yellow);
@@ -35,6 +35,10 @@
     font-weight: 600;
     transition: all 0.5s ease;
     display: inline-block;
+
+    @include mq($until: large) {
+        padding: 10px 30px;
+    }
 }
 
 .button-yellow:hover {
@@ -56,8 +60,10 @@
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    color: #000;
+    color: #5c5c5c;
     transition: all 0.5s ease;
+    font-family: var(--type--1--font-family);
+    margin-top: 20px;
 }
 
 .button-certificate::before {

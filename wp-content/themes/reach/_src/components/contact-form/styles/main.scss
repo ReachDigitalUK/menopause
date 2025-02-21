@@ -18,11 +18,16 @@
 
     padding: var(--text-padding);
 
+
     &__inner {
         @include align-width--l;
         padding: 30px 70px;
         border-radius: 30px;
         background-color: #fff;
+
+        @include mq($until: medium) {
+            padding: 30px 20px;
+        }
 
 
         h1{
@@ -31,6 +36,11 @@
             margin: 0px;
             font-family: var(--type--1--font-family);
             font-size: 36px;
+
+            @include mq($until: medium) {
+                padding: 15px 0;
+                font-size: 24px;
+            }
         }
 
         .gform_heading{
@@ -46,11 +56,20 @@
                 box-shadow: none;
                 outline: none;
                 cursor: pointer;
+
+                @include mq($until: medium) {
+                    padding: 20px;
+                }
             }
 
              .gform_fields, .gform-grid-row{
                 column-gap: 40px!important;
                 row-gap: 25px!important;
+                
+                @include mq($until: medium) {
+                    column-gap: 0px!important;
+                    row-gap: 15px!important;
+                }
              }
 
 
@@ -63,6 +82,11 @@
                 border-width: 2px;
                 color: red;
                 cursor: pointer;
+
+                @include mq($until: medium) {
+                    width: 20px;
+                    height: 20px;
+                }
 
                 &:focus{
                     border-color: #A3CEB0
@@ -84,7 +108,7 @@
                 font-family: var(--type--1--font-family)!important;
                 font-weight: 600!important;
                 border-radius: 30px!important;
-                padding: 20px 100px!important;
+                padding: 15px 100px!important;
                 color:  var(--color--black)!important;
                 text-decoration: none!important;
                 background-color: var(--color--yellow)!important;
@@ -94,10 +118,16 @@
                 &:hover{
                     background-color: #8ABE9B;
                 }
-            }
+
+
+                @include mq($until: medium) {
+                    padding: 10px 80px!important;
+                    margin-bottom: 30px;
+                 }
 
         }
 
+    }
 
 
     }

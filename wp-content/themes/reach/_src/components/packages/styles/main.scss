@@ -68,6 +68,7 @@
         flex-direction: column;
         width: 33.3333%;
         position: relative;
+        opacity: 0;
 
 
         @include mq($until: large) {
@@ -130,11 +131,11 @@
                     font-weight: 600;
                     padding-top: 20px;
 
-                    .woocommerce-Price-currencySymbol {
-                        vertical-align: super;
-                        font-weight: 400;
-                        font-size: 1.6rem;
-                    }
+                    // .woocommerce-Price-currencySymbol {
+                    //     vertical-align:text-bottom;
+                    //     font-weight: 400;
+                    //     font-size: 1.6rem;
+                    // }
                 }
 
                 .subscription-details {

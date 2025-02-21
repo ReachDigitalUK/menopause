@@ -23,8 +23,8 @@
         padding: var(--text-padding);
         
         @include mq($until: large) {
-           padding-top: 4em;
-            padding-bottom:0em;
+           padding-top: 3em;
+            padding-bottom:3em;
          }
 
 
@@ -35,6 +35,10 @@
         margin-bottom: 0px;
         margin-top: 0px;
         font-family: var(--type--1--font-family);
+
+        @include mq($until: medium) {
+            font-size: 16px;
+        }
     }
 
     &__heading {
@@ -53,6 +57,10 @@
         margin-bottom: 0px;
         margin-top: 0px;
         font-family: var(--type--1--font-family);
+
+        @include mq($until: medium) {
+            font-size: 16px;
+        }
 
     }
 
