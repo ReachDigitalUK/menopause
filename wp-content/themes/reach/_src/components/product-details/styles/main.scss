@@ -43,8 +43,13 @@
         }
     }
 
-    &__heading {
-        @include typestyle-h3;
+    h1{
+        font-family: var(--type--1--font-family);
+        font-size: 40px;
+
+        @include mq($until: medium) {
+            font-size: 30px;
+        }
 
     }
 

@@ -37,7 +37,7 @@
         </div>
 
         <div class="site-footer__middle">
-            <?=  do_shortcode('[reviews_rating]'); ?>
+            <?php echo '‎'; // do_shortcode('[reviews_rating]'); ?>
 
 
             <div class='footer-images'>

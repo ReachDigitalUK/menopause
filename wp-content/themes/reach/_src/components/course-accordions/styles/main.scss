@@ -115,15 +115,22 @@
                     font-weight: 400;
                     margin: 0;
                     font-family: var(--type--1--font-family);
+                    max-width: 85%;
 
                     @include mq($until: large) {
-                        font-size: 1.2rem;
+                        font-size: 0.9rem;
+                        font-weight: 400;
+
                     }
                 }
 
                 svg {
                     width: 2rem;
                     transition: transform .25s ease;
+
+                    @include mq($until: large) {
+                        width: 1.1rem;
+                    }
                 }
             }
 

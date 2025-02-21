@@ -42,12 +42,16 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 16em;
+        height: auto;
+
+        @include mq($until: large) {
+            height: auto;
+        }
 
         p {
             margin-top: 0px;
             margin-bottom: 20px;
-            color: #DEDEDE;
+            color: #5c5c5c;
             font-family: var(--type--1--font-family);
         }
 

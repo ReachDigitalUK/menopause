@@ -39,6 +39,10 @@
 
            a{
                  padding: 5px 5px!important;
+
+                 @include mq($until: large) {
+                    padding: 10px 15px!important;
+                 }
             }
 
         }
@@ -117,7 +121,7 @@
 
         @include mq($until: large) {
             img{
-                margin-top: 20px;
+                margin-top: 60px;
 
             }
         }
@@ -126,6 +130,10 @@
 
     &__content{
         padding-bottom: 40px;
+
+        @include mq($until: large) {
+            padding-bottom: 0px;
+        }
 
     
     }

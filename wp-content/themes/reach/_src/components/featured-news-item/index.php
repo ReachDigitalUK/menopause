@@ -5,9 +5,9 @@
             <a href='<?= $args['feautured_post']['post_link']; ?>'><img src='<?= $args['feautured_post']['post_image']; ?>' /></a>
             </div>
             <div class='featured-news-item__content'>
-                <div class = 'featured-news-item__category'>
-                    <?= $args['feautured_post']['post_category']; ?>
-                </div>
+                <!-- <div class = 'featured-news-item__category'>
+                    <?//$args['feautured_post']['post_category']; ?>
+                </div> -->
                 <div class='featured-news-item__date'>
                     <?= $args['feautured_post']['post_date']; ?>
                 </div>

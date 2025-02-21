@@ -129,6 +129,9 @@ function handle_get_quotes() {
             ];
 
         }
+    }else{
+
+        $args['items'] = [];
     }
     $quotes = $args['items'];
     wp_send_json_success($quotes);

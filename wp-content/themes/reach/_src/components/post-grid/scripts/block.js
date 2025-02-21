@@ -74,9 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="post-grid__item">
                     <div class="post-grid__item__image">
                         ${post.image ? ` <a href='${post.link}'><img src="${post.image}" alt="${post.title}"></a>` : ''}
-                        <div class="post-grid__category">
-                            <p>${firstCategory}</p>
-                        </div>
                     </div>
                     <div class="post-grid__item__content">
                         <p>${post.date}</p>

@@ -36,21 +36,24 @@ window.addEventListener('DOMContentLoaded', () => {
                         const starRating = '⭐'.repeat(parseInt(rating));
 
                         // Use `item.querySelector()` instead of `document.querySelector()`
-                        item.querySelector('.quote-slider__quote').classList.add('fade-out');
+                      //  item.querySelector('.quote-slider__quote').classList.add('fade-out');
                         setTimeout(() => {
-                            item.querySelector('.quote-slider__quote').classList.remove('fade-out');
-                            item.querySelector('.quote-slider__text').innerHTML = `"${text}"`;
-                            item.querySelector('.quote-slider__title').innerHTML = name;
-                            item.querySelector('.quote-slider__rating').innerHTML = starRating;
-                            currentIndex = (currentIndex + 1) % reviews.length;
+                           // item.querySelector('.quote-slider__quote').classList.remove('fade-out');
+                            // item.querySelector('.quote-slider__text').innerHTML = `"${text}"`;
+                          //  item.querySelector('.quote-slider__text').innerHTML = 'Google Reviews are coming soon!';
+                            //item.querySelector('.quote-slider__title').innerHTML = name;
+                           // item.querySelector('.quote-slider__rating').innerHTML = starRating;
+                            //currentIndex = (currentIndex + 1) % reviews.length;
                         }, 500);
                     };
 
                     updateQuoteSlider();
                     setInterval(updateQuoteSlider, 3000);
 
+                    item.querySelector('.quote-slider__text').innerHTML = 'Our Google reviews will be here soon, be one of the first to share your experience!';
+
                     // Update the average rating inside each `.quote-slider`
-                    item.querySelector('.quote-slider__review-average').innerHTML = averageRating + averageStarRating;
+                   // item.querySelector('.quote-slider__review-average').innerHTML = averageRating + averageStarRating;
                 } else {
                     console.error('Invalid data structure:', data);
                 }

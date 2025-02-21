@@ -160,6 +160,10 @@
 
         a {
             color: #5C5C5C !important;
+
+            @include mq($until: large) {
+                color: #fff !important;
+            }
         }
 
         &.active {
@@ -185,7 +189,7 @@
             @include mq($until: large) {
                 padding: 0;
                 margin-right: 0px;
-                margin-left: 60px !important;
+                margin-left: 20px !important;
             }
         }
 
@@ -305,6 +309,10 @@
             height: 20px;
             left: -40px;
             margin-top: 3px;
+
+            @include mq($until: large) {
+                display: none;
+            }
         }
 
 
