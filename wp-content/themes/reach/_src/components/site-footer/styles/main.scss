@@ -73,10 +73,13 @@
             width: 100%;
             max-width: rem(130);
 
-       
+            @include mq($until: medium) {
+               display: none;
+            }
 
             @include mq(medium) {
                 max-width: rem(165);
+
             }
 
           

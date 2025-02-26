@@ -41,16 +41,16 @@
 
 
             <div class='footer-images'>
-                <?php $images = get_field('footer_images', 'option'); 
+                <?php $images = get_field('footer_images', 'option');
 
 
                 if ($images) { ?>
                     <?php foreach ($images as $image) { ?>
-                        <div class='footer-image'>
-                            <a href='<?= $image['image']['link'] ?>'>
-                                <img src='<?= $image['image']['url'] ?>' alt='<?= $image['image']['alt'] ?>'>
-                            </a>
-                        </div>
+                <div class='footer-image'>
+                    <a href='<?= $image['image']['link'] ?>'>
+                        <img src='<?= $image['image']['url'] ?>' alt='<?= $image['image']['alt'] ?>'>
+                    </a>
+                </div>
                     <?php } ?>
                 <?php } ?>
             </div>
@@ -63,9 +63,12 @@
                     <?= wp_kses_post($bottom_text); ?>
                 </div>
                 <?php } ?>
-                <div class = 'site-footer__made-by-reach'>
-                    <a href="https://reachdigital.media/?utm_source=website&utm_medium=footer&utm_campaign=menopause_studio" target='_blank'>Design & Development by </a>
-                    <a href ="https://reachdigital.media/?utm_source=website&utm_medium=footer&utm_campaign=menopause_stusio"><?= \Reach\Image::get('logo-reach.svg'); ?> </a>
+                <div class='site-footer__made-by-reach'>
+                    <a href="https://reachdigital.media/?utm_source=website&utm_medium=footer&utm_campaign=menopause_studio"
+                        target='_blank'>Design & Development by </a>
+                    <a
+                        href="https://reachdigital.media/?utm_source=website&utm_medium=footer&utm_campaign=menopause_stusio"><?= \Reach\Image::get('logo-reach.svg'); ?>
+                    </a>
                 </div>
             </div>
         </div>
