@@ -1,0 +1,143 @@
+.homepage-hero {
+
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
+
+    $this: &;
+
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
+
+    &__inner {
+        padding: var(--text-padding);
+        @include align-width--l;
+
+        @include mq($until: medium) {
+            z-index: 2;
+            padding-top: 2em;
+        }
+
+    }
+
+
+    &__header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mq($until: medium) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        margin-top: 4em;
+
+        @include mq($until: medium) {
+            width: 100%;
+            z-index: 2;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-family: var(--type--1--font-family);
+            max-width: var(--text-span);
+            margin: 10px auto;
+            font-weight: 700;
+            line-height: 70px;
+            font-size: 4em;
+            text-underline-offset: 6px;
+
+            @include mq($until: medium) {
+                font-size: 2.7em;
+                line-height: 1.2;
+                margin: 0;
+            }
+        }
+
+        p {
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__check {
+        position: relative;
+
+        p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+            &::before {
+                content: "";
+                background-image: url('/wp-content/themes/reach/assets/images/check-white.svg');
+                background-repeat: no-repeat;
+                display: inline-flex;
+                height: 30px;
+                position: relative;
+                width: 30px;
+                background-size: contain;
+                margin-right: 10px;
+                top: 10px;
+            }
+        }
+
+    }
+
+    &__button {
+        margin-top: 50px;
+    }
+
+    &__image {
+        width: 40%;
+
+        @include mq($until: medium) {
+            width: 100%;
+        }
+
+        position: relative;
+        width: 100%;
+        height: 100px;
+        overflow: visible;
+        /* Allow elements to go outside if needed */
+
+
+        // @include mq($until: medium) {
+        //     display: none;
+        // }
+
+
+        img {
+            position: absolute;
+            max-width: 400%;
+            /* Makes the image twice as big */
+            height: auto;
+            /* Keeps its natural height */
+            bottom: -300px;
+            /* Adjust to move */
+            left: 0;
+            /* Adjust to move */
+        }
+
+    }
+
+    @media (max-width: 1500px) {
+        .homepage-hero__image img {
+            width: 100%;
+            max-width: 100%;
+            /* Ensures it doesn’t go beyond its container */
+            bottom: -200px;
+            /* Adjust position if needed */
+        }
+    }
+
+}

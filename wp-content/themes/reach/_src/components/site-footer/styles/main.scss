@@ -7,7 +7,7 @@
     $footer-breakpoint--small: 400px;
 
     padding-top: var(--space--xl);
-    padding-bottom: var(--space--xl);
+    //padding-bottom: var(--space--xl);
 
     &__logo { grid-area: logo; }
     &__top-text { grid-area: top-text; }
@@ -27,12 +27,12 @@
             'menu-2'
             'right';
 
-        @include mq($footer-breakpoint--small) {
-            grid-template-areas:
-                'logo logo'
-                'top-text menu-1'
-                'menu-2 right';
-        }
+        // @include mq($footer-breakpoint--small) {
+        //     grid-template-areas:
+        //         'logo logo'
+        //         'top-text menu-1'
+        //         'menu-2 right';
+        // }
 
         @include mq(medium) {
             grid-template-areas:
@@ -43,23 +43,43 @@
         }
 
         @include mq(large) {
-            grid-template-columns: minmax(0, 1fr) minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
         }
 
         > * {
             @include no-first-last-margin;
         }
+
+
+        a{
+            font-weight: 600;
+            text-decoration: none;
+            color: #000;
+            transition: all 0.5s ease;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 
     &__logo {
+
+        @include mq($until: large) {
+            text-align: center;
+        }
         a {
             display: inline-block;
             width: 100%;
             max-width: rem(130);
 
+       
+
             @include mq(medium) {
                 max-width: rem(165);
             }
+
+          
         }
 
         img {
@@ -96,7 +116,13 @@
 
         .menu-list {
             display: grid;
-            gap: var(--space--xs);
+            grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 3 columns with a minimum width */
+            grid-template-rows: auto; /* Rows adjust to content height */
+            gap: var(--space--xs); 
+
+            @include mq($until: large) {
+                text-align: center;
+            }
         }
 
         a {
@@ -123,7 +149,8 @@
 
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: center;
     }
 
     &__images {
@@ -142,14 +169,86 @@
         }
     }
 
+    &__middle{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include align-width--l;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        .number{
+            display: none;
+        }
+
+        .gmbrr.badge.tiny{
+            box-shadow: none;
+            max-width: unset;
+        }
+
+        .gmbrr.tiny{
+            margin-inline:unset;
+        }
+
+        .footer-images{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+            img{
+                max-width: 100px;
+            }
+
+        }
+
+
+        @include mq($until: large){
+
+            flex-direction: column;
+            gap: 10px;
+
+            .footer-images{
+                justify-content: center;
+            }
+        }
+
+    }
+
     &__bottom {
         padding-top: var(--space--base);
-        border-top: var(--border--1);
+        padding-bottom: var(--space--base);
+       // border-top: var(--border--1);
+       background-color: var(--color--light-yellow);
 
         &__inner {
-            align-items: center;
-            gap: rem(25);
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            @include align-width--l;
+
+            a{
+                font-weight: 600;
+                text-decoration: none;
+                color: #000;
+                transition: all 0.5s ease;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+
+            @include mq($until: large) {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+
+
         }
 
         #{$this}__bottom-text {
@@ -158,5 +257,23 @@
             max-width: 60em;
             text-align: left;
         }
+        
+    }
+
+    &__made-by-reach{
+        display: flex;
+        gap: 10px;
+        align-items: end;
+
+        @include mq($until: large){
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img{
+            height: 30px;
+        }
+
+
     }
 }

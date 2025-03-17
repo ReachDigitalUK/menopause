@@ -18,8 +18,9 @@
             height: 1em;
             align-items: center;
             justify-content: center;
-            color: inherit;
+            color: #5C5C5C;
             font-size: var(--social-icons--icon-size);
+            font-size: 4rem;
             transition: background-color var(--transition--duration) var(--transition--ease);
 
             @include interact {

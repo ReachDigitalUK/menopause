@@ -21,3 +21,62 @@
     --button--small--padding-y: 0;
     --button--small--padding-x: 0.7em;
 }
+
+
+//Button variables
+
+.button-yellow {
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: var(--color--black);
+    text-decoration: none;
+    background-color: var(--color--yellow);
+    font-family: var(--type--1--font-family);
+    font-weight: 600;
+    transition: all 0.5s ease;
+    display: inline-block;
+
+    @include mq($until: large) {
+        padding: 10px 30px;
+    }
+}
+
+.button-yellow:hover {
+    transform: scale(1.1) !important;
+}
+
+
+.button-light-yellow {
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: var(--color--black);
+    text-decoration: none;
+    background-color: #DAEBDF;
+    font-family: var(--type--1--font-family);
+    font-weight: 600;
+}
+
+.button-certificate {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #5c5c5c;
+    transition: all 0.5s ease;
+    font-family: var(--type--1--font-family);
+    margin-top: 20px;
+}
+
+.button-certificate::before {
+    content: '';
+    background-image: url('/wp-content/themes/reach/assets/images/certificate.svg');
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+.button-certificate:hover {
+    transform: scale(1.1) !important;
+}

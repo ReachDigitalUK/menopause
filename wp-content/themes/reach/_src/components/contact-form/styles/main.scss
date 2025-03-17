@@ -1,0 +1,135 @@
+.contact-form {
+    $this: &;
+
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
+
+    $this: &;
+
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
+
+    padding: var(--text-padding);
+
+
+    &__inner {
+        @include align-width--l;
+        padding: 30px 70px;
+        border-radius: 30px;
+        background-color: #fff;
+
+        @include mq($until: medium) {
+            padding: 30px 20px;
+        }
+
+
+        h1{
+            text-align: center;
+            padding: 50px 0;
+            margin: 0px;
+            font-family: var(--type--1--font-family);
+            font-size: 36px;
+
+            @include mq($until: medium) {
+                padding: 15px 0;
+                font-size: 24px;
+            }
+        }
+
+        .gform_heading{
+            display: none;
+        }
+
+        .gform-body{
+            input[type="text"], input[type="email"], input[type="tel"], textarea, select{
+                width: 100%;
+                padding: 30px;
+                border: 1px solid #DEE1E3;
+                border-radius: 30px;
+                box-shadow: none;
+                outline: none;
+                cursor: pointer;
+
+                @include mq($until: medium) {
+                    padding: 20px;
+                }
+            }
+
+             .gform_fields, .gform-grid-row{
+                column-gap: 40px!important;
+                row-gap: 25px!important;
+                
+                @include mq($until: medium) {
+                    column-gap: 0px!important;
+                    row-gap: 15px!important;
+                }
+             }
+
+
+
+            input[type="checkbox"]{
+                border-radius: 99px;
+                width: 30px;
+                height: 30px;
+                border-color: #A3CEB0;
+                border-width: 2px;
+                color: red;
+                cursor: pointer;
+
+                @include mq($until: medium) {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &:focus{
+                    border-color: #A3CEB0
+                }
+
+                &::before{
+                    color:#A3CEB0;
+                }
+            }
+        }
+
+
+
+        .gform-footer{
+            justify-content: center;
+
+
+            input[type="submit"]{
+                font-family: var(--type--1--font-family)!important;
+                font-weight: 600!important;
+                border-radius: 30px!important;
+                padding: 15px 100px!important;
+                color:  var(--color--black)!important;
+                text-decoration: none!important;
+                background-color: var(--color--yellow)!important;
+                box-shadow: none!important;
+                outline: none!important;
+                font-size: 16px!important;
+                &:hover{
+                    background-color: #8ABE9B;
+                }
+
+
+                @include mq($until: medium) {
+                    padding: 10px 80px!important;
+                    margin-bottom: 30px;
+                 }
+
+        }
+
+    }
+
+
+    }
+
+}

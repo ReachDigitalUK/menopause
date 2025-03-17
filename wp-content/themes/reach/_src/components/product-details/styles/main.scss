@@ -1,0 +1,357 @@
+.product-details {
+    $this: &;
+    padding: 9rem 0 6rem 0;
+    background-color: #EFF9FC;
+
+    &__inner {
+        @include align-width--l;
+
+
+        .back {
+            text-decoration: underline;
+
+            color: #5C5C5C;
+            font-family: var(--type--1--font-family);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        .back::before {
+            background-image: url('/wp-content/themes/reach/assets/images/arrow-right.svg');
+            background-repeat: no-repeat;
+            transform: rotate(180deg);
+            content: "";
+            display: inline-block;
+            height: 25px;
+            margin-right: 10px;
+            position: relative;
+            width: 25px;
+            top: 6px;
+
+
+        }
+
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        @include mq($until: medium) {
+            flex-direction: column;
+        }
+    }
+
+    h1{
+        font-family: var(--type--1--font-family);
+        font-size: 40px;
+
+        @include mq($until: medium) {
+            font-size: 30px;
+        }
+
+    }
+
+    &__description {
+
+        @include mq($until: large) {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__information {
+
+        color: #5C5C5C;
+
+        .item-desciption {
+            padding-bottom: 20px;
+            font-family: var(--type--1--font-family);
+        }
+
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+
+        z-index: 5;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            content: '';
+            width: 50dvw;
+            height: 100%;
+            z-index: -1;
+        }
+
+        &__sku {
+            font-size: 9px;
+            background: #EAEAEA;
+            padding: 0.2rem 1rem;
+            text-transform: uppercase;
+            width: fit-content;
+            margin-bottom: 1rem;
+        }
+
+        &__title {
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0px;
+            font-family: var(--type--1--font-family);
+
+            @include mq($until: medium) {
+                align-items: flex-start;
+                flex-direction: column;
+
+            }
+
+        }
+
+        &__price {
+            text-align: right;
+            font-weight: normal;
+            margin: 1rem 0;
+
+            span {
+                font-size: 26px;
+                display: inline-flex;
+                font-family: var(--type--1--font-family);
+
+
+                bdi {
+                    margin-right: 0.2rem;
+                }
+            }
+        }
+
+        .button {
+            background: #F6ED9A !important;
+            font-size: 1rem !important;
+            font-weight: bold !important;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            padding: 1rem !important;
+            text-align: center;
+            color: #fff !important;
+            border-radius: 50px !important;
+            transition: all .25s;
+
+            &:hover {
+                background: #facb6e !important;
+            }
+        }
+
+        .stock {
+            display: none;
+        }
+
+
+
+        .all-perks {
+            font-family: var(--type--1--font-family);
+            display: flex;
+            flex-direction: column;
+
+            a {
+                cursor: pointer;
+                font-family: var(--type--1--font-family);
+            }
+
+
+            img {
+                position: relative;
+                //bottom: 11px;
+            }
+
+            .info-modal {
+                cursor: pointer !important;
+            }
+
+            .info-modal:hover {
+
+                cursor: pointer !important;
+
+            }
+
+            .package-item-perk {
+                display: inline-flex;
+
+                a {
+                    margin-top: 6px;
+                    margin-left: 5px;
+                }
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 20px !important;
+                font-family: var(--type--1--font-family);
+            }
+
+            h4 {
+                font-family: var(--type--1--font-family);
+                font-size: 20px;
+                display: inline-flex;
+
+            }
+
+            h4::before {
+                background-image: url(/wp-content/themes/reach/assets/images/check.svg);
+                background-repeat: no-repeat;
+                background-size: 25px 25px;
+                content: "";
+                display: inline-block;
+                flex-shrink: 0;
+                height: 25px;
+                margin-right: 11px;
+                top: 0px;
+                width: 25px;
+                position: relative;
+            }
+
+            // h4::after{
+            //     background-image: url(/wp-content/themes/reach/assets/images/infosmall.svg);
+            //     background-repeat: no-repeat;
+            //     content: "";
+            //     display: inline-block;
+            //     height: 15px;
+            //     margin-left: 10px;
+            //     position: relative;
+            //     width: 15px;
+            //     top:2px;
+            //     background-size: cover;
+            //     cursor: pointer;
+            // }
+
+        }
+
+        // @include mq($until: medium) {
+        //    width: 100%;
+        // }
+
+    }
+
+    &__gallery {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        &__images {
+            display: flex;
+
+            img {
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+
+        &__video {
+            margin-bottom: 2rem;
+        }
+
+        .woocommerce-breadcrumb {
+            display: none;
+        }
+
+    }
+
+    &__category {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 1rem;
+
+        &__caret {
+            font-size: 10px;
+            margin-left: 0.4rem;
+            position: relative;
+            top: -0.1 rem;
+        }
+
+        &__category {
+            text-transform: uppercase;
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+        }
+
+        &__stock {
+            font-weight: 500;
+        }
+    }
+}
+
+.reach-woocommerce {
+    .did-you-know {
+        padding-top: 8rem;
+    }
+}
+
+dialog {
+    width: 800px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 30px;
+
+    .close {
+        align-items: center;
+        background: #F6ED9A !important;
+        border-radius: 50px !important;
+        color: #000 !important;
+        display: flex;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        justify-content: center;
+        padding: 1rem !important;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .25s;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .close:hover {
+        background: #facb6e !important;
+    }
+
+    :focus {
+        outline: none !important;
+    }
+}
+
+dialog::backdrop {
+    backdrop-filter: brightness(0.5);
+}
+
+dialog[open] {
+    transition:
+        translate 0.2s ease-out,
+        display 0.2s ease-out allow-discrete;
+
+    /* Post-Entry (Normal) State */
+    translate: 0 0;
+
+    /* Pre-Entry State */
+    @starting-style {
+        translate: 0 100vh;
+    }
+}

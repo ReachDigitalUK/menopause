@@ -154,16 +154,20 @@ msgctxt "ACF options page name"
 msgid "Integrations"
 msgstr ""
 
-#: Theme/PostTypes/Event.php:91
-msgid "Event"
+#: Theme/PostTypes/CaseStudy.php:91, Theme/PostTypes/CaseStudy.php:92
+msgid "Case Study"
 msgstr ""
 
-#: Theme/PostTypes/Event.php:92
-msgid "Events"
+#: Theme/PostTypes/CaseStudy.php:107, Theme/PostTypes/CaseStudy.php:108
+msgid "Case Study Settings"
 msgstr ""
 
-#: Theme/PostTypes/Event.php:107, Theme/PostTypes/Event.php:108
-msgid "Events Settings"
+#: Theme/PostTypes/FreeResources.php:91, Theme/PostTypes/FreeResources.php:92
+msgid "Free Resources"
+msgstr ""
+
+#: Theme/PostTypes/FreeResources.php:107, Theme/PostTypes/FreeResources.php:108
+msgid "Free Resources Settings"
 msgstr ""
 
 #: Theme/Taxonomies/Location.php:49
@@ -187,6 +191,11 @@ msgstr ""
 #: Theme/WordPress/Menus.php:22
 msgctxt "Menu name"
 msgid "Footer 2"
+msgstr ""
+
+#: Theme/WordPress/Menus.php:23
+msgctxt "Menu name"
+msgid "Header Top"
 msgstr ""
 
 #: _src/components/card/functions.php:84
@@ -289,16 +298,12 @@ msgstr ""
 msgid "No content found."
 msgstr ""
 
-#: _src/components/no-content/functions.php:37
+#: _src/components/no-content/functions.php:33
 msgid "Items cannot be displayed in the editor."
 msgstr ""
 
-#: _src/components/no-content/functions.php:31
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr ""
-
 #: _src/components/no-content/functions.php:29
-msgid "It seems we can't find what you're looking for."
+msgid "<a href='/'>Error 404</a>"
 msgstr ""
 
 #: _src/components/page-header/functions.php:71
@@ -348,15 +353,11 @@ msgid "Page"
 msgstr ""
 
 #. translators: 1: Social network name.
-#: _src/components/site-footer/index.php:43
+#: _src/components/site-footer/index.php:34
 msgid "Visit our %s page"
 msgstr ""
 
-#: _src/components/site-header/index.php:22, _src/components/site-header/index.php:53
-msgid "Expand the search field"
-msgstr ""
-
-#: _src/components/site-header/index.php:32
+#: _src/components/site-header/index.php:42
 msgid "Main menu button"
 msgstr ""
 

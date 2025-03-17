@@ -1,0 +1,31 @@
+.are-you-ready {
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
+
+    $this: &;
+
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
+
+
+
+    &__inner {
+        @include align-width--l;
+        padding: var(--text-padding);
+        @include mq($until: large) {
+            padding-top: 0rem!important;
+            padding-bottom: 1em;
+        }
+    }
+
+    &__heading {
+        @include typestyle-h3;
+    }
+}

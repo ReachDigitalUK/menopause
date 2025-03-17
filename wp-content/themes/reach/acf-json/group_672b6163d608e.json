@@ -418,6 +418,25 @@
                     "append": ""
                 }
             ]
+        },
+        {
+            "key": "field_6797f742b6b03",
+            "label": "Block Background Color",
+            "name": "block_background_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fffff",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -439,5 +458,5 @@
     "description": "",
     "show_in_rest": 0,
     "reach_save_location": 0,
-    "modified": 1732099528
+    "modified": 1738013026
 }

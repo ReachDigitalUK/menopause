@@ -1,0 +1,14 @@
+.jump-to {
+
+    margin: 0px;
+    padding: 0px;
+    height: 0px;
+
+    &__inner {
+        @include align-width--l;
+    }
+
+    &__heading {
+        @include typestyle-h3;
+    }
+}

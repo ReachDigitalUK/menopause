@@ -1,0 +1,167 @@
+.quote-slider {
+    --text-margin: 2rem 0rem;
+    --text-padding: 0rem;
+    --text-background-colour: transparent;
+    --text-text-colour: inherit;
+    --text-column-size: 1;
+    --text-text-align: left;
+
+    $this: &;
+
+    background: var(--text-background-colour);
+    color: var(--text-text-colour);
+    margin: var(--text-margin);
+    text-align: var(--text-text-align);
+
+    padding: var(--text-padding);
+
+    @include mq($until: medium) {
+        padding-top: 0px;
+    }
+
+    &__inner {
+        padding: var(--text-padding);
+        @include align-width--l;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+
+
+        @include mq($until: large) {
+            flex-direction: column;
+            height: auto;
+            padding: 50px;
+            max-width: 100%;
+            margin-left: unset;
+            margin-right: unset;
+        }
+    }
+
+    .google-logo{
+        width: 60px;
+    }
+
+    .home-page-hero::after {
+        content: '';
+        background-image: url('/wp-content/themes/reach/assets/images/woman-cut-out.png');
+        background-repeat: no-repeat;
+        width: 720px;
+        height: 500px;
+        position: absolute;
+        display: block;
+        bottom: 150px;
+        right: 0;
+
+        @include mq($until: large) {
+            display: none;
+        }
+
+    }
+
+    &__media-image {
+        display: flex;
+        width: 300px;
+
+        img {
+            position: absolute;
+            bottom: 0;
+
+            @include mq($until: large) {
+                opacity: 0.2;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__quote {
+        width: 800px;
+
+        @include mq($until: large) {
+            width: 100%;
+            align-items: center;
+            z-index: 2;
+        }
+    }
+
+    &__media {
+        display: flex;
+
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
+    }
+
+    &__media-text {
+        display: flex;
+        flex-direction: column;
+
+        h5 {
+            margin: 0px;
+        }
+
+        @include mq($until: large) {
+            align-items: center;
+        }
+    }
+
+    &__quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h5 {
+            margin: 0px;
+        }
+
+        p {
+            margin-top: 2px;
+            margin-bottom: 2px;
+
+            @include mq($until: large) {
+                text-align: center;
+            }
+        }
+    }
+
+    @include mq($until: large) {
+        z-index: 2;
+    }
+
+}
+
+/* Define the fade-out and fade-in animations */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-out class */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Apply the fade-in class */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}

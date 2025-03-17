@@ -1,4 +1,14 @@
 .flag {
+
+   
+
+    @include mq($until: large) {
+        padding-top: 4rem!important;
+        padding-bottom: 1rem;
+    }
+
+
+
     --flag-media-size: 50%;
     --flag-media-direction: row;
     --flag-row-gap: 2rem;
@@ -11,6 +21,10 @@
     --flag-link-hover-colour: lighten(var(--color--brand-1), 10%);
     --flag-image-overlay-colour: transparent;
     --flag-image-overlay-opacity: 0;
+    --flag-image-align-items: center;
+    --flag-image_border_tilt: 0;
+    --flag-image-border-color: transparent;
+    --flag-image-border-width: 7px;
 
     $this: &;
 
@@ -31,17 +45,35 @@
         gap: var(--flag-row-gap);
         flex-direction: var(--flag-media-direction);
         color: var(--flag-text-colour);
+        align-items: var(--flag-image-align-items);
 
         @include mq($until: medium) {
             flex-direction: column;
         }
 
         &__media {
+            position: relative;
             width: var(--flag-media-size);
             border-radius: var(--flag-image-border-radius);
-            overflow: hidden;
-            position: relative;
-
+            overflow: visible; 
+            z-index: 1;
+        
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border: solid var(--flag-image-border-width) var(--flag-image-border-color);
+                border-radius: var(--flag-image-border-radius);
+                z-index: 3; 
+                box-sizing: border-box;
+                pointer-events: none;
+                rotate: var(--flag-image_border_tilt);
+            }
+        
+        
             &:after {
                 content: '';
                 display: flex;
@@ -62,10 +94,35 @@
                 width: 100%;
                 object-fit: cover;
                 aspect-ratio: 4 / 3;
+                z-index: 1;
+                border-radius: var(--flag-image-border-radius);
             }
         }
 
         &__content {
+
+            margin-bottom: 0px;
+
+            p{
+                margin-bottom: 0px;
+                margin-top:5px;
+            }
+
+
+            ul{
+                padding-left: 10px;
+
+                @include mq($until: medium) {
+                    padding-left: 30px;
+                    margin-bottom: 0px;
+                }
+            }
+
+
+            h2, p{
+                font-family: var(--type--1--font-family);
+            }
+          
             width: calc(100% - var(--flag-media-size));
 
             @include mq($until: medium) {
@@ -73,13 +130,52 @@
             }
 
             &__button {
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                @include mq($until: medium) {
+                    margin-top: 20px;
+                }
                 .reach-button {
                     @include mq($until: medium) {
                         display: block;
                         width: 100%;
+                        margin-top: 20px;
                     }
                 }
             }
         }
+
+        &__content__bullets{
+            display: flex;
+            gap: 40px; 
+
+            @include mq($until: medium) {
+                flex-direction: column;
+                gap: 0px;
+            }
+        }
+
+
+        .bullet-one-column{
+            display: block;
+        }
+
+        
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .no-bullet {
+            list-style-type: none; /* Removes the bullet */
+            text-indent: -15px; /* Aligns it with the bullet points */
+
+        }
+        
+        .bold-text {
+            font-weight: bold; /* Makes the text bold */
+        }
+
     }
 }

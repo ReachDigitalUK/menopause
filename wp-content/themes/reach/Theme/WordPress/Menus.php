@@ -20,6 +20,7 @@ class Menus
             'header' => \_x('Header', 'Menu name', 'reach'),
             'footer-1' => \_x('Footer 1', 'Menu name', 'reach'),
             'footer-2' => \_x('Footer 2', 'Menu name', 'reach'),
+            'header-top' => \_x('Header Top', 'Menu name', 'reach'),
         ]);
     }
 }

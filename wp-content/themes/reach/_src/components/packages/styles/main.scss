@@ -1,0 +1,221 @@
+.packages {
+
+
+    $this: &;
+
+    --package-background: #fff;
+
+    &__inner {
+        @include align-width--l;
+    }
+
+    &__heading {
+        color: #044961;
+        @include typestyle-h3;
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+        font-family: var(--type--1--font-family);
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq($until: large) {
+            max-width: 100%;
+        }
+
+        @include mq($until: small) {
+            font-size: 32px;
+        }
+    }
+
+    &__content {
+        color: #5C5C5C;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 4rem;
+        max-width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq($until: large) {
+            max-width: 100%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-bottom: -2rem;
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
+
+        @include mq($until: small) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 33.3333%;
+        position: relative;
+        opacity: 0;
+
+
+        @include mq($until: large) {
+            width: 100%;
+            margin-bottom: 60px;
+
+            &:nth-child(2) {
+                margin-top: 0px !important;
+            }
+        }
+
+
+        &:nth-child(2) {
+            margin-top: -50px;
+
+            h3::after {
+                content: "";
+                display: inline-flex;
+                background-image: url('/wp-content/themes/reach/_srassetsc/images/popular.png');
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: 80px;
+                margin-left: 40px;
+
+                @include mq($until: large) {
+                    margin-left: 20px;
+                }
+
+            }
+        }
+
+
+
+        &__header {
+            background: var(--package-background);
+            color: #5C5C5C;
+            padding: 2rem 2rem;
+            font-family: var(--type--2--font-family);
+
+            h3 {
+                font-size: 28px;
+                font-weight: 600;
+                margin-bottom: 0.6rem;
+                text-align: center;
+                font-family: var(--type--1--font-family);
+            }
+
+            &__price {
+                margin-left: auto;
+                font-family: var(--type--1--font-family);
+                align-items: center;
+                display: flex;
+                justify-content: center;
+
+
+                .woocommerce-Price-amount {
+                    font-size: 32px;
+                    font-weight: 600;
+                    padding-top: 20px;
+
+                    // .woocommerce-Price-currencySymbol {
+                    //     vertical-align:text-bottom;
+                    //     font-weight: 400;
+                    //     font-size: 1.6rem;
+                    // }
+                }
+
+                .subscription-details {
+                    font-size: 13px;
+                }
+            }
+
+            &__description {
+                text-align: center;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    width: 280px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    font-family: var(--type--1--font-family);
+                
+                }
+            }
+        }
+
+        &__image {
+            top: -68px;
+            position: absolute;
+        }
+
+        &__features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            color: #5C5C5C;
+            margin-bottom: 1em;
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: space-between;
+            padding: 1rem 2rem 2rem 2rem;
+            padding-top: 2rem;
+            height: 100%;
+            position: relative;
+        }
+
+        &__feature {
+            display: flex;
+            align-items: flex-start;
+            /* Align icon to the top of text */
+            gap: 0.75rem;
+            font-weight: 600;
+
+            svg {
+                flex-shrink: 0;
+                /* Prevent icon from resizing */
+                width: 1.6rem;
+                height: 1.6rem;
+                color: #5C5C5C;
+
+                path {
+                    fill: #5C5C5C;
+                }
+            }
+
+            span {
+                display: block;
+                max-width: 90%;
+                /* Ensures text wraps properly */
+            }
+        }
+
+        &__button {
+            align-items: center !important;
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+
+    }
+}
